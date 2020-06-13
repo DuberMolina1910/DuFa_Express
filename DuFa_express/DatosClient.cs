@@ -20,13 +20,15 @@ namespace DuFa_express
         public string IdTipoId { set; get; }
         public string IdTipoPer { set; get; }
         public string CiudadUsu { set; get; }
+        public bool Estado { set; get; }
+        public int IdCiudad { set; get; }
 
         public DatosClient()
         {
             
         }
 
-        public DatosClient(string pNombreC, string pIDClient, string pFechaNac_C, string pTelefonoC, string pEmail, string pDirDom_C, string pContrasena, string pSucursal, string pTipoId, string pTipoPer, string pCiudad)
+        public DatosClient(string pNombreC, string pIDClient, string pFechaNac_C, string pTelefonoC, string pEmail, string pDirDom_C, string pContrasena, string pSucursal, string pTipoId, string pTipoPer, string pCiudad, bool pEstado, int pIdCiudad)
         {
             this.NumIdUsu = pNombreC;
             this.NomUsu = pIDClient;
@@ -39,6 +41,8 @@ namespace DuFa_express
             this.IdTipoId = pTipoId;
             this.IdTipoPer = pTipoPer;
             this.CiudadUsu = pCiudad;
+            this.Estado = pEstado;
+            this.IdCiudad = pIdCiudad;
         }
     }
 }

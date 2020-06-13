@@ -123,18 +123,18 @@ namespace DuFa_express
             return tabla;
         }
         /*Query para Desactivar los ciudades en DataGridView*/
-        public DataTable DesactivarCiudades()
+        public static int DesactivarCiudades(DatosClient DatosClient)
         {
+            int rest = 0;
             SqlConnection Connect = DB_Connection.DBConnection();
-
-            DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("UPDATE TABCIUDADES WHERE IDCIUDAD = '{0}'"), Connect);
-            SqlDataReader Reader = command.ExecuteReader();
-            tabla.Load(Reader);
-            Reader.Close();
-            Connect.Close();
-
-            return tabla;
+            {
+                
+                SqlCommand com = new SqlCommand(string.Format("UPDATE TABCIUDADES SET ESTADOS='{0}' WHERE NOMCIUDAD='{1}'",DatosClient.Estado,DatosClient.CiudadUsu),Connect);          
+                rest = com.ExecuteNonQuery();
+                Connect.Close();
+            }
+            
+            return rest;
         }
 
         /*Query para mostrar los sucursales*/

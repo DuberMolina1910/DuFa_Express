@@ -86,9 +86,22 @@ namespace DuFa_express
 
         private void btnElimCiudad_Click(object sender, EventArgs e)
         {
+            
             if (DtGrdVTabCiudades.SelectedRows.Count > 0)
-            {
-                 
+            {                               
+                if (MessageBox.Show("¿Esta seguro de Desactivar esta Ciudad?", "Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    //Llevar a cabo la desactivacion
+                    
+                    DatosClient enviar = new DatosClient();
+                    enviar.Estado = true;
+                    enviar.CiudadUsu = Convert.ToString(DtGrdVTabCiudades.CurrentRow.Cells["NOMCIUDAD"].Value);
+                    int res = UsuarioDAL_C.DesactivarCiudades(enviar);
+                    
+                    MostrarCiudades();
+                }
+                else
+                    this.Close();
             }
             else
                 MessageBox.Show("Seleccione una ciudad a eliminar");
