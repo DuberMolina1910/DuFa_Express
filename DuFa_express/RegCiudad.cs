@@ -88,7 +88,7 @@ namespace DuFa_express
         {
             if (DtGrdVTabCiudades.SelectedRows.Count > 0)
             {
-
+                 
             }
             else
                 MessageBox.Show("Seleccione una ciudad a eliminar");
