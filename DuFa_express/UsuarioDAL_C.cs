@@ -128,15 +128,12 @@ namespace DuFa_express
             int rest = 0;
             SqlConnection Connect = DB_Connection.DBConnection();
             {
-                
                 SqlCommand com = new SqlCommand(string.Format("UPDATE TABCIUDADES SET ESTADOS='{0}' WHERE NOMCIUDAD='{1}'",DatosClient.Estado,DatosClient.CiudadUsu),Connect);          
                 rest = com.ExecuteNonQuery();
                 Connect.Close();
             }
-            
             return rest;
         }
-
         /*Query para mostrar los sucursales*/
         public DataTable ListarSucursales()
         {
