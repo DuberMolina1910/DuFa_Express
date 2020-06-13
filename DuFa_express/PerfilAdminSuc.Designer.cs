@@ -34,7 +34,7 @@
             this.lblCerrarSesión = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblRgstUsrAdmSuc = new System.Windows.Forms.Label();
-            this.lblCorreo = new System.Windows.Forms.Label();
+            this.lblNomTipoPer = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.pnlShowSubForm = new System.Windows.Forms.Panel();
             this.picBxLogoV2 = new System.Windows.Forms.PictureBox();
@@ -50,7 +50,7 @@
             this.pnlUsuLog.Controls.Add(this.lblCerrarSesión);
             this.pnlUsuLog.Controls.Add(this.label2);
             this.pnlUsuLog.Controls.Add(this.lblRgstUsrAdmSuc);
-            this.pnlUsuLog.Controls.Add(this.lblCorreo);
+            this.pnlUsuLog.Controls.Add(this.lblNomTipoPer);
             this.pnlUsuLog.Controls.Add(this.lblNombre);
             this.pnlUsuLog.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlUsuLog.Location = new System.Drawing.Point(0, 0);
@@ -105,19 +105,20 @@
             this.lblRgstUsrAdmSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblRgstUsrAdmSuc.Click += new System.EventHandler(this.lblRgstUsrAdmSuc_Click);
             // 
-            // lblCorreo
+            // lblNomTipoPer
             // 
-            this.lblCorreo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.ForeColor = System.Drawing.Color.White;
-            this.lblCorreo.Location = new System.Drawing.Point(9, 37);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(150, 25);
-            this.lblCorreo.TabIndex = 1;
-            this.lblCorreo.Text = "Correo";
-            this.lblCorreo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNomTipoPer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomTipoPer.ForeColor = System.Drawing.Color.White;
+            this.lblNomTipoPer.Location = new System.Drawing.Point(9, 37);
+            this.lblNomTipoPer.Name = "lblNomTipoPer";
+            this.lblNomTipoPer.Size = new System.Drawing.Size(150, 25);
+            this.lblNomTipoPer.TabIndex = 1;
+            this.lblNomTipoPer.Text = "Tipo Perfil";
+            this.lblNomTipoPer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblNombre
             // 
+            this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
             this.lblNombre.Location = new System.Drawing.Point(9, 12);
@@ -158,6 +159,7 @@
             this.Name = "PerfilAdminSuc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PerfilAdminSuc";
+            this.Load += new System.EventHandler(this.PerfilAdminSuc_Load);
             this.pnlUsuLog.ResumeLayout(false);
             this.pnlShowSubForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).EndInit();
@@ -168,7 +170,7 @@
         #endregion
         private System.Windows.Forms.Panel pnlUsuLog;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblCorreo;
+        private System.Windows.Forms.Label lblNomTipoPer;
         private System.Windows.Forms.Label lblRgstUsrAdmSuc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCerrarSesión;

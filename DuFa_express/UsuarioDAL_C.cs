@@ -41,10 +41,18 @@ namespace DuFa_express
         {
             SqlConnection Connect = DB_Connection.DBConnection();
             int resultado = -1;
-            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABUSUARIOS WHERE NUMIDUSU = '{0}' AND HASHBYTES('MD5','{1}') = CONTRASENA AND IDTIPOPER = '{2}'", DatosClient.NumIdUsu, DatosClient.Contrasena, DatosClient.IdTipoPer), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT TABUSUARIOS.*, TABTIPOPER.DESCTIPOPER, TABTIPOID.NOMTIPOID FROM TABUSUARIOS, TABTIPOPER, TABTIPOID WHERE NUMIDUSU = '{0}' AND HASHBYTES('MD5','{1}') = CONTRASENA AND TABTIPOPER.IDTIPOPER = '{2}' AND TABTIPOID.IDTIPOID = TABUSUARIOS.IDTIPOID", DatosClient.NumIdUsu, DatosClient.Contrasena, DatosClient.IdTipoPer), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             while (Reader.Read())
             {
+                Cache.NumIdUsu = Reader.GetInt32(1);
+                Cache.NomUsu = Reader.GetString(3);
+                Cache.FechNacUsu = Reader.GetDateTime(4);
+                Cache.TelUsu = Reader.GetString(5);
+                Cache.CorreoUsu = Reader.GetString(6);
+                Cache.DirDomUsu = Reader.GetString(7);
+                Cache.NomTipoPer = Reader.GetString(11);
+                Cache.NomTipoId = Reader.GetString(12);
                 resultado = 50;
             }
             Connect.Close();
@@ -123,15 +131,16 @@ namespace DuFa_express
             return tabla;
         }
         /*Query para Desactivar los ciudades en DataGridView*/
-        public static int DesactivarCiudades(DatosClient DatosClient)
+        public DataTable DesactivarCiudades()
         {
-            int rest = 0;
             SqlConnection Connect = DB_Connection.DBConnection();
             {
+                
                 SqlCommand com = new SqlCommand(string.Format("UPDATE TABCIUDADES SET ESTADOS='{0}' WHERE NOMCIUDAD='{1}'",DatosClient.Estado,DatosClient.CiudadUsu),Connect);          
                 rest = com.ExecuteNonQuery();
                 Connect.Close();
             }
+            
             return rest;
         }
         /*Query para mostrar los sucursales*/
