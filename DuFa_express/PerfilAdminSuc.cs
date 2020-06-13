@@ -67,5 +67,10 @@ namespace DuFa_express
             lblNombre.Text = Cache.NomUsu;
             lblNomTipoPer.Text = Cache.NomTipoPer;
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            AbrirSubForms(new RegSuc());
+        }
     }
 }

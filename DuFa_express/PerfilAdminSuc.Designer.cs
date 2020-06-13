@@ -92,6 +92,7 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Registrar Sucursal";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblRgstUsrAdmSuc
             // 

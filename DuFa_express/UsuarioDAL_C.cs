@@ -148,7 +148,7 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABSUCURSALES ORDER BY NOMSUCURSAL ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT NomSucursal,NomCiudad FROM TABSUCURSALES,TabCiudades WHERE TabSucursales.IdCiudad = TabCiudades.IdCiudad AND Estados = '0' ORDER BY NOMSUCURSAL ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -156,5 +156,6 @@ namespace DuFa_express
 
             return tabla;
         }
+
     }
 }
