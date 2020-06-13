@@ -33,7 +33,7 @@
             this.txtRegCiudad = new System.Windows.Forms.TextBox();
             this.lblMsgError = new System.Windows.Forms.Label();
             this.DtGrdVTabCiudades = new System.Windows.Forms.DataGridView();
-            this.btnElimCiudad = new System.Windows.Forms.Button();
+            this.btnDesacCiudad = new System.Windows.Forms.Button();
             this.btnCancelarCiudad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DtGrdVTabCiudades)).BeginInit();
             this.SuspendLayout();
@@ -41,7 +41,7 @@
             // btnRegCiudad
             // 
             this.btnRegCiudad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegCiudad.Location = new System.Drawing.Point(243, 346);
+            this.btnRegCiudad.Location = new System.Drawing.Point(363, 168);
             this.btnRegCiudad.Name = "btnRegCiudad";
             this.btnRegCiudad.Size = new System.Drawing.Size(100, 25);
             this.btnRegCiudad.TabIndex = 1;
@@ -87,27 +87,27 @@
             // DtGrdVTabCiudades
             // 
             this.DtGrdVTabCiudades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtGrdVTabCiudades.Location = new System.Drawing.Point(107, 168);
+            this.DtGrdVTabCiudades.Location = new System.Drawing.Point(83, 168);
             this.DtGrdVTabCiudades.Name = "DtGrdVTabCiudades";
-            this.DtGrdVTabCiudades.Size = new System.Drawing.Size(264, 150);
+            this.DtGrdVTabCiudades.Size = new System.Drawing.Size(243, 150);
             this.DtGrdVTabCiudades.TabIndex = 17;
             this.DtGrdVTabCiudades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // btnElimCiudad
+            // btnDesacCiudad
             // 
-            this.btnElimCiudad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnElimCiudad.Location = new System.Drawing.Point(353, 346);
-            this.btnElimCiudad.Name = "btnElimCiudad";
-            this.btnElimCiudad.Size = new System.Drawing.Size(100, 25);
-            this.btnElimCiudad.TabIndex = 18;
-            this.btnElimCiudad.Text = "DESACTIVAR";
-            this.btnElimCiudad.UseVisualStyleBackColor = true;
-            this.btnElimCiudad.Click += new System.EventHandler(this.btnElimCiudad_Click);
+            this.btnDesacCiudad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDesacCiudad.Location = new System.Drawing.Point(363, 199);
+            this.btnDesacCiudad.Name = "btnDesacCiudad";
+            this.btnDesacCiudad.Size = new System.Drawing.Size(100, 25);
+            this.btnDesacCiudad.TabIndex = 18;
+            this.btnDesacCiudad.Text = "DESACTIVAR";
+            this.btnDesacCiudad.UseVisualStyleBackColor = true;
+            this.btnDesacCiudad.Click += new System.EventHandler(this.btnElimCiudad_Click);
             // 
             // btnCancelarCiudad
             // 
             this.btnCancelarCiudad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarCiudad.Location = new System.Drawing.Point(38, 346);
+            this.btnCancelarCiudad.Location = new System.Drawing.Point(38, 351);
             this.btnCancelarCiudad.Name = "btnCancelarCiudad";
             this.btnCancelarCiudad.Size = new System.Drawing.Size(100, 25);
             this.btnCancelarCiudad.TabIndex = 19;
@@ -121,7 +121,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 400);
             this.Controls.Add(this.btnCancelarCiudad);
-            this.Controls.Add(this.btnElimCiudad);
+            this.Controls.Add(this.btnDesacCiudad);
             this.Controls.Add(this.DtGrdVTabCiudades);
             this.Controls.Add(this.lblMsgError);
             this.Controls.Add(this.txtRegCiudad);
@@ -144,7 +144,7 @@
         private System.Windows.Forms.TextBox txtRegCiudad;
         private System.Windows.Forms.Label lblMsgError;
         private System.Windows.Forms.DataGridView DtGrdVTabCiudades;
-        private System.Windows.Forms.Button btnElimCiudad;
+        private System.Windows.Forms.Button btnDesacCiudad;
         private System.Windows.Forms.Button btnCancelarCiudad;
     }
 }
