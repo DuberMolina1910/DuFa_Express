@@ -17,11 +17,15 @@ namespace DuFa_express
             InitializeComponent();
         }
 
+        private void PerfilAdminSuc_Load(object sender, EventArgs e)
+        {
+            InfoUsuarios();
+        }
+
         private void BtnRgstUsrAdmSuc_Click(object sender, EventArgs e)
         {
             RegUsers reguser = new RegUsers();
-            reguser.ShowDialog();
-            
+            reguser.ShowDialog();            
         }
 
         private void lblCerrarSesión_Click(object sender, EventArgs e)
@@ -56,6 +60,12 @@ namespace DuFa_express
         private void lblRegCiudad_Click(object sender, EventArgs e)
         {
             AbrirSubForms(new RegCiudad());
+        }
+
+        private void InfoUsuarios()
+        {
+            lblNombre.Text = Cache.NomUsu;
+            lblNomTipoPer.Text = Cache.NomTipoPer;
         }
     }
 }

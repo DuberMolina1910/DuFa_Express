@@ -20,25 +20,27 @@ namespace DuFa_express
         public string IdTipoId { set; get; }
         public string IdTipoPer { set; get; }
         public string CiudadUsu { set; get; }
+        public string NomTipoPer { set; get; }
 
-        public DatosClient()
-        {
-            
-        }
+        //public DatosClient()
+        //{
 
-        public DatosClient(string pNombreC, string pIDClient, string pFechaNac_C, string pTelefonoC, string pEmail, string pDirDom_C, string pContrasena, string pSucursal, string pTipoId, string pTipoPer, string pCiudad)
-        {
-            this.NumIdUsu = pNombreC;
-            this.NomUsu = pIDClient;
-            this.FechNacUsu = pFechaNac_C;
-            this.TelUsu = pTelefonoC;
-            this.CorreoUsu = pEmail;
-            this.DirDomUsu = pDirDom_C;
-            this.Contrasena = pContrasena;
-            this.SucursalOperarios = pSucursal;
-            this.IdTipoId = pTipoId;
-            this.IdTipoPer = pTipoPer;
-            this.CiudadUsu = pCiudad;
-        }
+        //}
+
+        //public DatosClient(String pNombreC, String pIDClient, String pFechaNac_C, String pTelefonoC, String pEmail, String pDirDom_C, String pContrasena, String pSucursal, String pTipoId, String pTipoPer, String pCiudad, String pNomTipoPer)
+        //{
+        //    this.NumIdUsu = pNombreC;
+        //    this.NomUsu = pIDClient;
+        //    this.FechNacUsu = pFechaNac_C;
+        //    this.TelUsu = pTelefonoC;
+        //    this.CorreoUsu = pEmail;
+        //    this.DirDomUsu = pDirDom_C;
+        //    this.Contrasena = pContrasena;
+        //    this.SucursalOperarios = pSucursal;
+        //    this.IdTipoId = pTipoId;
+        //    this.IdTipoPer = pTipoPer;
+        //    this.CiudadUsu = pCiudad;
+        //    this.NomTipoPer = pNomTipoPer;
+        //}
     }
 }

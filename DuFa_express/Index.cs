@@ -130,7 +130,6 @@ namespace DuFa_express
                 RegClient registro = new RegClient();
                 registro.Show();
 
-
                 this.Hide();
             }
         }
