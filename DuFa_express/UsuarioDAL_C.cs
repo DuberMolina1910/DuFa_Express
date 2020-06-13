@@ -108,7 +108,7 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABCIUDADES ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABCIUDADES WHERE ESTADOS = '0' ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
