@@ -173,5 +173,65 @@ namespace DuFa_express
 
             return tabla;
         }
+
+        /*Query para registrar Sucursales*/
+        public static int RegistrarSuc(int pIdCiudad, string pNomSuc)
+        {
+            int resultado = 0;
+            SqlConnection Connect = DB_Connection.DBConnection();
+            {
+                SqlCommand command = new SqlCommand(string.Format("INSERT INTO TABSUCURSALES  (IDCIUDAD, NOMSUCURSAL) VALUES ('{0}','{1}')", pIdCiudad, pNomSuc), Connect);
+                resultado = command.ExecuteNonQuery();
+                Connect.Close();
+            }
+            return resultado;
+        }
+
+        /*Query para Desactivar o Activar Sucursales*/
+        public static int DesactivarSucursales(DatosClient DatosClient)
+        {
+            int rest = 0;
+            SqlConnection Connect = DB_Connection.DBConnection();
+            {
+                SqlCommand com = new SqlCommand(string.Format("UPDATE TABSUCURSALES SET ESTADOSSUC='{0}' WHERE NOMSUCURSAL ='{1}'", DatosClient.Estado, DatosClient.SucursalOperarios), Connect);
+                rest = com.ExecuteNonQuery();
+                Connect.Close();
+            }
+            return rest;
+        }
+
+        /*Query para listar los ciudades desactivadas en DataGridView*/
+        public DataTable ListarCiudadesDesac()
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+
+            DataTable tabla = new DataTable();
+            SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD FROM TABCIUDADES WHERE ESTADOS = '0' ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            tabla.Load(Reader);
+            Reader.Close();
+            Connect.Close();
+
+            return tabla;
+        }
+
+        /*Query para validar usuario al consultar en el registro de envios*/
+        public static int CosultarUsuarios(DatosClient DatosClient)
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+            int resultado = -1;
+            SqlCommand command = new SqlCommand(string.Format("SELECT TABUSUARIOS.*, TABTIPOPER.DESCTIPOPER, TABTIPOID.NOMTIPOID FROM TABUSUARIOS, TABTIPOPER, TABTIPOID WHERE NUMIDUSU = '{0}' AND TABTIPOPER.IDTIPOPER = '{1}' AND TABTIPOID.IDTIPOID = TABUSUARIOS.IDTIPOID", DatosClient.NumIdUsu, DatosClient.IdTipoPer), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            while (Reader.Read())
+            {
+                CacheRegEnvio.NomUsu = Reader.GetString(3);
+                CacheRegEnvio.TelUsu = Reader.GetString(5);
+                CacheRegEnvio.CorreoUsu = Reader.GetString(6);
+                CacheRegEnvio.DirDomUsu = Reader.GetString(7);
+                resultado = 50;
+            }
+            Connect.Close();
+            return resultado;
+        }
     }
 }

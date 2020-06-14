@@ -34,7 +34,7 @@
             this.BtnRegSuc = new System.Windows.Forms.Button();
             this.DtGrdVwTabSuc = new System.Windows.Forms.DataGridView();
             this.BtnDescSuc = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.lblMsgErrorSuc = new System.Windows.Forms.Label();
             this.BtnReactivarSuc = new System.Windows.Forms.Button();
             this.BtnRfrsDtGrdVwRegSuc = new System.Windows.Forms.Button();
@@ -81,7 +81,7 @@
             this.BtnRegSuc.TabIndex = 5;
             this.BtnRegSuc.Text = "Agregar Sucursal";
             this.BtnRegSuc.UseVisualStyleBackColor = true;
-            this.BtnRegSuc.Click += new System.EventHandler(this.button1_Click);
+            this.BtnRegSuc.Click += new System.EventHandler(this.BtnRegSuc_Click);
             // 
             // DtGrdVwTabSuc
             // 
@@ -101,15 +101,15 @@
             this.BtnDescSuc.UseVisualStyleBackColor = true;
             this.BtnDescSuc.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnRegresar
             // 
-            this.button3.Location = new System.Drawing.Point(38, 364);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(103, 24);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Regresar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnRegresar.Location = new System.Drawing.Point(38, 364);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(103, 24);
+            this.btnRegresar.TabIndex = 8;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // lblMsgErrorSuc
             // 
@@ -152,7 +152,7 @@
             this.Controls.Add(this.BtnRfrsDtGrdVwRegSuc);
             this.Controls.Add(this.BtnReactivarSuc);
             this.Controls.Add(this.lblMsgErrorSuc);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.BtnDescSuc);
             this.Controls.Add(this.DtGrdVwTabSuc);
             this.Controls.Add(this.BtnRegSuc);
@@ -178,7 +178,7 @@
         private System.Windows.Forms.Button BtnRegSuc;
         private System.Windows.Forms.DataGridView DtGrdVwTabSuc;
         private System.Windows.Forms.Button BtnDescSuc;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Label lblMsgErrorSuc;
         private System.Windows.Forms.Button BtnReactivarSuc;
         private System.Windows.Forms.Button BtnRfrsDtGrdVwRegSuc;

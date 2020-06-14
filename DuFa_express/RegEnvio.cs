@@ -24,7 +24,7 @@ namespace DuFa_express
 
         private void lblNomUsu_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void MensajeError(string errorMsg)
@@ -65,7 +65,7 @@ namespace DuFa_express
                     txtDetEnvio.Enabled = true;
                     btnConfirmar.Enabled = true;
                 }
-                else 
+                else
                     MensajeError("Usuario no existe.");
             }
             else

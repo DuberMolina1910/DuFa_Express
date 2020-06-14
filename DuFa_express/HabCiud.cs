@@ -30,7 +30,6 @@ namespace DuFa_express
         {
             UsuarioDAL_C Suc = new UsuarioDAL_C();
             DtGrdVwHabCiu.DataSource = Suc.ListarCiudadesDesac();
-
         }
 
         private void BtnHabCiu_Click(object sender, EventArgs e)

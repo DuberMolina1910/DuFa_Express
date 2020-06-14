@@ -33,7 +33,7 @@
             this.lblRegEnvio = new System.Windows.Forms.Label();
             this.lblRegCiudad = new System.Windows.Forms.Label();
             this.lblCerrarSesión = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblRegSuc = new System.Windows.Forms.Label();
             this.lblRgstUsrAdmSuc = new System.Windows.Forms.Label();
             this.lblNomTipoPer = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.pnlUsuLog.Controls.Add(this.lblRegEnvio);
             this.pnlUsuLog.Controls.Add(this.lblRegCiudad);
             this.pnlUsuLog.Controls.Add(this.lblCerrarSesión);
-            this.pnlUsuLog.Controls.Add(this.label2);
+            this.pnlUsuLog.Controls.Add(this.lblRegSuc);
             this.pnlUsuLog.Controls.Add(this.lblRgstUsrAdmSuc);
             this.pnlUsuLog.Controls.Add(this.lblNomTipoPer);
             this.pnlUsuLog.Controls.Add(this.lblNombre);
@@ -96,17 +96,17 @@
             this.lblCerrarSesión.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblCerrarSesión.Click += new System.EventHandler(this.lblCerrarSesión_Click);
             // 
-            // label2
+            // lblRegSuc
             // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 35);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Registrar Sucursal";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblRegSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblRegSuc.ForeColor = System.Drawing.Color.White;
+            this.lblRegSuc.Location = new System.Drawing.Point(1, 156);
+            this.lblRegSuc.Name = "lblRegSuc";
+            this.lblRegSuc.Size = new System.Drawing.Size(197, 35);
+            this.lblRegSuc.TabIndex = 3;
+            this.lblRegSuc.Text = "Registrar Sucursal";
+            this.lblRegSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblRegSuc.Click += new System.EventHandler(this.lblRegUsu_Click);
             // 
             // lblRgstUsrAdmSuc
             // 
@@ -187,7 +187,7 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblNomTipoPer;
         private System.Windows.Forms.Label lblRgstUsrAdmSuc;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblRegSuc;
         private System.Windows.Forms.Label lblCerrarSesión;
         private System.Windows.Forms.Panel pnlShowSubForm;
         private System.Windows.Forms.Label lblRegCiudad;

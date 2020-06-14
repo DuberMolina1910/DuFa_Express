@@ -52,12 +52,12 @@ namespace DuFa_express
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnRegSuc_Click(object sender, EventArgs e)
         {
             if (txtRegSuc.Text != "NOMBRE DE LA Sucursal")
             {
