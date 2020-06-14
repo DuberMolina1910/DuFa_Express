@@ -96,7 +96,7 @@ namespace DuFa_express
                     DatosClient enviar = new DatosClient();
                     enviar.Estado = true;
                     enviar.CiudadUsu = Convert.ToString(DtGrdVTabCiudades.CurrentRow.Cells["NOMCIUDAD"].Value);
-                    int res = UsuarioDAL_C.DesactivarCiudades(enviar);
+                    int res = UsuarioDAL_C.EstadosCiudades(enviar);
                     
                     MostrarCiudades();
                 }
