@@ -48,7 +48,7 @@ namespace DuFa_express
         public void MostrarSucursales()
         {
             UsuarioDAL_C Suc = new UsuarioDAL_C();
-            DtGrdVwTabSuc.DataSource = Suc.ListarSucursales();
+            DtGrdVwTabSuc.DataSource = Suc.ListarSucursalesDGV();
 
         }
 

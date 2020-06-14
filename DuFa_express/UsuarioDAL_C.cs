@@ -150,6 +150,21 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
+            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABSUCURSALES ORDER BY NOMSUCURSAL ASC"), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            tabla.Load(Reader);
+            Reader.Close();
+            Connect.Close();
+
+            return tabla;
+        }
+
+        /*Query para mostrar los sucursales activas en el DataGridView*/
+        public DataTable ListarSucursalesDGV()
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+
+            DataTable tabla = new DataTable();
             SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD,NOMSUCURSAL FROM TABSUCURSALES,TABCIUDADES WHERE TABSUCURSALES.IDCIUDAD = TABCIUDADES.IDCIUDAD AND TABSUCURSALES.ESTADOSSUC = '1' AND TABCIUDADES.ESTADOS = '1'  ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
@@ -159,7 +174,7 @@ namespace DuFa_express
             return tabla;
         }
 
-        /*Query para mostrar los sucursales deshabilitadas*/
+        /*Query para mostrar las sucursales deshabilitadas*/
         public DataTable ListarSucursalesDesac()
         {
             SqlConnection Connect = DB_Connection.DBConnection();
@@ -180,7 +195,7 @@ namespace DuFa_express
             int resultado = 0;
             SqlConnection Connect = DB_Connection.DBConnection();
             {
-                SqlCommand command = new SqlCommand(string.Format("INSERT INTO TABSUCURSALES  (IDCIUDAD, NOMSUCURSAL) VALUES ('{0}','{1}')", pIdCiudad, pNomSuc), Connect);
+                SqlCommand command = new SqlCommand(string.Format("INSERT INTO TABSUCURSALES (IDCIUDAD, NOMSUCURSAL) VALUES ('{0}','{1}')", pIdCiudad, pNomSuc), Connect);
                 resultado = command.ExecuteNonQuery();
                 Connect.Close();
             }
