@@ -108,7 +108,7 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABCIUDADES ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABCIUDADES WHERE ESTADOS = '1' ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -122,7 +122,7 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD AS 'CIUDADES REGISTRADAS' FROM TABCIUDADES WHERE ESTADOS = '1' ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD FROM TABCIUDADES WHERE ESTADOS = '0' ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -130,8 +130,9 @@ namespace DuFa_express
 
             return tabla;
         }
-        /*Query para Desactivar los ciudades en DataGridView*/
-        public static int  DesactivarCiudades(DatosClient DatosClient)
+
+        /*Query para Desactivar o Activar los ciudades*/
+        public static int  EstadosCiudades(DatosClient DatosClient)
         {
             int rest = 0;
             SqlConnection Connect = DB_Connection.DBConnection();
@@ -142,13 +143,14 @@ namespace DuFa_express
             }
             return rest;
         }
+
         /*Query para mostrar los sucursales*/
         public DataTable ListarSucursales()
         {
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABSUCURSALES ORDER BY NOMSUCURSAL ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD,NOMSUCURSAL FROM TABSUCURSALES,TABCIUDADES WHERE TABSUCURSALES.IDCIUDAD = TABCIUDADES.IDCIUDAD AND TABSUCURSALES.ESTADOSSUC = '1' AND TABCIUDADES.ESTADOS = '1'  ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -157,23 +159,19 @@ namespace DuFa_express
             return tabla;
         }
 
-        /*Query para validar usuario al consultar en el registro de envios*/
-        public static int CosultarUsuarios(DatosClient DatosClient)
+        /*Query para mostrar los sucursales deshabilitadas*/
+        public DataTable ListarSucursalesDesac()
         {
             SqlConnection Connect = DB_Connection.DBConnection();
-            int resultado = -1;
-            SqlCommand command = new SqlCommand(string.Format("SELECT TABUSUARIOS.*, TABTIPOPER.DESCTIPOPER, TABTIPOID.NOMTIPOID FROM TABUSUARIOS, TABTIPOPER, TABTIPOID WHERE NUMIDUSU = '{0}' AND TABTIPOPER.IDTIPOPER = '{1}' AND TABTIPOID.IDTIPOID = TABUSUARIOS.IDTIPOID", DatosClient.NumIdUsu, DatosClient.IdTipoPer), Connect);
+
+            DataTable tabla = new DataTable();
+            SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD,NOMSUCURSAL FROM TABSUCURSALES,TABCIUDADES WHERE TABSUCURSALES.IDCIUDAD = TABCIUDADES.IDCIUDAD AND TABSUCURSALES.ESTADOSSUC = '0' AND TABCIUDADES.ESTADOS = '1'  ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
-            while (Reader.Read())
-            {
-                CacheRegEnvio.NomUsu = Reader.GetString(3);
-                CacheRegEnvio.TelUsu = Reader.GetString(5);
-                CacheRegEnvio.CorreoUsu = Reader.GetString(6);
-                CacheRegEnvio.DirDomUsu = Reader.GetString(7);
-                resultado = 50;
-            }
+            tabla.Load(Reader);
+            Reader.Close();
             Connect.Close();
-            return resultado;
+
+            return tabla;
         }
     }
 }

@@ -38,13 +38,14 @@
             this.DtGrdVTabCiudades = new System.Windows.Forms.DataGridView();
             this.btnDesacCiudad = new System.Windows.Forms.Button();
             this.btnCancelarCiudad = new System.Windows.Forms.Button();
+            this.BtnReacCiud = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DtGrdVTabCiudades)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegCiudad
             // 
             this.btnRegCiudad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegCiudad.Location = new System.Drawing.Point(345, 168);
+            this.btnRegCiudad.Location = new System.Drawing.Point(363, 168);
             this.btnRegCiudad.Name = "btnRegCiudad";
             this.btnRegCiudad.Size = new System.Drawing.Size(100, 25);
             this.btnRegCiudad.TabIndex = 1;
@@ -102,16 +103,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DtGrdVTabCiudades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DtGrdVTabCiudades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DtGrdVTabCiudades.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DtGrdVTabCiudades.EnableHeadersVisualStyles = false;
-            this.DtGrdVTabCiudades.Location = new System.Drawing.Point(39, 168);
+            this.DtGrdVTabCiudades.Location = new System.Drawing.Point(83, 168);
             this.DtGrdVTabCiudades.Name = "DtGrdVTabCiudades";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -131,7 +123,7 @@
             // btnDesacCiudad
             // 
             this.btnDesacCiudad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDesacCiudad.Location = new System.Drawing.Point(345, 199);
+            this.btnDesacCiudad.Location = new System.Drawing.Point(363, 199);
             this.btnDesacCiudad.Name = "btnDesacCiudad";
             this.btnDesacCiudad.Size = new System.Drawing.Size(100, 25);
             this.btnDesacCiudad.TabIndex = 18;
@@ -150,11 +142,23 @@
             this.btnCancelarCiudad.UseVisualStyleBackColor = true;
             this.btnCancelarCiudad.Click += new System.EventHandler(this.btnCancelarCiudad_Click);
             // 
+            // BtnReacCiud
+            // 
+            this.BtnReacCiud.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReacCiud.Location = new System.Drawing.Point(363, 178);
+            this.BtnReacCiud.Name = "BtnReacCiud";
+            this.BtnReacCiud.Size = new System.Drawing.Size(100, 25);
+            this.BtnReacCiud.TabIndex = 20;
+            this.BtnReacCiud.Text = "REACTIVAR";
+            this.BtnReacCiud.UseVisualStyleBackColor = true;
+            this.BtnReacCiud.Click += new System.EventHandler(this.BtnReacCiud_Click);
+            // 
             // RegCiudad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 400);
+            this.Controls.Add(this.BtnReacCiud);
             this.Controls.Add(this.btnCancelarCiudad);
             this.Controls.Add(this.btnDesacCiudad);
             this.Controls.Add(this.DtGrdVTabCiudades);
@@ -181,5 +185,6 @@
         private System.Windows.Forms.DataGridView DtGrdVTabCiudades;
         private System.Windows.Forms.Button btnDesacCiudad;
         private System.Windows.Forms.Button btnCancelarCiudad;
+        private System.Windows.Forms.Button BtnReacCiud;
     }
 }

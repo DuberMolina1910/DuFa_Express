@@ -47,6 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cache.cs" />
+    <Compile Include="HabCiud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HabCiud.Designer.cs">
+      <DependentUpon>HabCiud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HabltSuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HabltSuc.Designer.cs">
+      <DependentUpon>HabltSuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Index.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,12 +111,6 @@
     <Compile Include="RegClient.Designer.cs">
       <DependentUpon>RegClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegEnvio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RegEnvio.Designer.cs">
-      <DependentUpon>RegEnvio.cs</DependentUpon>
-    </Compile>
     <Compile Include="RegUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,12 @@
       <DependentUpon>RegUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuarioDAL_C.cs" />
+    <EmbeddedResource Include="HabCiud.resx">
+      <DependentUpon>HabCiud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HabltSuc.resx">
+      <DependentUpon>HabltSuc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,9 +156,6 @@
     </Compile>
     <EmbeddedResource Include="RegClient.resx">
       <DependentUpon>RegClient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RegEnvio.resx">
-      <DependentUpon>RegEnvio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegUsers.resx">
       <DependentUpon>RegUsers.cs</DependentUpon>
