@@ -115,7 +115,7 @@ namespace DuFa_express
         }
 
 
-        public DataTable MostrarCiudadesDGV()   /*Query para listar los ciudades en DataGridView de RegCiudad*/
+        public DataTable MostrarCiudadesDGV()/*Query para listar los ciudades en DataGridView de RegCiudad*/
         {
             SqlConnection Connect = DB_Connection.DBConnection();
 
@@ -133,7 +133,7 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD FROM TABCIUDADES WHERE ESTADOS = '0' ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT LTRIM(RTRIM(REPLACE(NOMCIUDAD, '', ''))) AS NOMCIUDAD FROM TABCIUDADES WHERE ESTADOS = '0' ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -174,7 +174,7 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD,NOMSUCURSAL FROM TABSUCURSALES,TABCIUDADES WHERE TABSUCURSALES.IDCIUDAD = TABCIUDADES.IDCIUDAD AND TABSUCURSALES.ESTADOSSUC = '1' AND TABCIUDADES.ESTADOS = '1'  ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT LTRIM(RTRIM(REPLACE(NOMCIUDAD, '', ''))) AS NOMCIUDAD, LTRIM(RTRIM(REPLACE(NOMSUCURSAL, '', ''))) AS NOMSUCURSAL FROM TABSUCURSALES, TABCIUDADES WHERE TABSUCURSALES.IDCIUDAD = TABCIUDADES.IDCIUDAD AND TABSUCURSALES.ESTADOSSUC = '1' AND TABCIUDADES.ESTADOS = '1'  ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -199,7 +199,7 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD,NOMSUCURSAL FROM TABSUCURSALES,TABCIUDADES WHERE TABSUCURSALES.IDCIUDAD = TABCIUDADES.IDCIUDAD AND TABSUCURSALES.ESTADOSSUC = '0' AND TABCIUDADES.ESTADOS = '1'  ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT LTRIM(RTRIM(REPLACE(NOMCIUDAD, '', ''))) AS NOMCIUDAD, LTRIM(RTRIM(REPLACE(NOMSUCURSAL, '', ''))) AS NOMSUCURSAL FROM TABSUCURSALES,TABCIUDADES WHERE TABSUCURSALES.IDCIUDAD = TABCIUDADES.IDCIUDAD AND TABSUCURSALES.ESTADOSSUC = '0' AND TABCIUDADES.ESTADOS = '1'  ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
