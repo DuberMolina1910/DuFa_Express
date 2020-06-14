@@ -10,8 +10,8 @@ namespace DuFa_express
 {
     class UsuarioDAL_C
     {
-        /*Query para registrar usuario Cliente*/
-        public static int RegistrarData(DatosClient DatosClient, string pTipoPer)
+        
+        public static int RegistrarData(DatosClient DatosClient, string pTipoPer)/*Query para registrar usuario Cliente*/
         {
             int resultado = 0;
             SqlConnection Connect = DB_Connection.DBConnection();
@@ -23,8 +23,8 @@ namespace DuFa_express
             return resultado;
         }
 
-        /*Query para registrar usuario Operario*/
-        public static int RegistrarUsu(DatosClient DatosClient)
+        
+        public static int RegistrarUsu(DatosClient DatosClient)/*Query para registrar usuario Operario*/
         {
             int resultado = 0;
             SqlConnection Connect = DB_Connection.DBConnection();
@@ -36,8 +36,8 @@ namespace DuFa_express
             return resultado;
         }
 
-        /*Query para validar usuario Cliente*/
-        public static int AccesoUsuarios(DatosClient DatosClient)
+        
+        public static int AccesoUsuarios(DatosClient DatosClient)/*Query para validar usuario Cliente*/
         {
             SqlConnection Connect = DB_Connection.DBConnection();
             int resultado = -1;
@@ -59,8 +59,8 @@ namespace DuFa_express
             return resultado;
         }
 
-        /*Query para registrar Ciudades*/
-        public static int RegistrarCiudad(string pNomCiudad)
+        
+        public static int RegistrarCiudad(string pNomCiudad)/*Query para registrar Ciudades*/
         {
             int resultado = 0;
             SqlConnection Connect = DB_Connection.DBConnection();
@@ -72,13 +72,13 @@ namespace DuFa_express
             return resultado;
         }
 
-        /*Query para mostrar los tipos de identificación*/
-        public DataTable ListarIdTipoId()
+        
+        public DataTable ListarIdTipoId()/*Query para mostrar los tipos de identificación*/
         {
             SqlConnection Connect = DB_Connection.DBConnection();
             
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABTIPOID ORDER BY IDTIPOID ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT IDTIPOID, LTRIM(RTRIM(REPLACE(NOMTIPOID, '', ''))) AS NOMTIPOID FROM TABTIPOID"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -87,13 +87,13 @@ namespace DuFa_express
             return tabla;
         }
 
-        /*Query para mostrar los tipos de perfiles*/
-        public DataTable ListarTipoPer()
+        
+        public DataTable ListarTipoPer()/*Query para mostrar los tipos de perfiles*/
         {
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABTIPOPER ORDER BY IDTIPOPER DESC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT IDTIPOPER, LTRIM(RTRIM(REPLACE(DESCTIPOPER, '', ''))) AS DESCTIPOPER FROM TABTIPOPER ORDER BY IDTIPOPER DESC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -102,13 +102,13 @@ namespace DuFa_express
             return tabla;
         }
 
-        /*Query para mostrar los ciudades*/
-        public DataTable ListarCiudades()
+        
+        public DataTable ListarCiudades()/*Query para mostrar los ciudades*/
         {
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABCIUDADES WHERE ESTADOS = '1' ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT IdCiudad, LTRIM(RTRIM(REPLACE(NomCiudad, '', ''))) AS NomCiudad, Estados FROM TABCIUDADES WHERE ESTADOS = '1' ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -116,13 +116,14 @@ namespace DuFa_express
 
             return tabla;
         }
-        /*Query para listar los ciudades en DataGridView de RegCiudad*/
-        public DataTable MostrarCiudades()
+
+        
+        public DataTable MostrarCiudadesDGV()   /*Query para listar los ciudades en DataGridView de RegCiudad*/
         {
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD FROM TABCIUDADES WHERE ESTADOS = '1' ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT LTRIM(RTRIM(REPLACE(NOMCIUDAD, '', ''))) AS NOMCIUDAD FROM TABCIUDADES WHERE ESTADOS = '1' ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -131,8 +132,8 @@ namespace DuFa_express
             return tabla;
         }
 
-        /*Query para Desactivar o Activar los ciudades*/
-        public static int  EstadosCiudades(DatosClient DatosClient)
+        
+        public static int  EstadosCiudades(DatosClient DatosClient)/*Query para Desactivar o Activar los ciudades*/
         {
             int rest = 0;
             SqlConnection Connect = DB_Connection.DBConnection();
@@ -144,13 +145,13 @@ namespace DuFa_express
             return rest;
         }
 
-        /*Query para mostrar los sucursales*/
-        public DataTable ListarSucursales()
+        
+        public DataTable ListarSucursales()/*Query para mostrar los sucursales*/
         {
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABSUCURSALES ORDER BY NOMSUCURSAL ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT IDSUCURSAL, IDCIUDAD, LTRIM(RTRIM(REPLACE(NOMSUCURSAL, '', ''))) AS NOMSUCURSAL, ESTADOSSUC FROM TABSUCURSALES ORDER BY NOMSUCURSAL ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -159,13 +160,13 @@ namespace DuFa_express
             return tabla;
         }
 
-        /*Query para mostrar los sucursales activas en el DataGridView*/
-        public DataTable ListarSucursalesDGV()
+        
+        public DataTable ListarSucursalesDGV()/*Query para mostrar los sucursales activas en el DataGridView de RegSuc*/
         {
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD,NOMSUCURSAL FROM TABSUCURSALES,TABCIUDADES WHERE TABSUCURSALES.IDCIUDAD = TABCIUDADES.IDCIUDAD AND TABSUCURSALES.ESTADOSSUC = '1' AND TABCIUDADES.ESTADOS = '1'  ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT LTRIM(RTRIM(REPLACE(NOMCIUDAD, '', ''))) AS NOMCIUDAD, LTRIM(RTRIM(REPLACE(NOMSUCURSAL, '', ''))) AS NOMSUCURSAL FROM TABSUCURSALES,TABCIUDADES WHERE TABSUCURSALES.IDCIUDAD = TABCIUDADES.IDCIUDAD AND TABSUCURSALES.ESTADOSSUC = '1' AND TABCIUDADES.ESTADOS = '1'  ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -174,8 +175,8 @@ namespace DuFa_express
             return tabla;
         }
 
-        /*Query para mostrar las sucursales deshabilitadas*/
-        public DataTable ListarSucursalesDesac()
+        
+        public DataTable ListarSucursalesDesac()/*Query para mostrar las sucursales deshabilitadas*/
         {
             SqlConnection Connect = DB_Connection.DBConnection();
 
@@ -189,8 +190,8 @@ namespace DuFa_express
             return tabla;
         }
 
-        /*Query para registrar Sucursales*/
-        public static int RegistrarSuc(int pIdCiudad, string pNomSuc)
+        
+        public static int RegistrarSuc(int pIdCiudad, string pNomSuc)/*Query para registrar Sucursales*/
         {
             int resultado = 0;
             SqlConnection Connect = DB_Connection.DBConnection();
@@ -202,8 +203,8 @@ namespace DuFa_express
             return resultado;
         }
 
-        /*Query para Desactivar o Activar Sucursales*/
-        public static int DesactivarSucursales(DatosClient DatosClient)
+        
+        public static int DesactivarSucursales(DatosClient DatosClient)/*Query para Desactivar o Activar Sucursales*/
         {
             int rest = 0;
             SqlConnection Connect = DB_Connection.DBConnection();
@@ -215,8 +216,8 @@ namespace DuFa_express
             return rest;
         }
 
-        /*Query para listar los ciudades desactivadas en DataGridView*/
-        public DataTable ListarCiudadesDesac()
+        
+        public DataTable ListarCiudadesDesac()/*Query para listar los ciudades desactivadas en DataGridView*/
         {
             SqlConnection Connect = DB_Connection.DBConnection();
 
@@ -230,8 +231,8 @@ namespace DuFa_express
             return tabla;
         }
 
-        /*Query para validar usuario al consultar en el registro de envios*/
-        public static int CosultarUsuarios(DatosClient DatosClient)
+        
+        public static int CosultarUsuarios(DatosClient DatosClient)/*Query para validar usuario al consultar en el registro de envios*/
         {
             SqlConnection Connect = DB_Connection.DBConnection();
             int resultado = -1;

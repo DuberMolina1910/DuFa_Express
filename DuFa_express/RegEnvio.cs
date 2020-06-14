@@ -52,6 +52,9 @@ namespace DuFa_express
                     lblTelUsu.Visible = true;
                     lblDirUsu.Visible = true;
 
+                    CalcValor calcval = new CalcValor();
+                    calcval.ShowDialog();
+
                     MensajeError("Consulta Exitosa.");
 
                     cmbTipoUsu.Enabled = true;

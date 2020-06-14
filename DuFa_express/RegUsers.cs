@@ -96,8 +96,7 @@ namespace DuFa_express
             cmbCiudad.DataSource = Ciudad.ListarCiudades();
             cmbCiudad.DisplayMember = "NomCiudad";
             cmbCiudad.ValueMember = "IdCiudad";
-        }
-        
+        }        
 
         public void ListarSucursales()
         {
