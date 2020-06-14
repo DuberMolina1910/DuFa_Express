@@ -197,7 +197,7 @@ namespace DuFa_express
         }
 
 
-        public static int DesactivarSucursales(DatosClient DatosClient)/*Query para Desactivar o Activar Sucursales*/
+        public static int EstadosSucursales(DatosClient DatosClient)/*Query para Desactivar o Activar Sucursales*/
         {
             int rest = 0;
             SqlConnection Connect = DB_Connection.DBConnection();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BtnCanclHabCiu = new System.Windows.Forms.Button();
             this.BtnHabCiu = new System.Windows.Forms.Button();
             this.DtGrdVwHabCiu = new System.Windows.Forms.DataGridView();
@@ -55,9 +56,23 @@
             // 
             // DtGrdVwHabCiu
             // 
+            this.DtGrdVwHabCiu.AllowUserToAddRows = false;
+            this.DtGrdVwHabCiu.AllowUserToDeleteRows = false;
+            this.DtGrdVwHabCiu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DtGrdVwHabCiu.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.DtGrdVwHabCiu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DtGrdVwHabCiu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DtGrdVwHabCiu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtGrdVwHabCiu.Location = new System.Drawing.Point(39, 34);
             this.DtGrdVwHabCiu.Name = "DtGrdVwHabCiu";
+            this.DtGrdVwHabCiu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DtGrdVwHabCiu.Size = new System.Drawing.Size(267, 192);
             this.DtGrdVwHabCiu.TabIndex = 3;
             this.DtGrdVwHabCiu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGrdVwHabCiu_CellContentClick);

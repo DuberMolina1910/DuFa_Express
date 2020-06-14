@@ -97,7 +97,7 @@ namespace DuFa_express
                     DatosClient enviar = new DatosClient();
                     enviar.Estado = false;
                     enviar.SucursalOperarios = Convert.ToString(DtGrdVwTabSuc.CurrentRow.Cells["NOMSUCURSAL"].Value);
-                    int res = UsuarioDAL_C.DesactivarSucursales(enviar);
+                    int res = UsuarioDAL_C.EstadosSucursales(enviar);
 
                     MostrarSucursales();
                 }
