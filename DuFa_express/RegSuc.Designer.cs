@@ -37,6 +37,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.lblMsgErrorSuc = new System.Windows.Forms.Label();
             this.BtnReactivarSuc = new System.Windows.Forms.Button();
+            this.BtnRfrsDtGrdVwRegSuc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DtGrdVwTabSuc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,11 +134,22 @@
             this.BtnReactivarSuc.UseVisualStyleBackColor = true;
             this.BtnReactivarSuc.Click += new System.EventHandler(this.BtnReactivarSuc_Click);
             // 
+            // BtnRfrsDtGrdVwRegSuc
+            // 
+            this.BtnRfrsDtGrdVwRegSuc.Location = new System.Drawing.Point(319, 349);
+            this.BtnRfrsDtGrdVwRegSuc.Name = "BtnRfrsDtGrdVwRegSuc";
+            this.BtnRfrsDtGrdVwRegSuc.Size = new System.Drawing.Size(75, 23);
+            this.BtnRfrsDtGrdVwRegSuc.TabIndex = 19;
+            this.BtnRfrsDtGrdVwRegSuc.Text = "Refrescar";
+            this.BtnRfrsDtGrdVwRegSuc.UseVisualStyleBackColor = true;
+            this.BtnRfrsDtGrdVwRegSuc.Click += new System.EventHandler(this.BtnRfrsDtGrdVwRegSuc_Click);
+            // 
             // RegSuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(518, 400);
+            this.Controls.Add(this.BtnRfrsDtGrdVwRegSuc);
             this.Controls.Add(this.BtnReactivarSuc);
             this.Controls.Add(this.lblMsgErrorSuc);
             this.Controls.Add(this.button3);
@@ -169,5 +181,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lblMsgErrorSuc;
         private System.Windows.Forms.Button BtnReactivarSuc;
+        private System.Windows.Forms.Button BtnRfrsDtGrdVwRegSuc;
     }
 }

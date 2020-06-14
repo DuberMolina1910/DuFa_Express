@@ -130,8 +130,23 @@ namespace DuFa_express
 
             return tabla;
         }
-        /*Query para Desactivar los ciudades en DataGridView*/
-        public static int  DesactivarCiudades(DatosClient DatosClient)
+        /*Query para listar los ciudades desactivadas en DataGridView*/
+        public DataTable ListarCiudadesDesac()
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+
+            DataTable tabla = new DataTable();
+            SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD FROM TABCIUDADES WHERE ESTADOS = '0' ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            tabla.Load(Reader);
+            Reader.Close();
+            Connect.Close();
+
+            return tabla;
+        }
+
+        /*Query para Desactivar o Activar los ciudades*/
+        public static int  EstadosCiudades(DatosClient DatosClient)
         {
             int rest = 0;
             SqlConnection Connect = DB_Connection.DBConnection();
@@ -142,6 +157,7 @@ namespace DuFa_express
             }
             return rest;
         }
+
         /*Query para mostrar los sucursales*/
         public DataTable ListarSucursales()
         {
@@ -185,7 +201,7 @@ namespace DuFa_express
             return resultado;
         }
 
-        /*Query para Desactivar Sucursales*/
+        /*Query para Desactivar o Activar Sucursales*/
         public static int DesactivarSucursales(DatosClient DatosClient)
         {
             int rest = 0;

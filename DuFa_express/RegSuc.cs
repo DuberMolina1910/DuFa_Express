@@ -111,8 +111,13 @@ namespace DuFa_express
         private void BtnReactivarSuc_Click(object sender, EventArgs e)
         {
             HabltSuc habsuc = new HabltSuc();
-            habsuc.Show();
-            this.Close();
+            habsuc.ShowDialog();
+            
+        }
+
+        private void BtnRfrsDtGrdVwRegSuc_Click(object sender, EventArgs e)
+        {
+            MostrarSucursales();
         }
     }
 }

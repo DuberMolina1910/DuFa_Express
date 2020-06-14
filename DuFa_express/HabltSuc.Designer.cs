@@ -71,7 +71,7 @@
             this.Controls.Add(this.BtnCanclHabSuc);
             this.Controls.Add(this.BtnHabSuc);
             this.Controls.Add(this.DtGrdVwHabSuc);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "HabltSuc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HabltSuc";

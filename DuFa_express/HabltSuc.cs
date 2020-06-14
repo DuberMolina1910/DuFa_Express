@@ -25,7 +25,7 @@ namespace DuFa_express
         public void MostrarSucursales()
         {
             UsuarioDAL_C Suc = new UsuarioDAL_C();
-            DtGrdVwHabSuc.DataSource = Suc.ListarSucursales();
+            DtGrdVwHabSuc.DataSource = Suc.ListarSucursalesDesac();
 
         }
 
@@ -41,13 +41,13 @@ namespace DuFa_express
                     enviar.Estado = true;
                     enviar.SucursalOperarios = Convert.ToString(DtGrdVwHabSuc.CurrentRow.Cells["NOMSUCURSAL"].Value);
                     int res = UsuarioDAL_C.DesactivarSucursales(enviar);
-
+                    
                 }
                 else
                     this.Close();
             }
             else
-                MessageBox.Show("Seleccione una ciudad a eliminar");
+                MessageBox.Show("Seleccione una Sucursal a Habilitar");
 
             this.Close();
         }
@@ -57,6 +57,7 @@ namespace DuFa_express
             
             this.Close();
         }
+
 
     }
 }

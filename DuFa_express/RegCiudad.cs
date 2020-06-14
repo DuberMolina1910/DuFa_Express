@@ -96,7 +96,7 @@ namespace DuFa_express
                     DatosClient enviar = new DatosClient();
                     enviar.Estado = false;
                     enviar.CiudadUsu = Convert.ToString(DtGrdVTabCiudades.CurrentRow.Cells["NOMCIUDAD"].Value);
-                    int res = UsuarioDAL_C.DesactivarCiudades(enviar);
+                    int res = UsuarioDAL_C.EstadosCiudades(enviar);
                     
                     MostrarCiudades();
                 }
@@ -105,6 +105,12 @@ namespace DuFa_express
             }
             else
                 MessageBox.Show("Seleccione una ciudad a eliminar");
+        }
+
+        private void BtnReacCiud_Click(object sender, EventArgs e)
+        {
+            HabCiud habciud = new HabCiud();
+            habciud.ShowDialog();
         }
     }
 }
