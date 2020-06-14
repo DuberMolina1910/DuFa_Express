@@ -90,6 +90,8 @@
             // 
             // DtGrdVTabCiudades
             // 
+            this.DtGrdVTabCiudades.AllowUserToAddRows = false;
+            this.DtGrdVTabCiudades.AllowUserToDeleteRows = false;
             this.DtGrdVTabCiudades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DtGrdVTabCiudades.BackgroundColor = System.Drawing.Color.White;
             this.DtGrdVTabCiudades.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;

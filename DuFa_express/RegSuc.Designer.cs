@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblRegCiudad = new System.Windows.Forms.Label();
             this.txtRegSuc = new System.Windows.Forms.TextBox();
             this.CmbBxSelecCiudRegSuc = new System.Windows.Forms.ComboBox();
@@ -85,9 +86,25 @@
             // 
             // DtGrdVwTabSuc
             // 
+            this.DtGrdVwTabSuc.AllowUserToAddRows = false;
+            this.DtGrdVwTabSuc.AllowUserToDeleteRows = false;
+            this.DtGrdVwTabSuc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DtGrdVwTabSuc.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.DtGrdVwTabSuc.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DtGrdVwTabSuc.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DtGrdVwTabSuc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DtGrdVwTabSuc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtGrdVwTabSuc.Location = new System.Drawing.Point(50, 204);
             this.DtGrdVwTabSuc.Name = "DtGrdVwTabSuc";
+            this.DtGrdVwTabSuc.RowHeadersVisible = false;
+            this.DtGrdVwTabSuc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DtGrdVwTabSuc.Size = new System.Drawing.Size(344, 139);
             this.DtGrdVwTabSuc.TabIndex = 6;
             // 
