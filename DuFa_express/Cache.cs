@@ -28,7 +28,8 @@ namespace DuFa_express
         public static string NomUsu { set; get; }
         public static string TelUsu { set; get; }
         public static string CorreoUsu { set; get; }
-        public static string DirDomUsu { set; get; }
-        
+        public static string DirDomUsu { set; get; }        
+        public static string ValTotalEnvio { set; get; }
+
     }
 }

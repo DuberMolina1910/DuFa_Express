@@ -21,13 +21,13 @@ namespace DuFa_express
         {
             if (txtRegSuc.Text == "NOMBRE DE LA SUCURSAL")
             {
-                txtRegSuc.Text = " ";
+                txtRegSuc.Text = "";
             }
         }
 
         private void txtRegCiudad_Leave(object sender, EventArgs e)
         {
-            if (txtRegSuc.Text == " ")
+            if (txtRegSuc.Text == "")
             {
                 txtRegSuc.Text = "NOMBRE DE LA SUCURSAL";
             }

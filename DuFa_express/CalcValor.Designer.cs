@@ -30,14 +30,14 @@
         {
             this.cmbCiudadOri = new System.Windows.Forms.ComboBox();
             this.cmbCiudadDes = new System.Windows.Forms.ComboBox();
-            this.txtSeguro = new System.Windows.Forms.TextBox();
+            this.txtValDeclarado = new System.Windows.Forms.TextBox();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.btnCalc = new System.Windows.Forms.Button();
             this.lblInfo = new System.Windows.Forms.Label();
             this.lblCiudadOri = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblValDeclarado = new System.Windows.Forms.Label();
+            this.lblPeso = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmbCiudadOri
@@ -58,14 +58,17 @@
             this.cmbCiudadDes.Size = new System.Drawing.Size(159, 25);
             this.cmbCiudadDes.TabIndex = 1;
             // 
-            // txtSeguro
+            // txtValDeclarado
             // 
-            this.txtSeguro.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtSeguro.Location = new System.Drawing.Point(163, 173);
-            this.txtSeguro.Multiline = true;
-            this.txtSeguro.Name = "txtSeguro";
-            this.txtSeguro.Size = new System.Drawing.Size(159, 25);
-            this.txtSeguro.TabIndex = 2;
+            this.txtValDeclarado.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtValDeclarado.Location = new System.Drawing.Point(163, 173);
+            this.txtValDeclarado.Multiline = true;
+            this.txtValDeclarado.Name = "txtValDeclarado";
+            this.txtValDeclarado.Size = new System.Drawing.Size(159, 25);
+            this.txtValDeclarado.TabIndex = 2;
+            this.txtValDeclarado.Text = "0";
+            this.txtValDeclarado.Enter += new System.EventHandler(this.txtValDeclarado_Enter);
+            this.txtValDeclarado.Leave += new System.EventHandler(this.txtValDeclarado_Leave);
             // 
             // txtPeso
             // 
@@ -96,7 +99,8 @@
             this.lblInfo.Size = new System.Drawing.Size(348, 57);
             this.lblInfo.TabIndex = 146;
             this.lblInfo.Text = "Recuerde que al declarar un valor se adquiere un seguro lo cual aumenta el valor " +
-    "total del envío, en caso de no adquirir el seguro la empresa";
+    "total del envío, en caso de no adquirir el seguro la empresa no se hara cargo po" +
+    "r daños";
             // 
             // lblCiudadOri
             // 
@@ -118,25 +122,25 @@
             this.label1.Text = "Ciudad Destino";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // lblValDeclarado
             // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 175);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 23);
-            this.label2.TabIndex = 149;
-            this.label2.Text = "Valor Declarado";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblValDeclarado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValDeclarado.Location = new System.Drawing.Point(25, 175);
+            this.lblValDeclarado.Name = "lblValDeclarado";
+            this.lblValDeclarado.Size = new System.Drawing.Size(132, 23);
+            this.lblValDeclarado.TabIndex = 149;
+            this.lblValDeclarado.Text = "Valor Declarado";
+            this.lblValDeclarado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label3
+            // lblPeso
             // 
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 213);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 23);
-            this.label3.TabIndex = 150;
-            this.label3.Text = "Peso Producto";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPeso.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeso.Location = new System.Drawing.Point(25, 213);
+            this.lblPeso.Name = "lblPeso";
+            this.lblPeso.Size = new System.Drawing.Size(132, 23);
+            this.lblPeso.TabIndex = 150;
+            this.lblPeso.Text = "Peso Producto";
+            this.lblPeso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // CalcValor
             // 
@@ -144,14 +148,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(372, 311);
             this.ControlBox = false;
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblPeso);
+            this.Controls.Add(this.lblValDeclarado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCiudadOri);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.btnCalc);
             this.Controls.Add(this.txtPeso);
-            this.Controls.Add(this.txtSeguro);
+            this.Controls.Add(this.txtValDeclarado);
             this.Controls.Add(this.cmbCiudadDes);
             this.Controls.Add(this.cmbCiudadOri);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -170,13 +174,13 @@
 
         private System.Windows.Forms.ComboBox cmbCiudadOri;
         private System.Windows.Forms.ComboBox cmbCiudadDes;
-        private System.Windows.Forms.TextBox txtSeguro;
+        private System.Windows.Forms.TextBox txtValDeclarado;
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.Button btnCalc;
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Label lblCiudadOri;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblValDeclarado;
+        private System.Windows.Forms.Label lblPeso;
     }
 }

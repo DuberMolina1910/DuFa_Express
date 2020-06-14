@@ -67,6 +67,7 @@ namespace DuFa_express
                     txtDirDes.Enabled = true;
                     txtDetEnvio.Enabled = true;
                     btnConfirmar.Enabled = true;
+                    lblValEnvio.Text = CacheRegEnvio.ValTotalEnvio;
                 }
                 else
                     MensajeError("Usuario no existe.");

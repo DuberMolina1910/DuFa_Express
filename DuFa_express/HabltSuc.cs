@@ -40,7 +40,7 @@ namespace DuFa_express
                     DatosClient enviar = new DatosClient();
                     enviar.Estado = true;
                     enviar.SucursalOperarios = Convert.ToString(DtGrdVwHabSuc.CurrentRow.Cells["NOMSUCURSAL"].Value);
-                    int res = UsuarioDAL_C.DesactivarSucursales(enviar);
+                    int res = UsuarioDAL_C.EstadosSucursales(enviar);
                     
                 }
                 else
