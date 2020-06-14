@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRegCiudad = new System.Windows.Forms.Button();
             this.lblRegCiudad = new System.Windows.Forms.Label();
             this.txtRegCiudad = new System.Windows.Forms.TextBox();
@@ -41,7 +44,7 @@
             // btnRegCiudad
             // 
             this.btnRegCiudad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegCiudad.Location = new System.Drawing.Point(363, 168);
+            this.btnRegCiudad.Location = new System.Drawing.Point(345, 168);
             this.btnRegCiudad.Name = "btnRegCiudad";
             this.btnRegCiudad.Size = new System.Drawing.Size(100, 25);
             this.btnRegCiudad.TabIndex = 1;
@@ -63,9 +66,9 @@
             // txtRegCiudad
             // 
             this.txtRegCiudad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegCiudad.Location = new System.Drawing.Point(107, 103);
+            this.txtRegCiudad.Location = new System.Drawing.Point(39, 103);
             this.txtRegCiudad.Name = "txtRegCiudad";
-            this.txtRegCiudad.Size = new System.Drawing.Size(264, 23);
+            this.txtRegCiudad.Size = new System.Drawing.Size(282, 23);
             this.txtRegCiudad.TabIndex = 2;
             this.txtRegCiudad.Text = "NOMBRE DE LA CIUDAD";
             this.txtRegCiudad.TextChanged += new System.EventHandler(this.txtRegCiudad_TextChanged);
@@ -77,7 +80,7 @@
             this.lblMsgError.AutoSize = true;
             this.lblMsgError.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMsgError.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblMsgError.Location = new System.Drawing.Point(104, 129);
+            this.lblMsgError.Location = new System.Drawing.Point(39, 129);
             this.lblMsgError.Name = "lblMsgError";
             this.lblMsgError.Size = new System.Drawing.Size(34, 17);
             this.lblMsgError.TabIndex = 16;
@@ -86,17 +89,49 @@
             // 
             // DtGrdVTabCiudades
             // 
+            this.DtGrdVTabCiudades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DtGrdVTabCiudades.BackgroundColor = System.Drawing.Color.White;
+            this.DtGrdVTabCiudades.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DtGrdVTabCiudades.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DtGrdVTabCiudades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DtGrdVTabCiudades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtGrdVTabCiudades.Location = new System.Drawing.Point(83, 168);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DtGrdVTabCiudades.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DtGrdVTabCiudades.EnableHeadersVisualStyles = false;
+            this.DtGrdVTabCiudades.Location = new System.Drawing.Point(39, 168);
             this.DtGrdVTabCiudades.Name = "DtGrdVTabCiudades";
-            this.DtGrdVTabCiudades.Size = new System.Drawing.Size(243, 150);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DtGrdVTabCiudades.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DtGrdVTabCiudades.RowHeadersVisible = false;
+            this.DtGrdVTabCiudades.RowHeadersWidth = 40;
+            this.DtGrdVTabCiudades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DtGrdVTabCiudades.Size = new System.Drawing.Size(282, 150);
             this.DtGrdVTabCiudades.TabIndex = 17;
             this.DtGrdVTabCiudades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnDesacCiudad
             // 
             this.btnDesacCiudad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDesacCiudad.Location = new System.Drawing.Point(363, 199);
+            this.btnDesacCiudad.Location = new System.Drawing.Point(345, 199);
             this.btnDesacCiudad.Name = "btnDesacCiudad";
             this.btnDesacCiudad.Size = new System.Drawing.Size(100, 25);
             this.btnDesacCiudad.TabIndex = 18;
@@ -107,7 +142,7 @@
             // btnCancelarCiudad
             // 
             this.btnCancelarCiudad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarCiudad.Location = new System.Drawing.Point(38, 351);
+            this.btnCancelarCiudad.Location = new System.Drawing.Point(39, 348);
             this.btnCancelarCiudad.Name = "btnCancelarCiudad";
             this.btnCancelarCiudad.Size = new System.Drawing.Size(100, 25);
             this.btnCancelarCiudad.TabIndex = 19;

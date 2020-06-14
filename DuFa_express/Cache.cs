@@ -22,4 +22,13 @@ namespace DuFa_express
         public static string NomTipoPer { set; get; }
         public static string NomTipoId { set; get; }
     }
+
+    class CacheRegEnvio
+    {
+        public static string NomUsu { set; get; }
+        public static string TelUsu { set; get; }
+        public static string CorreoUsu { set; get; }
+        public static string DirDomUsu { set; get; }
+        
+    }
 }

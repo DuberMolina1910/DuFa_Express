@@ -122,7 +122,7 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD FROM TABCIUDADES WHERE ESTADOS = '0' ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD AS 'CIUDADES REGISTRADAS' FROM TABCIUDADES WHERE ESTADOS = '1' ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -155,6 +155,25 @@ namespace DuFa_express
             Connect.Close();
 
             return tabla;
+        }
+
+        /*Query para validar usuario al consultar en el registro de envios*/
+        public static int CosultarUsuarios(DatosClient DatosClient)
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+            int resultado = -1;
+            SqlCommand command = new SqlCommand(string.Format("SELECT TABUSUARIOS.*, TABTIPOPER.DESCTIPOPER, TABTIPOID.NOMTIPOID FROM TABUSUARIOS, TABTIPOPER, TABTIPOID WHERE NUMIDUSU = '{0}' AND TABTIPOPER.IDTIPOPER = '{1}' AND TABTIPOID.IDTIPOID = TABUSUARIOS.IDTIPOID", DatosClient.NumIdUsu, DatosClient.IdTipoPer), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            while (Reader.Read())
+            {
+                CacheRegEnvio.NomUsu = Reader.GetString(3);
+                CacheRegEnvio.TelUsu = Reader.GetString(5);
+                CacheRegEnvio.CorreoUsu = Reader.GetString(6);
+                CacheRegEnvio.DirDomUsu = Reader.GetString(7);
+                resultado = 50;
+            }
+            Connect.Close();
+            return resultado;
         }
     }
 }

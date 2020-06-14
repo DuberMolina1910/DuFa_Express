@@ -94,8 +94,8 @@ namespace DuFa_express
                     //Llevar a cabo la desactivacion
                     
                     DatosClient enviar = new DatosClient();
-                    enviar.Estado = true;
-                    enviar.CiudadUsu = Convert.ToString(DtGrdVTabCiudades.CurrentRow.Cells["NOMCIUDAD"].Value);
+                    enviar.Estado = false;
+                    enviar.CiudadUsu = Convert.ToString(DtGrdVTabCiudades.CurrentRow.Cells["CIUDADES REGISTRADAS"].Value);
                     int res = UsuarioDAL_C.DesactivarCiudades(enviar);
                     
                     MostrarCiudades();

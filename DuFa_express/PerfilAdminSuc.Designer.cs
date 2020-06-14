@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilAdminSuc));
             this.pnlUsuLog = new System.Windows.Forms.Panel();
+            this.lblRegEnvio = new System.Windows.Forms.Label();
             this.lblRegCiudad = new System.Windows.Forms.Label();
             this.lblCerrarSesión = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +47,7 @@
             // pnlUsuLog
             // 
             this.pnlUsuLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.pnlUsuLog.Controls.Add(this.lblRegEnvio);
             this.pnlUsuLog.Controls.Add(this.lblRegCiudad);
             this.pnlUsuLog.Controls.Add(this.lblCerrarSesión);
             this.pnlUsuLog.Controls.Add(this.label2);
@@ -57,6 +59,18 @@
             this.pnlUsuLog.Name = "pnlUsuLog";
             this.pnlUsuLog.Size = new System.Drawing.Size(200, 490);
             this.pnlUsuLog.TabIndex = 3;
+            // 
+            // lblRegEnvio
+            // 
+            this.lblRegEnvio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblRegEnvio.ForeColor = System.Drawing.Color.White;
+            this.lblRegEnvio.Location = new System.Drawing.Point(2, 191);
+            this.lblRegEnvio.Name = "lblRegEnvio";
+            this.lblRegEnvio.Size = new System.Drawing.Size(197, 35);
+            this.lblRegEnvio.TabIndex = 6;
+            this.lblRegEnvio.Text = "Registrar Envío";
+            this.lblRegEnvio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblRegEnvio.Click += new System.EventHandler(this.lblRegEnvio_Click);
             // 
             // lblRegCiudad
             // 
@@ -74,7 +88,7 @@
             // 
             this.lblCerrarSesión.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblCerrarSesión.ForeColor = System.Drawing.Color.White;
-            this.lblCerrarSesión.Location = new System.Drawing.Point(2, 311);
+            this.lblCerrarSesión.Location = new System.Drawing.Point(2, 446);
             this.lblCerrarSesión.Name = "lblCerrarSesión";
             this.lblCerrarSesión.Size = new System.Drawing.Size(197, 35);
             this.lblCerrarSesión.TabIndex = 4;
@@ -177,5 +191,6 @@
         private System.Windows.Forms.Panel pnlShowSubForm;
         private System.Windows.Forms.Label lblRegCiudad;
         private System.Windows.Forms.PictureBox picBxLogoV2;
+        private System.Windows.Forms.Label lblRegEnvio;
     }
 }

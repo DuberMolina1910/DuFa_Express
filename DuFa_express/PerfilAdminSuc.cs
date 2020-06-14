@@ -47,14 +47,14 @@ namespace DuFa_express
         {
             if (this.pnlShowSubForm.Controls.Count > 0)
                 this.pnlShowSubForm.Controls.RemoveAt(0);
-            {
-                Form frm = SubForms as Form;
-                frm.TopLevel = false;
-                frm.Dock = DockStyle.Fill;
-                this.pnlShowSubForm.Controls.Add(frm);
-                this.pnlShowSubForm.Tag = frm;
-                frm.Show();
-            }
+                {
+                    Form frm = SubForms as Form;
+                    frm.TopLevel = false;
+                    frm.Dock = DockStyle.Fill;
+                    this.pnlShowSubForm.Controls.Add(frm);
+                    this.pnlShowSubForm.Tag = frm;
+                    frm.Show();
+                }
         }
 
         private void lblRegCiudad_Click(object sender, EventArgs e)
@@ -66,6 +66,11 @@ namespace DuFa_express
         {
             lblNombre.Text = Cache.NomUsu;
             lblNomTipoPer.Text = Cache.NomTipoPer;
+        }
+
+        private void lblRegEnvio_Click(object sender, EventArgs e)
+        {
+            AbrirSubForms(new RegEnvio());
         }
     }
 }
