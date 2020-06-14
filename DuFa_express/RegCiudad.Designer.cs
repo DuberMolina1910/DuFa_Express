@@ -36,6 +36,7 @@
             this.btnDesacCiudad = new System.Windows.Forms.Button();
             this.btnCancelarCiudad = new System.Windows.Forms.Button();
             this.BtnReacCiud = new System.Windows.Forms.Button();
+            this.BtnRfrsCiud = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DtGrdVTabCiudades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,11 +128,23 @@
             this.BtnReacCiud.UseVisualStyleBackColor = true;
             this.BtnReacCiud.Click += new System.EventHandler(this.BtnReacCiud_Click);
             // 
+            // BtnRfrsCiud
+            // 
+            this.BtnRfrsCiud.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRfrsCiud.Location = new System.Drawing.Point(250, 334);
+            this.BtnRfrsCiud.Name = "BtnRfrsCiud";
+            this.BtnRfrsCiud.Size = new System.Drawing.Size(100, 25);
+            this.BtnRfrsCiud.TabIndex = 21;
+            this.BtnRfrsCiud.Text = "REFRESCAR";
+            this.BtnRfrsCiud.UseVisualStyleBackColor = true;
+            this.BtnRfrsCiud.Click += new System.EventHandler(this.BtnRfrsCiud_Click);
+            // 
             // RegCiudad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 400);
+            this.Controls.Add(this.BtnRfrsCiud);
             this.Controls.Add(this.BtnReacCiud);
             this.Controls.Add(this.btnCancelarCiudad);
             this.Controls.Add(this.btnDesacCiudad);
@@ -160,5 +173,6 @@
         private System.Windows.Forms.Button btnDesacCiudad;
         private System.Windows.Forms.Button btnCancelarCiudad;
         private System.Windows.Forms.Button BtnReacCiud;
+        private System.Windows.Forms.Button BtnRfrsCiud;
     }
 }

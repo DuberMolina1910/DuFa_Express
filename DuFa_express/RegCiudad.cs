@@ -112,5 +112,10 @@ namespace DuFa_express
             HabCiud habciud = new HabCiud();
             habciud.ShowDialog();
         }
+
+        private void BtnRfrsCiud_Click(object sender, EventArgs e)
+        {
+            MostrarCiudades();
+        }
     }
 }
