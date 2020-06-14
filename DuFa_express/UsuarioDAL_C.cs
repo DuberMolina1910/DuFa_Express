@@ -108,7 +108,7 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABCIUDADES WHERE ESTADOS = '0' ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABCIUDADES WHERE ESTADOS = '1' ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -122,7 +122,7 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD FROM TABCIUDADES WHERE ESTADOS = '0' ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD FROM TABCIUDADES WHERE ESTADOS = '1' ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -148,13 +148,54 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT NomSucursal,NomCiudad FROM TABSUCURSALES,TabCiudades WHERE TabSucursales.IdCiudad = TabCiudades.IdCiudad AND Estados = '0' ORDER BY NOMSUCURSAL ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD,NOMSUCURSAL FROM TABSUCURSALES,TABCIUDADES WHERE TABSUCURSALES.IDCIUDAD = TABCIUDADES.IDCIUDAD AND TABSUCURSALES.ESTADOSSUC = '1' AND TABCIUDADES.ESTADOS = '1'  ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
             Connect.Close();
 
             return tabla;
+        }
+
+        /*Query para mostrar los sucursales deshabilitadas*/
+        public DataTable ListarSucursalesDesac()
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+
+            DataTable tabla = new DataTable();
+            SqlCommand command = new SqlCommand(string.Format("SELECT NOMCIUDAD,NOMSUCURSAL FROM TABSUCURSALES,TABCIUDADES WHERE TABSUCURSALES.IDCIUDAD = TABCIUDADES.IDCIUDAD AND TABSUCURSALES.ESTADOSSUC = '0' AND TABCIUDADES.ESTADOS = '1'  ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            tabla.Load(Reader);
+            Reader.Close();
+            Connect.Close();
+
+            return tabla;
+        }
+
+        /*Query para registrar Sucursales*/
+        public static int RegistrarSuc(int pIdCiudad, string pNomSuc)
+        {
+            int resultado = 0;
+            SqlConnection Connect = DB_Connection.DBConnection();
+            {
+                SqlCommand command = new SqlCommand(string.Format("INSERT INTO TABSUCURSALES  (IDCIUDAD, NOMSUCURSAL) VALUES ('{0}','{1}')", pIdCiudad,pNomSuc), Connect);
+                resultado = command.ExecuteNonQuery();
+                Connect.Close();
+            }
+            return resultado;
+        }
+
+        /*Query para Desactivar Sucursales*/
+        public static int DesactivarSucursales(DatosClient DatosClient)
+        {
+            int rest = 0;
+            SqlConnection Connect = DB_Connection.DBConnection();
+            {
+                SqlCommand com = new SqlCommand(string.Format("UPDATE TABSUCURSALES SET ESTADOSSUC='{0}' WHERE NOMSUCURSAL ='{1}'", DatosClient.Estado, DatosClient.SucursalOperarios), Connect);
+                rest = com.ExecuteNonQuery();
+                Connect.Close();
+            }
+            return rest;
         }
 
     }

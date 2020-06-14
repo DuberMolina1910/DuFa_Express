@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cache.cs" />
+    <Compile Include="HabltSuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HabltSuc.Designer.cs">
+      <DependentUpon>HabltSuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Index.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
       <DependentUpon>RegUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuarioDAL_C.cs" />
+    <EmbeddedResource Include="HabltSuc.resx">
+      <DependentUpon>HabltSuc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
     </EmbeddedResource>
