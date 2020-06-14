@@ -75,7 +75,7 @@ namespace DuFa_express
         public void MostrarCiudades()
         {
             UsuarioDAL_C Ciudad = new UsuarioDAL_C();
-            DtGrdVTabCiudades.DataSource = Ciudad.MostrarCiudades();
+            DtGrdVTabCiudades.DataSource = Ciudad.MostrarCiudadesDGV();
             
         }
 
