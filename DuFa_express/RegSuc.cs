@@ -77,7 +77,7 @@ namespace DuFa_express
 
         private void lblMsgError_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void MensajeError(string errorMsg)
@@ -112,7 +112,7 @@ namespace DuFa_express
         {
             HabltSuc habsuc = new HabltSuc();
             habsuc.ShowDialog();
-            
+
         }
 
         private void BtnRfrsDtGrdVwRegSuc_Click(object sender, EventArgs e)

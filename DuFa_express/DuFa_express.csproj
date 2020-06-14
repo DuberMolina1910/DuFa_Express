@@ -111,6 +111,12 @@
     <Compile Include="RegClient.Designer.cs">
       <DependentUpon>RegClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegSuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegSuc.Designer.cs">
+      <DependentUpon>RegSuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </Compile>
     <EmbeddedResource Include="RegClient.resx">
       <DependentUpon>RegClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegSuc.resx">
+      <DependentUpon>RegSuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegUsers.resx">
       <DependentUpon>RegUsers.cs</DependentUpon>
