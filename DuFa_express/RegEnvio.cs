@@ -18,13 +18,15 @@ namespace DuFa_express
         }
 
         private void RegEnvio_Load(object sender, EventArgs e)
+        {            
+        }
+        private void timerFechaEnvio_Tick(object sender, EventArgs e)
         {
-            ListarTipoPerRegEnvios();
+            lblShowFechaEnvio.Text = DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToLongTimeString();
         }
 
         private void lblNomUsu_Click(object sender, EventArgs e)
         {
-
         }
 
         private void MensajeError(string errorMsg)
@@ -40,7 +42,7 @@ namespace DuFa_express
             {
                 DatosClient enviar = new DatosClient();
                 enviar.NumIdUsu = txtNumId.Text;
-                enviar.IdTipoPer = Convert.ToString(cmbTipoPer.SelectedValue);
+                enviar.IdTipoPer = "5";
 
                 int res = UsuarioDAL_C.CosultarUsuarios(enviar);
 
@@ -55,10 +57,6 @@ namespace DuFa_express
                     CalcValor calcval = new CalcValor();
                     calcval.ShowDialog();
 
-                    MensajeError("Consulta Exitosa.");
-
-                    cmbTipoUsu.Enabled = true;
-                    dtpFechEnvio.Enabled = true;
                     cmbIdSucOri.Enabled = true;
                     cmbIdSucDes.Enabled = true;
                     txtNumIdDes.Enabled = true;
@@ -67,7 +65,7 @@ namespace DuFa_express
                     txtDirDes.Enabled = true;
                     txtDetEnvio.Enabled = true;
                     btnConfirmar.Enabled = true;
-                    lblValEnvio.Text = CacheRegEnvio.ValTotalEnvio;
+                    lblValEnvio.Text = "COP " + CacheRegEnvio.ValTotalEnvio;
                 }
                 else
                     MensajeError("Usuario no existe.");
@@ -78,21 +76,20 @@ namespace DuFa_express
             }
         }
 
-        /*Listar los tipos de perfiles en el formulario de registrar envios*/
-        public void ListarTipoPerRegEnvios()
-        {
-            UsuarioDAL_C TipoPer = new UsuarioDAL_C();
-            cmbTipoPer.DataSource = TipoPer.ListarTipoPer();
-            cmbTipoPer.DisplayMember = "DescTipoPer";
-            cmbTipoPer.ValueMember = "IdTipoPer";
-        }
-
         private void InfoUsuariosRegEnvios()
         {
             lblNomUsu.Text = CacheRegEnvio.NomUsu;
             lblCorreoUsu.Text = CacheRegEnvio.CorreoUsu;
             lblTelUsu.Text = CacheRegEnvio.TelUsu;
             lblDirUsu.Text = CacheRegEnvio.DirDomUsu;
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            DatosClient enviar = new DatosClient();
+            enviar.NumIdUsu = txtNumId.Text;
+            enviar.IdTipoPer = "5";
+            enviar.IdEstadoEnvio = "1";
         }
     }
 }

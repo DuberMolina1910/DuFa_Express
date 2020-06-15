@@ -224,7 +224,7 @@ namespace DuFa_express
         {
             SqlConnection Connect = DB_Connection.DBConnection();
             int resultado = -1;
-            SqlCommand command = new SqlCommand(string.Format("SELECT TABUSUARIOS.*, TABTIPOPER.DESCTIPOPER, TABTIPOID.NOMTIPOID FROM TABUSUARIOS, TABTIPOPER, TABTIPOID WHERE NUMIDUSU = '{0}' AND TABTIPOPER.IDTIPOPER = '{1}' AND TABTIPOID.IDTIPOID = TABUSUARIOS.IDTIPOID", DatosClient.NumIdUsu, DatosClient.IdTipoPer), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT TABUSUARIOS.*, TABTIPOPER.DESCTIPOPER, TABTIPOID.NOMTIPOID FROM TABUSUARIOS, TABTIPOPER, TABTIPOID WHERE NUMIDUSU = '{0}' AND TABUSUARIOS.IDTIPOPER = '{1}' AND TABTIPOID.IDTIPOID = TABUSUARIOS.IDTIPOID", DatosClient.NumIdUsu, DatosClient.IdTipoPer), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             while (Reader.Read())
             {
@@ -237,5 +237,6 @@ namespace DuFa_express
             Connect.Close();
             return resultado;
         }
+
     }
 }

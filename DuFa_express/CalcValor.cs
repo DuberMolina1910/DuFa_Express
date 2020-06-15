@@ -20,7 +20,7 @@ namespace DuFa_express
         private void CalcValor_Load(object sender, EventArgs e)
         {
             ListarCiudadOrigen();
-            ListarCiudadDestino();
+            ListarCiudadDestino();                        
         }
 
         private void txtValDeclarado_Enter(object sender, EventArgs e)
@@ -58,60 +58,270 @@ namespace DuFa_express
         private void MensajeError(string errorMsg)
         {
             lblInfo.Text = errorMsg;
-            //lblInfo.Visible = true;
         }
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
-            double valorTotal = 0;
-            double valorCiudad = 0;
-            double seguro = 0;
-            double peso = 0;
-            
+            double valorTotal = 0; // Variable valor Total del envio
+            double vd = 0; // Variable para guardar el valor declarado del envio
+            double vsp = 0; // Variable del valor sin peso cuando se declara un valor del envio
+            double vc = 0; // Variable valor por ciudad
+            double peso = 0; // Variable para guardar el peso
+            double vp = 0; // Variable para guardar el valor cuando no se declara valor del envio, ósea el valor total solo se incrementa por peso
+
 
             if (Convert.ToString(cmbCiudadOri.SelectedValue) == Convert.ToString(cmbCiudadDes.SelectedValue) && txtPeso.Text != "")
             {
-                valorCiudad = 5000;
-                peso = Convert.ToDouble(txtPeso.Text);
-                valorTotal = valorCiudad;
+                vc = 5000;
+                peso = Convert.ToInt32(txtPeso.Text);
+                vd = Convert.ToInt32(txtValDeclarado.Text);
 
-                if (txtValDeclarado.Text != "0")
+                if (vd != Convert.ToInt32("0"))
                 {
-                    seguro = 10000;
-                    valorTotal = valorCiudad + seguro;
+                    if (vd <= 20000)
+                    {
+                        vsp = vc + (vc * 0.1);
 
-                    CacheRegEnvio.ValTotalEnvio = Convert.ToString("$ " + valorTotal);
+                        if (peso <= 10)
+                        {
+                            valorTotal = vsp + (vc * 0.05);
+                        }
+                        else if (peso >= 11 && peso <= 30)
+                        {
+                            valorTotal = vsp + (vc * 0.1);
+                        }
+                        else if (peso >= 31 && peso <= 50)
+                        {
+                            valorTotal = vsp + (vc * 0.2);
+                        }
+                        else if (peso >= 51)
+                        {
+                            valorTotal = vsp + 3000;
+                        }
+                    }
+                    else if (vd >= 20001 && vd <= 50000)
+                    {
+                        vsp = vc + (vc * 0.25);
+
+                        if (peso <= 10)
+                        {
+                            valorTotal = vsp + (vc * 0.05);
+                        }
+                        else if (peso >= 11 && peso <= 30)
+                        {
+                            valorTotal = vsp + (vc * 0.1);
+                        }
+                        else if (peso >= 31 && peso <= 50)
+                        {
+                            valorTotal = vsp + (vc * 0.2);
+                        }
+                        else if (peso >= 51)
+                        {
+                            valorTotal = vsp + 3000;
+                        }
+                    }
+                    else if (vd >= 50001 && vd <= 100000)
+                    {
+                        vsp = vc + (vc * 0.5);
+
+                        if (peso <= 10)
+                        {
+                            valorTotal = vsp + (vc * 0.05);
+                        }
+                        else if (peso >= 11 && peso <= 30)
+                        {
+                            valorTotal = vsp + (vc * 0.1);
+                        }
+                        else if (peso >= 31 && peso <= 50)
+                        {
+                            valorTotal = vsp + (vc * 0.2);
+                        }
+                        else if (peso >= 51)
+                        {
+                            valorTotal = vsp + 3000;
+                        }
+                    }
+                    else if (vd >= 100001)
+                    {
+                        vsp = vc + 10000;
+
+                        if (peso <= 10)
+                        {
+                            valorTotal = vsp + (vc * 0.05);
+                        }
+                        else if (peso >= 11 && peso <= 30)
+                        {
+                            valorTotal = vsp + (vc * 0.1);
+                        }
+                        else if (peso >= 31 && peso <= 50)
+                        {
+                            valorTotal = vsp + (vc * 0.2);
+                        }
+                        else if (peso >= 51)
+                        {
+                            valorTotal = vsp + 3000;
+                        }
+                    }
+
+                    CacheRegEnvio.ValTotalEnvio = Convert.ToString("$" + valorTotal);
+                    this.Close();
                 }
-                else
+                else if (Convert.ToString(vd) != "")
                 {
-                    CacheRegEnvio.ValTotalEnvio = Convert.ToString("$ " + valorTotal);
+
+                    vc = 5000;
+                    peso = Convert.ToInt32(txtPeso.Text);
+                    vp = vc;
+
+                    if (peso <= 10)
+                    {
+                        valorTotal = vp + (vc * 0.05);
+                    }
+                    else if (peso >= 11 && peso <= 30)
+                    {
+                        valorTotal = vp + (vc * 0.1);
+                    }
+                    else if (peso >= 31 && peso <= 50)
+                    {
+                        valorTotal = vp + (vc * 0.2);
+                    }
+                    else if (peso >= 51)
+                    {
+                        valorTotal = vp + 3000;
+                    }                    
+
+                    CacheRegEnvio.ValTotalEnvio = Convert.ToString("$" + valorTotal);
+                    this.Close();
                 }
-                this.Close();
             }
-
-            else if (txtPeso.Text != "")
+            else if (Convert.ToString(cmbCiudadOri.SelectedValue) != Convert.ToString(cmbCiudadDes.SelectedValue) && txtPeso.Text != "")
             {
-                valorCiudad = 10000;
-                peso = Convert.ToDouble(txtPeso.Text);
-                valorTotal = valorCiudad;
+                vc = 10000;
+                peso = Convert.ToInt32(txtPeso.Text);
+                vd = Convert.ToInt32(txtValDeclarado.Text);
 
-                if (txtValDeclarado.Text != "0")
+                if (vd != Convert.ToInt32("0"))
                 {
-                    seguro = 10000;
-                    valorTotal = valorCiudad + seguro;
+                    if (vd <= 20000)
+                    {
+                        vsp = vc + (vc * 0.1);
 
-                    CacheRegEnvio.ValTotalEnvio = Convert.ToString("$ " + valorTotal);
+                        if (peso <= 10)
+                        {
+                            valorTotal = vsp + (vc * 0.05);
+                        }
+                        else if (peso >= 11 && peso <= 30)
+                        {
+                            valorTotal = vsp + (vc * 0.1);
+                        }
+                        else if (peso >= 31 && peso <= 50)
+                        {
+                            valorTotal = vsp + (vc * 0.2);
+                        }
+                        else if (peso >= 51)
+                        {
+                            valorTotal = vsp + 3000;
+                        }
+                    }
+                    else if (vd >= 20001 && vd <= 50000)
+                    {
+                        vsp = vc + (vc * 0.25);
+
+                        if (peso <= 10)
+                        {
+                            valorTotal = vsp + (vc * 0.05);
+                        }
+                        else if (peso >= 11 && peso <= 30)
+                        {
+                            valorTotal = vsp + (vc * 0.1);
+                        }
+                        else if (peso >= 31 && peso <= 50)
+                        {
+                            valorTotal = vsp + (vc * 0.2);
+                        }
+                        else if (peso >= 51)
+                        {
+                            valorTotal = vsp + 3000;
+                        }
+                    }
+                    else if (vd >= 50001 && vd <= 100000)
+                    {
+                        vsp = vc + (vc * 0.5);
+
+                        if (peso <= 10)
+                        {
+                            valorTotal = vsp + (vc * 0.05);
+                        }
+                        else if (peso >= 11 && peso <= 30)
+                        {
+                            valorTotal = vsp + (vc * 0.1);
+                        }
+                        else if (peso >= 31 && peso <= 50)
+                        {
+                            valorTotal = vsp + (vc * 0.2);
+                        }
+                        else if (peso >= 51)
+                        {
+                            valorTotal = vsp + 3000;
+                        }
+                    }
+                    else if (vd >= 100001)
+                    {
+                        vsp = vc + 10000;
+
+                        if (peso <= 10)
+                        {
+                            valorTotal = vsp + (vc * 0.05);
+                        }
+                        else if (peso >= 11 && peso <= 30)
+                        {
+                            valorTotal = vsp + (vc * 0.1);
+                        }
+                        else if (peso >= 31 && peso <= 50)
+                        {
+                            valorTotal = vsp + (vc * 0.2);
+                        }
+                        else if (peso >= 51)
+                        {
+                            valorTotal = vsp + 3000;
+                        }
+                    }
+
+                    CacheRegEnvio.ValTotalEnvio = Convert.ToString("$" + valorTotal);
+                    this.Close();
                 }
-                else
+                else if (Convert.ToString(vd) != "")
                 {
-                    CacheRegEnvio.ValTotalEnvio = Convert.ToString("$ " + valorTotal);
+
+                    vc = 10000;
+                    peso = Convert.ToInt32(txtPeso.Text);
+                    vp = vc;
+
+                    if (peso <= 10)
+                    {
+                        valorTotal = vp + (vc * 0.05);
+                    }
+                    else if (peso >= 11 && peso <= 30)
+                    {
+                        valorTotal = vp + (vc * 0.1);
+                    }
+                    else if (peso >= 31 && peso <= 50)
+                    {
+                        valorTotal = vp + (vc * 0.2);
+                    }
+                    else if (peso >= 51)
+                    {
+                        valorTotal = vp + 3000;
+                    }
+
+                    CacheRegEnvio.ValTotalEnvio = Convert.ToString("$" + valorTotal);
+                    this.Close();
                 }
-                this.Close();
             }
             else
             {
                 MensajeError("Ingrese un peso valido");
             }
-        }        
+        }
     }
 }

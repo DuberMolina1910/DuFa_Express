@@ -44,7 +44,7 @@
             // 
             this.cmbCiudadOri.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cmbCiudadOri.FormattingEnabled = true;
-            this.cmbCiudadOri.Location = new System.Drawing.Point(163, 97);
+            this.cmbCiudadOri.Location = new System.Drawing.Point(192, 97);
             this.cmbCiudadOri.Name = "cmbCiudadOri";
             this.cmbCiudadOri.Size = new System.Drawing.Size(159, 25);
             this.cmbCiudadOri.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             this.cmbCiudadDes.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cmbCiudadDes.FormattingEnabled = true;
-            this.cmbCiudadDes.Location = new System.Drawing.Point(163, 135);
+            this.cmbCiudadDes.Location = new System.Drawing.Point(192, 135);
             this.cmbCiudadDes.Name = "cmbCiudadDes";
             this.cmbCiudadDes.Size = new System.Drawing.Size(159, 25);
             this.cmbCiudadDes.TabIndex = 1;
@@ -61,7 +61,7 @@
             // txtValDeclarado
             // 
             this.txtValDeclarado.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtValDeclarado.Location = new System.Drawing.Point(163, 173);
+            this.txtValDeclarado.Location = new System.Drawing.Point(192, 173);
             this.txtValDeclarado.Multiline = true;
             this.txtValDeclarado.Name = "txtValDeclarado";
             this.txtValDeclarado.Size = new System.Drawing.Size(159, 25);
@@ -73,7 +73,7 @@
             // txtPeso
             // 
             this.txtPeso.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtPeso.Location = new System.Drawing.Point(163, 211);
+            this.txtPeso.Location = new System.Drawing.Point(192, 211);
             this.txtPeso.Multiline = true;
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(159, 25);
@@ -82,7 +82,7 @@
             // btnCalc
             // 
             this.btnCalc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalc.Location = new System.Drawing.Point(163, 268);
+            this.btnCalc.Location = new System.Drawing.Point(88, 262);
             this.btnCalc.Name = "btnCalc";
             this.btnCalc.Size = new System.Drawing.Size(159, 23);
             this.btnCalc.TabIndex = 145;
@@ -99,13 +99,13 @@
             this.lblInfo.Size = new System.Drawing.Size(348, 57);
             this.lblInfo.TabIndex = 146;
             this.lblInfo.Text = "Recuerde que al declarar un valor se adquiere un seguro lo cual aumenta el valor " +
-    "total del envío, en caso de no adquirir el seguro la empresa no se hara cargo po" +
+    "total del envío, en caso de no adquirir el seguro la empresa no se hará cargo po" +
     "r daños";
             // 
             // lblCiudadOri
             // 
             this.lblCiudadOri.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCiudadOri.Location = new System.Drawing.Point(25, 99);
+            this.lblCiudadOri.Location = new System.Drawing.Point(19, 99);
             this.lblCiudadOri.Name = "lblCiudadOri";
             this.lblCiudadOri.Size = new System.Drawing.Size(132, 23);
             this.lblCiudadOri.TabIndex = 147;
@@ -115,7 +115,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 137);
+            this.label1.Location = new System.Drawing.Point(19, 137);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 23);
             this.label1.TabIndex = 148;
@@ -125,21 +125,21 @@
             // lblValDeclarado
             // 
             this.lblValDeclarado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValDeclarado.Location = new System.Drawing.Point(25, 175);
+            this.lblValDeclarado.Location = new System.Drawing.Point(19, 175);
             this.lblValDeclarado.Name = "lblValDeclarado";
-            this.lblValDeclarado.Size = new System.Drawing.Size(132, 23);
+            this.lblValDeclarado.Size = new System.Drawing.Size(168, 23);
             this.lblValDeclarado.TabIndex = 149;
-            this.lblValDeclarado.Text = "Valor Declarado";
+            this.lblValDeclarado.Text = "Valor Declarado (COP)";
             this.lblValDeclarado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblPeso
             // 
             this.lblPeso.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeso.Location = new System.Drawing.Point(25, 213);
+            this.lblPeso.Location = new System.Drawing.Point(19, 213);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(132, 23);
+            this.lblPeso.Size = new System.Drawing.Size(143, 23);
             this.lblPeso.TabIndex = 150;
-            this.lblPeso.Text = "Peso Producto";
+            this.lblPeso.Text = "Peso Producto (Kg.)";
             this.lblPeso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // CalcValor
