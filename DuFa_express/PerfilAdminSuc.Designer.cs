@@ -162,6 +162,7 @@
             this.picBxLogoV2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBxLogoV2.TabIndex = 0;
             this.picBxLogoV2.TabStop = false;
+            this.picBxLogoV2.Click += new System.EventHandler(this.picBxLogoV2_Click);
             // 
             // PerfilAdminSuc
             // 

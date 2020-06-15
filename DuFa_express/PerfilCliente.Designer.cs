@@ -28,71 +28,148 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.BtnCrearPerfilC = new System.Windows.Forms.Button();
-            this.BtnActualizarEnvioC = new System.Windows.Forms.Button();
-            this.BtnSoliciAnulacC = new System.Windows.Forms.Button();
+            this.PnlPerfCl = new System.Windows.Forms.Panel();
+            this.lblActDtsPerClien = new System.Windows.Forms.Label();
+            this.lblCsltEnvPerClient = new System.Windows.Forms.Label();
+            this.lblCerrarSesión = new System.Windows.Forms.Label();
+            this.lblSlctrAnlPerClient = new System.Windows.Forms.Label();
+            this.lblPerClienCrearEnv = new System.Windows.Forms.Label();
+            this.lblNomTipoPer = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.LblCmbContraPerClien = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // PnlPerfCl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bienvenido";
+            this.PnlPerfCl.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.PnlPerfCl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.PnlPerfCl.Location = new System.Drawing.Point(208, 0);
+            this.PnlPerfCl.Name = "PnlPerfCl";
+            this.PnlPerfCl.Size = new System.Drawing.Size(592, 490);
+            this.PnlPerfCl.TabIndex = 0;
             // 
-            // BtnCrearPerfilC
+            // lblActDtsPerClien
             // 
-            this.BtnCrearPerfilC.Location = new System.Drawing.Point(122, 110);
-            this.BtnCrearPerfilC.Name = "BtnCrearPerfilC";
-            this.BtnCrearPerfilC.Size = new System.Drawing.Size(162, 48);
-            this.BtnCrearPerfilC.TabIndex = 1;
-            this.BtnCrearPerfilC.Text = "Nuevo Envio";
-            this.BtnCrearPerfilC.UseVisualStyleBackColor = true;
+            this.lblActDtsPerClien.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblActDtsPerClien.ForeColor = System.Drawing.Color.White;
+            this.lblActDtsPerClien.Location = new System.Drawing.Point(5, 188);
+            this.lblActDtsPerClien.Name = "lblActDtsPerClien";
+            this.lblActDtsPerClien.Size = new System.Drawing.Size(197, 35);
+            this.lblActDtsPerClien.TabIndex = 13;
+            this.lblActDtsPerClien.Text = "Actualizar Datos";
+            this.lblActDtsPerClien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // BtnActualizarEnvioC
+            // lblCsltEnvPerClient
             // 
-            this.BtnActualizarEnvioC.Location = new System.Drawing.Point(122, 212);
-            this.BtnActualizarEnvioC.Name = "BtnActualizarEnvioC";
-            this.BtnActualizarEnvioC.Size = new System.Drawing.Size(162, 48);
-            this.BtnActualizarEnvioC.TabIndex = 2;
-            this.BtnActualizarEnvioC.Text = "Actualizacion de envio";
-            this.BtnActualizarEnvioC.UseVisualStyleBackColor = true;
+            this.lblCsltEnvPerClient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblCsltEnvPerClient.ForeColor = System.Drawing.Color.White;
+            this.lblCsltEnvPerClient.Location = new System.Drawing.Point(4, 118);
+            this.lblCsltEnvPerClient.Name = "lblCsltEnvPerClient";
+            this.lblCsltEnvPerClient.Size = new System.Drawing.Size(197, 35);
+            this.lblCsltEnvPerClient.TabIndex = 12;
+            this.lblCsltEnvPerClient.Text = "Consultar Envio";
+            this.lblCsltEnvPerClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // BtnSoliciAnulacC
+            // lblCerrarSesión
             // 
-            this.BtnSoliciAnulacC.Location = new System.Drawing.Point(122, 318);
-            this.BtnSoliciAnulacC.Name = "BtnSoliciAnulacC";
-            this.BtnSoliciAnulacC.Size = new System.Drawing.Size(162, 48);
-            this.BtnSoliciAnulacC.TabIndex = 3;
-            this.BtnSoliciAnulacC.Text = "Solicitar Anulacion";
-            this.BtnSoliciAnulacC.UseVisualStyleBackColor = true;
+            this.lblCerrarSesión.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblCerrarSesión.ForeColor = System.Drawing.Color.White;
+            this.lblCerrarSesión.Location = new System.Drawing.Point(5, 443);
+            this.lblCerrarSesión.Name = "lblCerrarSesión";
+            this.lblCerrarSesión.Size = new System.Drawing.Size(189, 35);
+            this.lblCerrarSesión.TabIndex = 11;
+            this.lblCerrarSesión.Text = "Cerrar Sesión";
+            this.lblCerrarSesión.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCerrarSesión.Click += new System.EventHandler(this.lblCerrarSesión_Click);
+            // 
+            // lblSlctrAnlPerClient
+            // 
+            this.lblSlctrAnlPerClient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblSlctrAnlPerClient.ForeColor = System.Drawing.Color.White;
+            this.lblSlctrAnlPerClient.Location = new System.Drawing.Point(4, 153);
+            this.lblSlctrAnlPerClient.Name = "lblSlctrAnlPerClient";
+            this.lblSlctrAnlPerClient.Size = new System.Drawing.Size(197, 35);
+            this.lblSlctrAnlPerClient.TabIndex = 10;
+            this.lblSlctrAnlPerClient.Text = "Solicitar Anulacion de Envio";
+            this.lblSlctrAnlPerClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblPerClienCrearEnv
+            // 
+            this.lblPerClienCrearEnv.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblPerClienCrearEnv.ForeColor = System.Drawing.Color.White;
+            this.lblPerClienCrearEnv.Location = new System.Drawing.Point(4, 83);
+            this.lblPerClienCrearEnv.Name = "lblPerClienCrearEnv";
+            this.lblPerClienCrearEnv.Size = new System.Drawing.Size(197, 35);
+            this.lblPerClienCrearEnv.TabIndex = 9;
+            this.lblPerClienCrearEnv.Text = "Nuevo Envio";
+            this.lblPerClienCrearEnv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblNomTipoPer
+            // 
+            this.lblNomTipoPer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomTipoPer.ForeColor = System.Drawing.Color.White;
+            this.lblNomTipoPer.Location = new System.Drawing.Point(12, 34);
+            this.lblNomTipoPer.Name = "lblNomTipoPer";
+            this.lblNomTipoPer.Size = new System.Drawing.Size(150, 25);
+            this.lblNomTipoPer.TabIndex = 8;
+            this.lblNomTipoPer.Text = "Tipo Perfil";
+            this.lblNomTipoPer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.Location = new System.Drawing.Point(12, 9);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(150, 25);
+            this.lblNombre.TabIndex = 7;
+            this.lblNombre.Text = "Nombre";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LblCmbContraPerClien
+            // 
+            this.LblCmbContraPerClien.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.LblCmbContraPerClien.ForeColor = System.Drawing.Color.White;
+            this.LblCmbContraPerClien.Location = new System.Drawing.Point(5, 223);
+            this.LblCmbContraPerClien.Name = "LblCmbContraPerClien";
+            this.LblCmbContraPerClien.Size = new System.Drawing.Size(197, 35);
+            this.LblCmbContraPerClien.TabIndex = 14;
+            this.LblCmbContraPerClien.Text = "Cambiar Contraseña";
+            this.LblCmbContraPerClien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // PerfilClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 494);
-            this.Controls.Add(this.BtnSoliciAnulacC);
-            this.Controls.Add(this.BtnActualizarEnvioC);
-            this.Controls.Add(this.BtnCrearPerfilC);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.ClientSize = new System.Drawing.Size(800, 490);
+            this.Controls.Add(this.LblCmbContraPerClien);
+            this.Controls.Add(this.lblActDtsPerClien);
+            this.Controls.Add(this.lblCsltEnvPerClient);
+            this.Controls.Add(this.lblCerrarSesión);
+            this.Controls.Add(this.lblSlctrAnlPerClient);
+            this.Controls.Add(this.lblPerClienCrearEnv);
+            this.Controls.Add(this.lblNomTipoPer);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.PnlPerfCl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PerfilClientForm";
             this.Text = "PerfilCliente";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button BtnCrearPerfilC;
-        private System.Windows.Forms.Button BtnActualizarEnvioC;
-        private System.Windows.Forms.Button BtnSoliciAnulacC;
+        private System.Windows.Forms.Panel PnlPerfCl;
+        private System.Windows.Forms.Label lblActDtsPerClien;
+        private System.Windows.Forms.Label lblCsltEnvPerClient;
+        private System.Windows.Forms.Label lblCerrarSesión;
+        private System.Windows.Forms.Label lblSlctrAnlPerClient;
+        private System.Windows.Forms.Label lblPerClienCrearEnv;
+        private System.Windows.Forms.Label lblNomTipoPer;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label LblCmbContraPerClien;
     }
 }

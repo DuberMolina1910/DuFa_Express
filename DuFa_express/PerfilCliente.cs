@@ -16,5 +16,10 @@ namespace DuFa_express
         {
             InitializeComponent();
         }
+
+        private void lblCerrarSesión_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
