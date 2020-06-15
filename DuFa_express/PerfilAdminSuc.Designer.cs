@@ -152,6 +152,7 @@
             this.pnlShowSubForm.Name = "pnlShowSubForm";
             this.pnlShowSubForm.Size = new System.Drawing.Size(600, 490);
             this.pnlShowSubForm.TabIndex = 4;
+            this.pnlShowSubForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlShowSubForm_Paint);
             // 
             // picBxLogoV2
             // 

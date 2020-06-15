@@ -87,5 +87,10 @@ namespace DuFa_express
         {
 
         }
+
+        private void pnlShowSubForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

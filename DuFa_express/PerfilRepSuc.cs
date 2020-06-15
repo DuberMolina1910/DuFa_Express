@@ -10,22 +10,26 @@ using System.Windows.Forms;
 
 namespace DuFa_express
 {
-    public partial class PerfilJefSuc : Form
+    public partial class PerfilRepSuc : Form
     {
-        public PerfilJefSuc()
+        public PerfilRepSuc()
         {
             InitializeComponent();
         }
 
-        private void PerfilJefSuc_Load(object sender, EventArgs e)
+        private void PerfilRepSuc_Load(object sender, EventArgs e)
         {
             InfoUsuarios();
         }
-
         private void InfoUsuarios()
         {
             lblNombre.Text = Cache.NomUsu;
             lblNomTipoPer.Text = Cache.NomTipoPer;
+        }
+
+        private void lblActDtsPerClien_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void lblCerrarSesión_Click(object sender, EventArgs e)

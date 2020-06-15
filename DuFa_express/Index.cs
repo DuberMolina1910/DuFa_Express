@@ -87,7 +87,7 @@ namespace DuFa_express
                         }
                         else if (enviar.IdTipoPer == "4")//Perfil Repartidor
                         {
-                            PerfilRepartidor perfilRepartidor = new PerfilRepartidor();
+                            PerfilRepSuc perfilRepartidor = new PerfilRepSuc();
                             perfilRepartidor.Show();
                         }
                         else //Perfil Cliente

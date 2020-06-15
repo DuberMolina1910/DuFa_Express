@@ -1,6 +1,6 @@
 ﻿namespace DuFa_express
 {
-    partial class PerfilJefSuc
+    partial class PerfilRepSuc
     {
         /// <summary>
         /// Required designer variable.
@@ -30,11 +30,9 @@
         {
             this.PnlShowPerfilRepSuc = new System.Windows.Forms.Panel();
             this.LblCmbContraPerClien = new System.Windows.Forms.Label();
-            this.lblActDtsPerClien = new System.Windows.Forms.Label();
-            this.lblCsltEnvPerClient = new System.Windows.Forms.Label();
+            this.lblActlzrEstdEnvRepSuc = new System.Windows.Forms.Label();
             this.lblCerrarSesión = new System.Windows.Forms.Label();
-            this.lblSlctrAnlPerClient = new System.Windows.Forms.Label();
-            this.lblPerClienCrearEnv = new System.Windows.Forms.Label();
+            this.lblCsltrEnvAsignRepSuc = new System.Windows.Forms.Label();
             this.lblNomTipoPer = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -52,34 +50,23 @@
             // 
             this.LblCmbContraPerClien.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.LblCmbContraPerClien.ForeColor = System.Drawing.Color.White;
-            this.LblCmbContraPerClien.Location = new System.Drawing.Point(4, 408);
+            this.LblCmbContraPerClien.Location = new System.Drawing.Point(5, 408);
             this.LblCmbContraPerClien.Name = "LblCmbContraPerClien";
-            this.LblCmbContraPerClien.Size = new System.Drawing.Size(189, 35);
+            this.LblCmbContraPerClien.Size = new System.Drawing.Size(197, 35);
             this.LblCmbContraPerClien.TabIndex = 22;
             this.LblCmbContraPerClien.Text = "Cambiar Contraseña";
             this.LblCmbContraPerClien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblActDtsPerClien
+            // lblActlzrEstdEnvRepSuc
             // 
-            this.lblActDtsPerClien.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblActDtsPerClien.ForeColor = System.Drawing.Color.White;
-            this.lblActDtsPerClien.Location = new System.Drawing.Point(5, 188);
-            this.lblActDtsPerClien.Name = "lblActDtsPerClien";
-            this.lblActDtsPerClien.Size = new System.Drawing.Size(189, 35);
-            this.lblActDtsPerClien.TabIndex = 21;
-            this.lblActDtsPerClien.Text = "Actualizar Datos";
-            this.lblActDtsPerClien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblCsltEnvPerClient
-            // 
-            this.lblCsltEnvPerClient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblCsltEnvPerClient.ForeColor = System.Drawing.Color.White;
-            this.lblCsltEnvPerClient.Location = new System.Drawing.Point(4, 118);
-            this.lblCsltEnvPerClient.Name = "lblCsltEnvPerClient";
-            this.lblCsltEnvPerClient.Size = new System.Drawing.Size(197, 35);
-            this.lblCsltEnvPerClient.TabIndex = 20;
-            this.lblCsltEnvPerClient.Text = "Consultar Envio";
-            this.lblCsltEnvPerClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblActlzrEstdEnvRepSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblActlzrEstdEnvRepSuc.ForeColor = System.Drawing.Color.White;
+            this.lblActlzrEstdEnvRepSuc.Location = new System.Drawing.Point(4, 118);
+            this.lblActlzrEstdEnvRepSuc.Name = "lblActlzrEstdEnvRepSuc";
+            this.lblActlzrEstdEnvRepSuc.Size = new System.Drawing.Size(197, 35);
+            this.lblActlzrEstdEnvRepSuc.TabIndex = 20;
+            this.lblActlzrEstdEnvRepSuc.Text = "Actualizar Estado Envio";
+            this.lblActlzrEstdEnvRepSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblCerrarSesión
             // 
@@ -93,27 +80,16 @@
             this.lblCerrarSesión.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblCerrarSesión.Click += new System.EventHandler(this.lblCerrarSesión_Click);
             // 
-            // lblSlctrAnlPerClient
+            // lblCsltrEnvAsignRepSuc
             // 
-            this.lblSlctrAnlPerClient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblSlctrAnlPerClient.ForeColor = System.Drawing.Color.White;
-            this.lblSlctrAnlPerClient.Location = new System.Drawing.Point(4, 153);
-            this.lblSlctrAnlPerClient.Name = "lblSlctrAnlPerClient";
-            this.lblSlctrAnlPerClient.Size = new System.Drawing.Size(197, 35);
-            this.lblSlctrAnlPerClient.TabIndex = 18;
-            this.lblSlctrAnlPerClient.Text = "Solicitar Anulacion de Envio";
-            this.lblSlctrAnlPerClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblPerClienCrearEnv
-            // 
-            this.lblPerClienCrearEnv.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblPerClienCrearEnv.ForeColor = System.Drawing.Color.White;
-            this.lblPerClienCrearEnv.Location = new System.Drawing.Point(4, 83);
-            this.lblPerClienCrearEnv.Name = "lblPerClienCrearEnv";
-            this.lblPerClienCrearEnv.Size = new System.Drawing.Size(197, 35);
-            this.lblPerClienCrearEnv.TabIndex = 17;
-            this.lblPerClienCrearEnv.Text = "Nuevo Envio";
-            this.lblPerClienCrearEnv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCsltrEnvAsignRepSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblCsltrEnvAsignRepSuc.ForeColor = System.Drawing.Color.White;
+            this.lblCsltrEnvAsignRepSuc.Location = new System.Drawing.Point(4, 83);
+            this.lblCsltrEnvAsignRepSuc.Name = "lblCsltrEnvAsignRepSuc";
+            this.lblCsltrEnvAsignRepSuc.Size = new System.Drawing.Size(197, 35);
+            this.lblCsltrEnvAsignRepSuc.TabIndex = 17;
+            this.lblCsltrEnvAsignRepSuc.Text = "Consultar Envios Asignados";
+            this.lblCsltrEnvAsignRepSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblNomTipoPer
             // 
@@ -138,26 +114,23 @@
             this.lblNombre.Text = "Nombre";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // PerfilJefSuc
+            // PerfilRepSuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(800, 490);
             this.Controls.Add(this.LblCmbContraPerClien);
-            this.Controls.Add(this.lblActDtsPerClien);
-            this.Controls.Add(this.lblCsltEnvPerClient);
+            this.Controls.Add(this.lblActlzrEstdEnvRepSuc);
             this.Controls.Add(this.lblCerrarSesión);
-            this.Controls.Add(this.lblSlctrAnlPerClient);
-            this.Controls.Add(this.lblPerClienCrearEnv);
+            this.Controls.Add(this.lblCsltrEnvAsignRepSuc);
             this.Controls.Add(this.lblNomTipoPer);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.PnlShowPerfilRepSuc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PerfilJefSuc";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PerfilJefSuc";
-            this.Load += new System.EventHandler(this.PerfilJefSuc_Load);
+            this.Name = "PerfilRepSuc";
+            this.Text = "PerfilRepSuc";
+            this.Load += new System.EventHandler(this.PerfilRepSuc_Load);
             this.ResumeLayout(false);
 
         }
@@ -166,11 +139,9 @@
 
         private System.Windows.Forms.Panel PnlShowPerfilRepSuc;
         private System.Windows.Forms.Label LblCmbContraPerClien;
-        private System.Windows.Forms.Label lblActDtsPerClien;
-        private System.Windows.Forms.Label lblCsltEnvPerClient;
+        private System.Windows.Forms.Label lblActlzrEstdEnvRepSuc;
         private System.Windows.Forms.Label lblCerrarSesión;
-        private System.Windows.Forms.Label lblSlctrAnlPerClient;
-        private System.Windows.Forms.Label lblPerClienCrearEnv;
+        private System.Windows.Forms.Label lblCsltrEnvAsignRepSuc;
         private System.Windows.Forms.Label lblNomTipoPer;
         private System.Windows.Forms.Label lblNombre;
     }

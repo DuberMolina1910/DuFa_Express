@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PnlPerfCl = new System.Windows.Forms.Panel();
+            this.PnlShowPerfilClent = new System.Windows.Forms.Panel();
             this.lblActDtsPerClien = new System.Windows.Forms.Label();
             this.lblCsltEnvPerClient = new System.Windows.Forms.Label();
             this.lblCerrarSesión = new System.Windows.Forms.Label();
@@ -39,14 +39,14 @@
             this.LblCmbContraPerClien = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // PnlPerfCl
+            // PnlShowPerfilClent
             // 
-            this.PnlPerfCl.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.PnlPerfCl.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PnlPerfCl.Location = new System.Drawing.Point(208, 0);
-            this.PnlPerfCl.Name = "PnlPerfCl";
-            this.PnlPerfCl.Size = new System.Drawing.Size(592, 490);
-            this.PnlPerfCl.TabIndex = 0;
+            this.PnlShowPerfilClent.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.PnlShowPerfilClent.Dock = System.Windows.Forms.DockStyle.Right;
+            this.PnlShowPerfilClent.Location = new System.Drawing.Point(208, 0);
+            this.PnlShowPerfilClent.Name = "PnlShowPerfilClent";
+            this.PnlShowPerfilClent.Size = new System.Drawing.Size(592, 490);
+            this.PnlShowPerfilClent.TabIndex = 0;
             // 
             // lblActDtsPerClien
             // 
@@ -131,7 +131,7 @@
             // 
             this.LblCmbContraPerClien.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.LblCmbContraPerClien.ForeColor = System.Drawing.Color.White;
-            this.LblCmbContraPerClien.Location = new System.Drawing.Point(5, 223);
+            this.LblCmbContraPerClien.Location = new System.Drawing.Point(5, 408);
             this.LblCmbContraPerClien.Name = "LblCmbContraPerClien";
             this.LblCmbContraPerClien.Size = new System.Drawing.Size(197, 35);
             this.LblCmbContraPerClien.TabIndex = 14;
@@ -152,7 +152,7 @@
             this.Controls.Add(this.lblPerClienCrearEnv);
             this.Controls.Add(this.lblNomTipoPer);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.PnlPerfCl);
+            this.Controls.Add(this.PnlShowPerfilClent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PerfilClientForm";
             this.Text = "PerfilCliente";
@@ -163,7 +163,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel PnlPerfCl;
+        private System.Windows.Forms.Panel PnlShowPerfilClent;
         private System.Windows.Forms.Label lblActDtsPerClien;
         private System.Windows.Forms.Label lblCsltEnvPerClient;
         private System.Windows.Forms.Label lblCerrarSesión;
