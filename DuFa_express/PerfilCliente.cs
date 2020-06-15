@@ -19,7 +19,22 @@ namespace DuFa_express
 
         private void lblCerrarSesión_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("¿Esta seguro que desea cerrar la sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Index index = new Index();
+                index.Show();
+                this.Close();
+            }
+        }
+        private void InfoUsuarios()
+        {
+            lblNombre.Text = Cache.NomUsu;
+            lblNomTipoPer.Text = Cache.NomTipoPer;
+        }
+
+        private void PerfilClientForm_Load(object sender, EventArgs e)
+        {
+            InfoUsuarios();
         }
     }
 }

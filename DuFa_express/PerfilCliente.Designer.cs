@@ -156,6 +156,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PerfilClientForm";
             this.Text = "PerfilCliente";
+            this.Load += new System.EventHandler(this.PerfilClientForm_Load);
             this.ResumeLayout(false);
 
         }

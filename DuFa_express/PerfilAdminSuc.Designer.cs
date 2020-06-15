@@ -142,6 +142,7 @@
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNombre.Click += new System.EventHandler(this.lblNombre_Click);
             // 
             // pnlShowSubForm
             // 
