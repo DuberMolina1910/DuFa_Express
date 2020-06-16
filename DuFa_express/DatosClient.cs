@@ -22,14 +22,22 @@ namespace DuFa_express
         public string CiudadUsu { set; get; }
         public bool Estado { set; get; }
         public int IdCiudad { set; get; }
-        public int ValTotalEnvio { set; get; }
+        public string ValTotalEnvio { set; get; }
         public string IdEstadoEnvio { set; get; }
+        public string FechEnvio { set; get; }
+        public string SucursalOrigen { set; get; }
+        public string SucursalDestino { set; get; }
+        public string IdDestinatario { set; get; }
+        public string NomDestinatario { set; get; }
+        public string TelDestinatario { set; get; }
+        public string DirDestinatario { set; get; }
+        public string DetEnvio { set; get; }
 
         public DatosClient()
         {
         }
 
-        public DatosClient(string pNombreC, string pIDClient, string pFechaNac_C, string pTelefonoC, string pEmail, string pDirDom_C, string pContrasena, string pSucursal, string pTipoId, string pTipoPer, string pCiudad, bool pEstado, int pIdCiudad, int pValTotalEnvio, string pIdEstadoEnvio)
+        public DatosClient(string pNombreC, string pIDClient, string pFechaNac_C, string pTelefonoC, string pEmail, string pDirDom_C, string pContrasena, string pSucursal, string pTipoId, string pTipoPer, string pCiudad, bool pEstado, int pIdCiudad, string pValTotalEnvio, string pIdEstadoEnvio, string pFechEnvio, string pSucursalOrigen, string pSucursalDestino, string pIdDestinatario, string pNomDestinatario, string pTelDestinatario, string pDirDestinatario, string pDetEnvio)
         {
             this.NumIdUsu = pNombreC;
             this.NomUsu = pIDClient;
@@ -46,6 +54,14 @@ namespace DuFa_express
             this.IdCiudad = pIdCiudad;
             this.ValTotalEnvio = pValTotalEnvio;
             this.IdEstadoEnvio = pIdEstadoEnvio;
+            this.FechEnvio = pFechEnvio;
+            this.SucursalOrigen = pSucursalOrigen;
+            this.SucursalDestino = pSucursalDestino;
+            this.IdDestinatario = pIdDestinatario;
+            this.NomDestinatario = pNomDestinatario;
+            this.TelDestinatario = pTelDestinatario;
+            this.DirDestinatario = pDirDestinatario;
+            this.DetEnvio = pDetEnvio;
         }
     }
 }
