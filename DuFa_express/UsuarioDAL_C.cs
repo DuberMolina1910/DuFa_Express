@@ -174,7 +174,7 @@ namespace DuFa_express
 
             //DataTable tabla = new DataTable();
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT NOMSUCURSAL,IdSucursal,TabCiudades.IdCiudad,TABSUCURSALES.IdCiudad FROM TABSUCURSALES,TabCiudades WHERE TabCiudades.IdCiudad =  TabSucursales.IdCiudad AND TabSucursales.IdCiudad = '{0}'  ORDER BY NOMSUCURSAL ASC  ",pIdSucursal), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT TabCiudades.IdCiudad,TABSUCURSALES.IdCiudad, NomSucursal FROM TabCiudades inner join TabSucursales on TabCiudades.IdCiudad= TabSucursales.IdCiudad  WHERE TabCiudades.IdCiudad = '{0}'  ORDER BY NOMSUCURSAL ASC", pIdSucursal), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             
             tabla.Load(Reader);

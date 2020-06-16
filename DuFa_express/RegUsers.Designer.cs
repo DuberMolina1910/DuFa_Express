@@ -313,6 +313,7 @@
             this.cmbCiudad.Name = "cmbCiudad";
             this.cmbCiudad.Size = new System.Drawing.Size(231, 25);
             this.cmbCiudad.TabIndex = 105;
+            this.cmbCiudad.SelectedValueChanged += new System.EventHandler(this.cmbCiudad_SelectedValueChanged);
             // 
             // lblMsgError
             // 

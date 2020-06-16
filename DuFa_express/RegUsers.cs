@@ -22,7 +22,8 @@ namespace DuFa_express
             ListarTipoId();
             ListarTipoPer();
             ListarCiudades();
-            ListarSucursalesbyCiudad();
+            //ListarSucursalesbyCiudad();
+            //ListarSucursales();
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
@@ -96,29 +97,46 @@ namespace DuFa_express
             cmbCiudad.DataSource = Ciudad.ListarCiudades();
             cmbCiudad.DisplayMember = "NomCiudad";
             cmbCiudad.ValueMember = "IdCiudad";
+            ListarSucursalesbyCiudad();
         }
 
-        public void ListarSucursales()
-        {
-            UsuarioDAL_C Sucu = new UsuarioDAL_C();
+        //public void ListarSucursales()
+        //{
+        //    UsuarioDAL_C Sucu = new UsuarioDAL_C();
 
-            cmbSucOper.DataSource = Sucu.ListarSucursales();
-            cmbSucOper.DisplayMember = "NomSucursal";
-            cmbSucOper.ValueMember = "IdSucursal";
+        //    cmbSucOper.DataSource = Sucu.ListarSucursales();
+        //    cmbSucOper.DisplayMember = "NomSucursal";
+        //    cmbSucOper.ValueMember = "IdSucursal";
 
             
-        }
+        //}
 
+        /// <summary>
+        /// /////////////////////////////////////////////////////////////////////////
+        /// </summary>
         public void ListarSucursalesbyCiudad()
         {
             UsuarioDAL_C SucXCiu = new UsuarioDAL_C();
 
-            cmbSucOper.DataSource = SucXCiu.ListarSucursalesbyCiudad(Convert.ToInt32(cmbSucOper.SelectedValue));
+            cmbSucOper.DataSource = SucXCiu.ListarSucursalesbyCiudad(Convert.ToInt32(cmbCiudad.SelectedValue));
+            cmbSucOper.DisplayMember = "NomSucursal";
+            cmbSucOper.ValueMember = "IdSucursal";
         }
+
+        ///
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmbCiudad_SelectedValueChanged(object sender, EventArgs e)
+        {
+            UsuarioDAL_C SucXCiu = new UsuarioDAL_C();
+
+            cmbSucOper.DataSource = SucXCiu.ListarSucursalesbyCiudad(Convert.ToInt32(cmbCiudad.SelectedValue));
+            cmbSucOper.DisplayMember = "NomSucursal";
+            cmbSucOper.ValueMember = "IdSucursal";
         }
     }
 }
