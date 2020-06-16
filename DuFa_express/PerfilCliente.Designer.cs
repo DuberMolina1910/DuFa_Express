@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilClientForm));
-            this.pnlUsuLog = new System.Windows.Forms.Panel();
+            this.pnlPerfClient1 = new System.Windows.Forms.Panel();
             this.LblCmbContraPerClien = new System.Windows.Forms.Label();
             this.lblActDtsPerClien = new System.Windows.Forms.Label();
             this.lblCsltEnvPerClient = new System.Windows.Forms.Label();
@@ -39,30 +39,30 @@
             this.lblNomTipoPer = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.picBxLogoV2 = new System.Windows.Forms.PictureBox();
-            this.pnlShowSubForm = new System.Windows.Forms.Panel();
+            this.pnlPerClient2 = new System.Windows.Forms.Panel();
             this.picBxLogoV2Client = new System.Windows.Forms.PictureBox();
-            this.pnlUsuLog.SuspendLayout();
+            this.pnlPerfClient1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).BeginInit();
-            this.pnlShowSubForm.SuspendLayout();
+            this.pnlPerClient2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2Client)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnlUsuLog
+            // pnlPerfClient1
             // 
-            this.pnlUsuLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.pnlUsuLog.Controls.Add(this.LblCmbContraPerClien);
-            this.pnlUsuLog.Controls.Add(this.lblActDtsPerClien);
-            this.pnlUsuLog.Controls.Add(this.lblCsltEnvPerClient);
-            this.pnlUsuLog.Controls.Add(this.lblSlctrAnlPerClient);
-            this.pnlUsuLog.Controls.Add(this.lblPerClienCrearEnv);
-            this.pnlUsuLog.Controls.Add(this.lblCerrarSesion);
-            this.pnlUsuLog.Controls.Add(this.lblNomTipoPer);
-            this.pnlUsuLog.Controls.Add(this.lblNombre);
-            this.pnlUsuLog.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlUsuLog.Location = new System.Drawing.Point(0, 0);
-            this.pnlUsuLog.Name = "pnlUsuLog";
-            this.pnlUsuLog.Size = new System.Drawing.Size(200, 490);
-            this.pnlUsuLog.TabIndex = 15;
+            this.pnlPerfClient1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.pnlPerfClient1.Controls.Add(this.LblCmbContraPerClien);
+            this.pnlPerfClient1.Controls.Add(this.lblActDtsPerClien);
+            this.pnlPerfClient1.Controls.Add(this.lblCsltEnvPerClient);
+            this.pnlPerfClient1.Controls.Add(this.lblSlctrAnlPerClient);
+            this.pnlPerfClient1.Controls.Add(this.lblPerClienCrearEnv);
+            this.pnlPerfClient1.Controls.Add(this.lblCerrarSesion);
+            this.pnlPerfClient1.Controls.Add(this.lblNomTipoPer);
+            this.pnlPerfClient1.Controls.Add(this.lblNombre);
+            this.pnlPerfClient1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlPerfClient1.Location = new System.Drawing.Point(0, 0);
+            this.pnlPerfClient1.Name = "pnlPerfClient1";
+            this.pnlPerfClient1.Size = new System.Drawing.Size(200, 490);
+            this.pnlPerfClient1.TabIndex = 15;
             // 
             // LblCmbContraPerClien
             // 
@@ -165,14 +165,14 @@
             this.picBxLogoV2.TabIndex = 16;
             this.picBxLogoV2.TabStop = false;
             // 
-            // pnlShowSubForm
+            // pnlPerClient2
             // 
-            this.pnlShowSubForm.Controls.Add(this.picBxLogoV2Client);
-            this.pnlShowSubForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlShowSubForm.Location = new System.Drawing.Point(200, 0);
-            this.pnlShowSubForm.Name = "pnlShowSubForm";
-            this.pnlShowSubForm.Size = new System.Drawing.Size(600, 490);
-            this.pnlShowSubForm.TabIndex = 17;
+            this.pnlPerClient2.Controls.Add(this.picBxLogoV2Client);
+            this.pnlPerClient2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPerClient2.Location = new System.Drawing.Point(200, 0);
+            this.pnlPerClient2.Name = "pnlPerClient2";
+            this.pnlPerClient2.Size = new System.Drawing.Size(600, 490);
+            this.pnlPerClient2.TabIndex = 17;
             // 
             // picBxLogoV2Client
             // 
@@ -191,16 +191,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 490);
-            this.Controls.Add(this.pnlShowSubForm);
+            this.Controls.Add(this.pnlPerClient2);
             this.Controls.Add(this.picBxLogoV2);
-            this.Controls.Add(this.pnlUsuLog);
+            this.Controls.Add(this.pnlPerfClient1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PerfilClientForm";
             this.Text = "PerfilCliente";
             this.Load += new System.EventHandler(this.PerfilClientForm_Load);
-            this.pnlUsuLog.ResumeLayout(false);
+            this.pnlPerfClient1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).EndInit();
-            this.pnlShowSubForm.ResumeLayout(false);
+            this.pnlPerClient2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2Client)).EndInit();
             this.ResumeLayout(false);
 
@@ -208,7 +208,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlUsuLog;
+        private System.Windows.Forms.Panel pnlPerfClient1;
         private System.Windows.Forms.Label LblCmbContraPerClien;
         private System.Windows.Forms.Label lblActDtsPerClien;
         private System.Windows.Forms.Label lblCsltEnvPerClient;
@@ -218,7 +218,7 @@
         private System.Windows.Forms.Label lblNomTipoPer;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.PictureBox picBxLogoV2;
-        private System.Windows.Forms.Panel pnlShowSubForm;
+        private System.Windows.Forms.Panel pnlPerClient2;
         private System.Windows.Forms.PictureBox picBxLogoV2Client;
     }
 }

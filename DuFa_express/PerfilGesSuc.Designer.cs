@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilGesSuc));
             this.lblSlctrAnlcnEnvGesSuc = new System.Windows.Forms.Label();
             this.lblCsltrEnvGesSuc = new System.Windows.Forms.Label();
             this.lblCerrarSesión = new System.Windows.Forms.Label();
@@ -35,8 +36,13 @@
             this.lblCrearEnvGesSuc = new System.Windows.Forms.Label();
             this.lblNomTipoPer = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.PnlShowPerfilGesSuc = new System.Windows.Forms.Panel();
+            this.PnlPerfilGesSuc2 = new System.Windows.Forms.Panel();
             this.LblCambContrGesSuc = new System.Windows.Forms.Label();
+            this.PnlPerfilGesSuc1 = new System.Windows.Forms.Panel();
+            this.picBxLogoV2 = new System.Windows.Forms.PictureBox();
+            this.PnlPerfilGesSuc2.SuspendLayout();
+            this.PnlPerfilGesSuc1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSlctrAnlcnEnvGesSuc
@@ -118,15 +124,16 @@
             this.lblNombre.Text = "Nombre";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // PnlShowPerfilGesSuc
+            // PnlPerfilGesSuc2
             // 
-            this.PnlShowPerfilGesSuc.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.PnlShowPerfilGesSuc.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PnlShowPerfilGesSuc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.PnlShowPerfilGesSuc.Location = new System.Drawing.Point(200, 0);
-            this.PnlShowPerfilGesSuc.Name = "PnlShowPerfilGesSuc";
-            this.PnlShowPerfilGesSuc.Size = new System.Drawing.Size(600, 490);
-            this.PnlShowPerfilGesSuc.TabIndex = 14;
+            this.PnlPerfilGesSuc2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.PnlPerfilGesSuc2.Controls.Add(this.picBxLogoV2);
+            this.PnlPerfilGesSuc2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.PnlPerfilGesSuc2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.PnlPerfilGesSuc2.Location = new System.Drawing.Point(200, 0);
+            this.PnlPerfilGesSuc2.Name = "PnlPerfilGesSuc2";
+            this.PnlPerfilGesSuc2.Size = new System.Drawing.Size(600, 490);
+            this.PnlPerfilGesSuc2.TabIndex = 14;
             // 
             // LblCambContrGesSuc
             // 
@@ -139,26 +146,50 @@
             this.LblCambContrGesSuc.Text = "Cambiar Contraseña";
             this.LblCambContrGesSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // PnlPerfilGesSuc1
+            // 
+            this.PnlPerfilGesSuc1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.PnlPerfilGesSuc1.Controls.Add(this.lblNombre);
+            this.PnlPerfilGesSuc1.Controls.Add(this.LblCambContrGesSuc);
+            this.PnlPerfilGesSuc1.Controls.Add(this.lblNomTipoPer);
+            this.PnlPerfilGesSuc1.Controls.Add(this.lblCrearEnvGesSuc);
+            this.PnlPerfilGesSuc1.Controls.Add(this.lblSlctrAnlcnEnvGesSuc);
+            this.PnlPerfilGesSuc1.Controls.Add(this.lblGstnrEnvGesSuc);
+            this.PnlPerfilGesSuc1.Controls.Add(this.lblCsltrEnvGesSuc);
+            this.PnlPerfilGesSuc1.Controls.Add(this.lblCerrarSesión);
+            this.PnlPerfilGesSuc1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PnlPerfilGesSuc1.Location = new System.Drawing.Point(0, 0);
+            this.PnlPerfilGesSuc1.Name = "PnlPerfilGesSuc1";
+            this.PnlPerfilGesSuc1.Size = new System.Drawing.Size(200, 490);
+            this.PnlPerfilGesSuc1.TabIndex = 25;
+            // 
+            // picBxLogoV2
+            // 
+            this.picBxLogoV2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picBxLogoV2.Image = ((System.Drawing.Image)(resources.GetObject("picBxLogoV2.Image")));
+            this.picBxLogoV2.Location = new System.Drawing.Point(0, 0);
+            this.picBxLogoV2.Name = "picBxLogoV2";
+            this.picBxLogoV2.Size = new System.Drawing.Size(600, 490);
+            this.picBxLogoV2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBxLogoV2.TabIndex = 1;
+            this.picBxLogoV2.TabStop = false;
+            // 
             // PerfilGesSuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(800, 490);
-            this.Controls.Add(this.LblCambContrGesSuc);
-            this.Controls.Add(this.PnlShowPerfilGesSuc);
-            this.Controls.Add(this.lblSlctrAnlcnEnvGesSuc);
-            this.Controls.Add(this.lblCsltrEnvGesSuc);
-            this.Controls.Add(this.lblCerrarSesión);
-            this.Controls.Add(this.lblGstnrEnvGesSuc);
-            this.Controls.Add(this.lblCrearEnvGesSuc);
-            this.Controls.Add(this.lblNomTipoPer);
-            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.PnlPerfilGesSuc1);
+            this.Controls.Add(this.PnlPerfilGesSuc2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PerfilGesSuc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PerfilGesSuc";
             this.Load += new System.EventHandler(this.PerfilGesSuc_Load);
+            this.PnlPerfilGesSuc2.ResumeLayout(false);
+            this.PnlPerfilGesSuc1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -172,7 +203,9 @@
         private System.Windows.Forms.Label lblCrearEnvGesSuc;
         private System.Windows.Forms.Label lblNomTipoPer;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Panel PnlShowPerfilGesSuc;
+        private System.Windows.Forms.Panel PnlPerfilGesSuc2;
         private System.Windows.Forms.Label LblCambContrGesSuc;
+        private System.Windows.Forms.Panel PnlPerfilGesSuc1;
+        private System.Windows.Forms.PictureBox picBxLogoV2;
     }
 }

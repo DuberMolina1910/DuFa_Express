@@ -39,14 +39,14 @@ namespace DuFa_express
 
         private void AbrirSubForms(object SubForms)
         {
-            if (this.pnlShowSubForm.Controls.Count > 0)
-                this.pnlShowSubForm.Controls.RemoveAt(0);
+            if (this.pnlPerClient2.Controls.Count > 0)
+                this.pnlPerClient2.Controls.RemoveAt(0);
             {
                 Form frm = SubForms as Form;
                 frm.TopLevel = false;
                 frm.Dock = DockStyle.Fill;
-                this.pnlShowSubForm.Controls.Add(frm);
-                this.pnlShowSubForm.Tag = frm;
+                this.pnlPerClient2.Controls.Add(frm);
+                this.pnlPerClient2.Tag = frm;
                 frm.Show();
             }
         }
