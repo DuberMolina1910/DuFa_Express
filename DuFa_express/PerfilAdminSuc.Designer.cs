@@ -32,7 +32,7 @@
             this.pnlUsuLog = new System.Windows.Forms.Panel();
             this.lblRegEnvio = new System.Windows.Forms.Label();
             this.lblRegCiudad = new System.Windows.Forms.Label();
-            this.lblCerrarSesión = new System.Windows.Forms.Label();
+            this.lblCerrarSesion = new System.Windows.Forms.Label();
             this.lblRegSuc = new System.Windows.Forms.Label();
             this.lblRgstUsrAdmSuc = new System.Windows.Forms.Label();
             this.lblNomTipoPer = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@
             this.pnlUsuLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.pnlUsuLog.Controls.Add(this.lblRegEnvio);
             this.pnlUsuLog.Controls.Add(this.lblRegCiudad);
-            this.pnlUsuLog.Controls.Add(this.lblCerrarSesión);
+            this.pnlUsuLog.Controls.Add(this.lblCerrarSesion);
             this.pnlUsuLog.Controls.Add(this.lblRegSuc);
             this.pnlUsuLog.Controls.Add(this.lblRgstUsrAdmSuc);
             this.pnlUsuLog.Controls.Add(this.lblNomTipoPer);
@@ -68,7 +68,7 @@
             this.lblRegEnvio.Name = "lblRegEnvio";
             this.lblRegEnvio.Size = new System.Drawing.Size(197, 35);
             this.lblRegEnvio.TabIndex = 6;
-            this.lblRegEnvio.Text = "Registrar Envío";
+            this.lblRegEnvio.Text = "Nuevo Envío";
             this.lblRegEnvio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblRegEnvio.Click += new System.EventHandler(this.lblRegEnvio_Click);
             // 
@@ -84,17 +84,17 @@
             this.lblRegCiudad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblRegCiudad.Click += new System.EventHandler(this.lblRegCiudad_Click);
             // 
-            // lblCerrarSesión
+            // lblCerrarSesion
             // 
-            this.lblCerrarSesión.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblCerrarSesión.ForeColor = System.Drawing.Color.White;
-            this.lblCerrarSesión.Location = new System.Drawing.Point(2, 446);
-            this.lblCerrarSesión.Name = "lblCerrarSesión";
-            this.lblCerrarSesión.Size = new System.Drawing.Size(197, 35);
-            this.lblCerrarSesión.TabIndex = 4;
-            this.lblCerrarSesión.Text = "Cerrar Sesión";
-            this.lblCerrarSesión.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCerrarSesión.Click += new System.EventHandler(this.lblCerrarSesión_Click);
+            this.lblCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.lblCerrarSesion.Location = new System.Drawing.Point(2, 446);
+            this.lblCerrarSesion.Name = "lblCerrarSesion";
+            this.lblCerrarSesion.Size = new System.Drawing.Size(197, 35);
+            this.lblCerrarSesion.TabIndex = 4;
+            this.lblCerrarSesion.Text = "Cerrar Sesión";
+            this.lblCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCerrarSesion.Click += new System.EventHandler(this.lblCerrarSesion_Click);
             // 
             // lblRegSuc
             // 
@@ -191,7 +191,7 @@
         private System.Windows.Forms.Label lblNomTipoPer;
         private System.Windows.Forms.Label lblRgstUsrAdmSuc;
         private System.Windows.Forms.Label lblRegSuc;
-        private System.Windows.Forms.Label lblCerrarSesión;
+        private System.Windows.Forms.Label lblCerrarSesion;
         private System.Windows.Forms.Panel pnlShowSubForm;
         private System.Windows.Forms.Label lblRegCiudad;
         private System.Windows.Forms.PictureBox picBxLogoV2;

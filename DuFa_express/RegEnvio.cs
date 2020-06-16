@@ -147,7 +147,11 @@ namespace DuFa_express
 
         private void btnNuevoReg_Click(object sender, EventArgs e)
         {
+            txtNumGuia.Clear();
             txtNumId.Clear();
+            txtNumId.Enabled = true;
+            btnConfirmar.Enabled = false;
+            btnNuevoReg.Enabled = false;
             CacheRegEnvio.ValTotalEnvio = Convert.ToString(0);
             lblValEnvio.Text = "COP $0";
             txtNumIdDes.Clear();

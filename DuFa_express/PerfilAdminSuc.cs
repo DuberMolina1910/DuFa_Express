@@ -28,7 +28,7 @@ namespace DuFa_express
             reguser.ShowDialog();            
         }
 
-        private void lblCerrarSesión_Click(object sender, EventArgs e)
+        private void lblCerrarSesion_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Esta seguro que desea cerrar la sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
             {

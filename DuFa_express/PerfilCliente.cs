@@ -17,6 +17,11 @@ namespace DuFa_express
             InitializeComponent();
         }
 
+        private void PerfilClientForm_Load(object sender, EventArgs e)
+        {
+            InfoUsuarios();
+        }
+
         private void lblCerrarSesión_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Esta seguro que desea cerrar la sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -32,9 +37,33 @@ namespace DuFa_express
             lblNomTipoPer.Text = Cache.NomTipoPer;
         }
 
-        private void PerfilClientForm_Load(object sender, EventArgs e)
+        private void AbrirSubForms(object SubForms)
         {
-            InfoUsuarios();
+            if (this.pnlShowSubForm.Controls.Count > 0)
+                this.pnlShowSubForm.Controls.RemoveAt(0);
+            {
+                Form frm = SubForms as Form;
+                frm.TopLevel = false;
+                frm.Dock = DockStyle.Fill;
+                this.pnlShowSubForm.Controls.Add(frm);
+                this.pnlShowSubForm.Tag = frm;
+                frm.Show();
+            }
+        }
+
+        private void lblCerrarSesion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Esta seguro que desea cerrar la sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Index index = new Index();
+                index.Show();
+                this.Close();
+            }
+        }
+
+        private void lblPerClienCrearEnv_Click(object sender, EventArgs e)
+        {
+            AbrirSubForms(new RegEnvio());
         }
     }
 }
