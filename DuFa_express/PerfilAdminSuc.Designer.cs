@@ -142,6 +142,7 @@
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNombre.Click += new System.EventHandler(this.lblNombre_Click);
             // 
             // pnlShowSubForm
             // 
@@ -151,6 +152,7 @@
             this.pnlShowSubForm.Name = "pnlShowSubForm";
             this.pnlShowSubForm.Size = new System.Drawing.Size(600, 490);
             this.pnlShowSubForm.TabIndex = 4;
+            this.pnlShowSubForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlShowSubForm_Paint);
             // 
             // picBxLogoV2
             // 
@@ -162,6 +164,7 @@
             this.picBxLogoV2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBxLogoV2.TabIndex = 0;
             this.picBxLogoV2.TabStop = false;
+            this.picBxLogoV2.Click += new System.EventHandler(this.picBxLogoV2_Click);
             // 
             // PerfilAdminSuc
             // 

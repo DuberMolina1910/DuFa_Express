@@ -15,7 +15,7 @@ namespace DuFa_express
             int resultado = 0;
             SqlConnection Connect = DB_Connection.DBConnection();
             {
-                SqlCommand command = new SqlCommand(string.Format("INSERT INTO TABUSUARIOS (NUMIDUSU, NOMUSU, FECHNACUSU, TELUSU, CORREOUSU,  DIRDOMUSU, CONTRASENA, TIPOPER, IDTIPOID) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}', HASHBYTES('MD5','{6}'),'{7}','{8}')", DatosClient.NumIdUsu, DatosClient.NomUsu, DatosClient.FechNacUsu.ToString(), DatosClient.TelUsu, DatosClient.CorreoUsu, DatosClient.DirDomUsu, DatosClient.Contrasena, pTipoPer, DatosClient.IdTipoId), Connect);
+                SqlCommand command = new SqlCommand(string.Format("INSERT INTO TABUSUARIOS (NUMIDUSU, NOMUSU, FECHNACUSU, TELUSU, CORREOUSU,  DIRDOMUSU, CONTRASENA, IDTIPOPER, IDTIPOID) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}', HASHBYTES('MD5','{6}'),'{7}','{8}')", DatosClient.NumIdUsu, DatosClient.NomUsu, DatosClient.FechNacUsu.ToString(), DatosClient.TelUsu, DatosClient.CorreoUsu, DatosClient.DirDomUsu, DatosClient.Contrasena, pTipoPer, DatosClient.IdTipoId), Connect);
                 resultado = command.ExecuteNonQuery();
                 Connect.Close();
             }

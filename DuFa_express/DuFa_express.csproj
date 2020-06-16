@@ -73,6 +73,12 @@
     </Compile>
     <Compile Include="DatosClient.cs" />
     <Compile Include="DB_Connection.cs" />
+    <Compile Include="PerfilRepSuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerfilRepSuc.Designer.cs">
+      <DependentUpon>PerfilRepSuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegCiudad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,12 +108,6 @@
     </Compile>
     <Compile Include="PerfilJefSuc.Designer.cs">
       <DependentUpon>PerfilJefSuc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PerfilRepartidor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PerfilRepartidor.Designer.cs">
-      <DependentUpon>PerfilRepartidor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,6 +148,9 @@
     <EmbeddedResource Include="Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PerfilRepSuc.resx">
+      <DependentUpon>PerfilRepSuc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegCiudad.resx">
       <DependentUpon>RegCiudad.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,9 +165,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PerfilJefSuc.resx">
       <DependentUpon>PerfilJefSuc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PerfilRepartidor.resx">
-      <DependentUpon>PerfilRepartidor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
