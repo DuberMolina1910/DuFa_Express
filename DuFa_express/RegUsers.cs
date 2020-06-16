@@ -22,7 +22,7 @@ namespace DuFa_express
             ListarTipoId();
             ListarTipoPer();
             ListarCiudades();
-            ListarSucursales();
+            ListarSucursalesbyCiudad();
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
@@ -97,14 +97,23 @@ namespace DuFa_express
             cmbCiudad.DisplayMember = "NomCiudad";
             cmbCiudad.ValueMember = "IdCiudad";
         }
-        
 
         public void ListarSucursales()
         {
             UsuarioDAL_C Sucu = new UsuarioDAL_C();
+
             cmbSucOper.DataSource = Sucu.ListarSucursales();
             cmbSucOper.DisplayMember = "NomSucursal";
             cmbSucOper.ValueMember = "IdSucursal";
+
+            
+        }
+
+        public void ListarSucursalesbyCiudad()
+        {
+            UsuarioDAL_C SucXCiu = new UsuarioDAL_C();
+
+            cmbSucOper.DataSource = SucXCiu.ListarSucursalesbyCiudad(Convert.ToInt32(cmbSucOper.SelectedValue));
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

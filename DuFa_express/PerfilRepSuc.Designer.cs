@@ -50,9 +50,9 @@
             // 
             this.LblCmbContraPerClien.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.LblCmbContraPerClien.ForeColor = System.Drawing.Color.White;
-            this.LblCmbContraPerClien.Location = new System.Drawing.Point(5, 408);
+            this.LblCmbContraPerClien.Location = new System.Drawing.Point(5, 406);
             this.LblCmbContraPerClien.Name = "LblCmbContraPerClien";
-            this.LblCmbContraPerClien.Size = new System.Drawing.Size(197, 35);
+            this.LblCmbContraPerClien.Size = new System.Drawing.Size(189, 37);
             this.LblCmbContraPerClien.TabIndex = 22;
             this.LblCmbContraPerClien.Text = "Cambiar Contraseña";
             this.LblCmbContraPerClien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -63,7 +63,7 @@
             this.lblActlzrEstdEnvRepSuc.ForeColor = System.Drawing.Color.White;
             this.lblActlzrEstdEnvRepSuc.Location = new System.Drawing.Point(4, 118);
             this.lblActlzrEstdEnvRepSuc.Name = "lblActlzrEstdEnvRepSuc";
-            this.lblActlzrEstdEnvRepSuc.Size = new System.Drawing.Size(197, 35);
+            this.lblActlzrEstdEnvRepSuc.Size = new System.Drawing.Size(190, 35);
             this.lblActlzrEstdEnvRepSuc.TabIndex = 20;
             this.lblActlzrEstdEnvRepSuc.Text = "Actualizar Estado Envio";
             this.lblActlzrEstdEnvRepSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -84,9 +84,9 @@
             // 
             this.lblCsltrEnvAsignRepSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblCsltrEnvAsignRepSuc.ForeColor = System.Drawing.Color.White;
-            this.lblCsltrEnvAsignRepSuc.Location = new System.Drawing.Point(4, 83);
+            this.lblCsltrEnvAsignRepSuc.Location = new System.Drawing.Point(4, 81);
             this.lblCsltrEnvAsignRepSuc.Name = "lblCsltrEnvAsignRepSuc";
-            this.lblCsltrEnvAsignRepSuc.Size = new System.Drawing.Size(197, 35);
+            this.lblCsltrEnvAsignRepSuc.Size = new System.Drawing.Size(190, 37);
             this.lblCsltrEnvAsignRepSuc.TabIndex = 17;
             this.lblCsltrEnvAsignRepSuc.Text = "Consultar Envios Asignados";
             this.lblCsltrEnvAsignRepSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

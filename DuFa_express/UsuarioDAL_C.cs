@@ -168,6 +168,21 @@ namespace DuFa_express
             return tabla;
         }
 
+        public DataTable ListarSucursalesbyCiudad(int pIdSucursal)/*Query para mostrar los sucursales segun ciudad para RegUsers*/
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+
+            //DataTable tabla = new DataTable();
+            DataTable tabla = new DataTable();
+            SqlCommand command = new SqlCommand(string.Format("SELECT NOMSUCURSAL,IdSucursal,TabCiudades.IdCiudad,TABSUCURSALES.IdCiudad FROM TABSUCURSALES,TabCiudades WHERE TabCiudades.IdCiudad =  TabSucursales.IdCiudad AND TabSucursales.IdCiudad = '{0}'  ORDER BY NOMSUCURSAL ASC  ",pIdSucursal), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            
+            tabla.Load(Reader);
+            Reader.Close();
+            Connect.Close();
+            return tabla;
+        }
+
 
         public DataTable ListarSucursalesDGV()/*Query para mostrar los sucursales activas en el DataGridView de RegSuc*/
         {
