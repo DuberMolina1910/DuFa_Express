@@ -39,6 +39,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.pnlShowSubForm = new System.Windows.Forms.Panel();
             this.picBxLogoV2 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.pnlUsuLog.SuspendLayout();
             this.pnlShowSubForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).BeginInit();
@@ -47,6 +48,7 @@
             // pnlUsuLog
             // 
             this.pnlUsuLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.pnlUsuLog.Controls.Add(this.label6);
             this.pnlUsuLog.Controls.Add(this.lblRegEnvio);
             this.pnlUsuLog.Controls.Add(this.lblRegCiudad);
             this.pnlUsuLog.Controls.Add(this.lblCerrarSesion);
@@ -142,7 +144,6 @@
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblNombre.Click += new System.EventHandler(this.lblNombre_Click);
             // 
             // pnlShowSubForm
             // 
@@ -152,7 +153,6 @@
             this.pnlShowSubForm.Name = "pnlShowSubForm";
             this.pnlShowSubForm.Size = new System.Drawing.Size(600, 490);
             this.pnlShowSubForm.TabIndex = 4;
-            this.pnlShowSubForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlShowSubForm_Paint);
             // 
             // picBxLogoV2
             // 
@@ -164,7 +164,17 @@
             this.picBxLogoV2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBxLogoV2.TabIndex = 0;
             this.picBxLogoV2.TabStop = false;
-            this.picBxLogoV2.Click += new System.EventHandler(this.picBxLogoV2_Click);
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(2, 228);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(197, 35);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Generar Reporte de Sucursales";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // PerfilAdminSuc
             // 
@@ -196,5 +206,6 @@
         private System.Windows.Forms.Label lblRegCiudad;
         private System.Windows.Forms.PictureBox picBxLogoV2;
         private System.Windows.Forms.Label lblRegEnvio;
+        private System.Windows.Forms.Label label6;
     }
 }

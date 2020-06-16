@@ -77,20 +77,5 @@ namespace DuFa_express
         {
             AbrirSubForms(new RegEnvio());
         }
-
-        private void picBxLogoV2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNombre_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlShowSubForm_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
