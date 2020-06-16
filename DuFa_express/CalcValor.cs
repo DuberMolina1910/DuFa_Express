@@ -163,7 +163,7 @@ namespace DuFa_express
                         }
                     }
 
-                    CacheRegEnvio.ValTotalEnvio = Convert.ToString("$" + valorTotal);
+                    CacheRegEnvio.ValTotalEnvio = Convert.ToString(valorTotal);
                     this.Close();
                 }
                 else if (Convert.ToString(vd) != "")
@@ -190,7 +190,7 @@ namespace DuFa_express
                         valorTotal = vp + 3000;
                     }                    
 
-                    CacheRegEnvio.ValTotalEnvio = Convert.ToString("$" + valorTotal);
+                    CacheRegEnvio.ValTotalEnvio = Convert.ToString(valorTotal);
                     this.Close();
                 }
             }
@@ -287,7 +287,7 @@ namespace DuFa_express
                         }
                     }
 
-                    CacheRegEnvio.ValTotalEnvio = Convert.ToString("$" + valorTotal);
+                    CacheRegEnvio.ValTotalEnvio = Convert.ToString(valorTotal);
                     this.Close();
                 }
                 else if (Convert.ToString(vd) != "")
@@ -314,7 +314,7 @@ namespace DuFa_express
                         valorTotal = vp + 3000;
                     }
 
-                    CacheRegEnvio.ValTotalEnvio = Convert.ToString("$" + valorTotal);
+                    CacheRegEnvio.ValTotalEnvio = Convert.ToString(valorTotal);
                     this.Close();
                 }
             }

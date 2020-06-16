@@ -68,15 +68,12 @@ namespace DuFa_express
 
         private void RegCiudad_Load(object sender, EventArgs e)
         {
-
             MostrarCiudades();
-
         }
         public void MostrarCiudades()
         {
             UsuarioDAL_C Ciudad = new UsuarioDAL_C();
-            DtGrdVTabCiudades.DataSource = Ciudad.MostrarCiudadesDGV();
-            
+            DtGrdVTabCiudades.DataSource = Ciudad.MostrarCiudadesDGV();            
         }
 
         private void btnCancelarCiudad_Click(object sender, EventArgs e)
@@ -85,8 +82,7 @@ namespace DuFa_express
         }
 
         private void btnElimCiudad_Click(object sender, EventArgs e)
-        {
-            
+        {            
             if (DtGrdVTabCiudades.SelectedRows.Count > 0)
             {                               
                 if (MessageBox.Show("¿Esta seguro de Desactivar esta Ciudad?", "Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

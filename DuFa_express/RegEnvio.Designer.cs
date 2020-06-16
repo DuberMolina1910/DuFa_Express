@@ -39,7 +39,7 @@
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.txtDirDes = new System.Windows.Forms.TextBox();
             this.txtTelDes = new System.Windows.Forms.TextBox();
-            this.TxtBxNumGuia = new System.Windows.Forms.TextBox();
+            this.txtNumGuia = new System.Windows.Forms.TextBox();
             this.lblTitleReg = new System.Windows.Forms.Label();
             this.lblDirDes = new System.Windows.Forms.Label();
             this.lblTelDes = new System.Windows.Forms.Label();
@@ -64,6 +64,7 @@
             this.cmbTipoPer = new System.Windows.Forms.ComboBox();
             this.lblShowFechaEnvio = new System.Windows.Forms.Label();
             this.timerFechaEnvio = new System.Windows.Forms.Timer(this.components);
+            this.btnNuevoReg = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblMsgError
@@ -71,7 +72,7 @@
             this.lblMsgError.AutoSize = true;
             this.lblMsgError.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMsgError.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblMsgError.Location = new System.Drawing.Point(433, 349);
+            this.lblMsgError.Location = new System.Drawing.Point(433, 297);
             this.lblMsgError.Name = "lblMsgError";
             this.lblMsgError.Size = new System.Drawing.Size(34, 17);
             this.lblMsgError.TabIndex = 134;
@@ -123,10 +124,11 @@
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(436, 452);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(142, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(142, 25);
             this.btnCancelar.TabIndex = 127;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblNumId
             // 
@@ -142,9 +144,9 @@
             // 
             this.btnConfirmar.Enabled = false;
             this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmar.Location = new System.Drawing.Point(436, 423);
+            this.btnConfirmar.Location = new System.Drawing.Point(436, 394);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(142, 23);
+            this.btnConfirmar.Size = new System.Drawing.Size(142, 25);
             this.btnConfirmar.TabIndex = 125;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
@@ -168,14 +170,14 @@
             this.txtTelDes.Size = new System.Drawing.Size(200, 23);
             this.txtTelDes.TabIndex = 10;
             // 
-            // TxtBxNumGuia
+            // txtNumGuia
             // 
-            this.TxtBxNumGuia.Enabled = false;
-            this.TxtBxNumGuia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBxNumGuia.Location = new System.Drawing.Point(209, 90);
-            this.TxtBxNumGuia.Name = "TxtBxNumGuia";
-            this.TxtBxNumGuia.Size = new System.Drawing.Size(200, 23);
-            this.TxtBxNumGuia.TabIndex = 1;
+            this.txtNumGuia.Enabled = false;
+            this.txtNumGuia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumGuia.Location = new System.Drawing.Point(209, 90);
+            this.txtNumGuia.Name = "txtNumGuia";
+            this.txtNumGuia.Size = new System.Drawing.Size(200, 23);
+            this.txtNumGuia.TabIndex = 1;
             // 
             // lblTitleReg
             // 
@@ -296,9 +298,9 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(436, 394);
+            this.btnBuscar.Location = new System.Drawing.Point(436, 365);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(142, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(142, 25);
             this.btnBuscar.TabIndex = 144;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -423,11 +425,24 @@
             this.timerFechaEnvio.Enabled = true;
             this.timerFechaEnvio.Tick += new System.EventHandler(this.timerFechaEnvio_Tick);
             // 
+            // btnNuevoReg
+            // 
+            this.btnNuevoReg.Enabled = false;
+            this.btnNuevoReg.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoReg.Location = new System.Drawing.Point(436, 423);
+            this.btnNuevoReg.Name = "btnNuevoReg";
+            this.btnNuevoReg.Size = new System.Drawing.Size(142, 25);
+            this.btnNuevoReg.TabIndex = 155;
+            this.btnNuevoReg.Text = "Nuevo Registro";
+            this.btnNuevoReg.UseVisualStyleBackColor = true;
+            this.btnNuevoReg.Click += new System.EventHandler(this.btnNuevoReg_Click);
+            // 
             // RegEnvio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 490);
+            this.Controls.Add(this.btnNuevoReg);
             this.Controls.Add(this.lblShowFechaEnvio);
             this.Controls.Add(this.cmbTipoPer);
             this.Controls.Add(this.lblValEnvio);
@@ -455,7 +470,7 @@
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.txtDirDes);
             this.Controls.Add(this.txtTelDes);
-            this.Controls.Add(this.TxtBxNumGuia);
+            this.Controls.Add(this.txtNumGuia);
             this.Controls.Add(this.lblTitleReg);
             this.Controls.Add(this.lblDirDes);
             this.Controls.Add(this.lblTelDes);
@@ -483,7 +498,7 @@
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.TextBox txtDirDes;
         private System.Windows.Forms.TextBox txtTelDes;
-        private System.Windows.Forms.TextBox TxtBxNumGuia;
+        private System.Windows.Forms.TextBox txtNumGuia;
         private System.Windows.Forms.Label lblTitleReg;
         private System.Windows.Forms.Label lblDirDes;
         private System.Windows.Forms.Label lblTelDes;
@@ -508,5 +523,6 @@
         private System.Windows.Forms.ComboBox cmbTipoPer;
         private System.Windows.Forms.Label lblShowFechaEnvio;
         private System.Windows.Forms.Timer timerFechaEnvio;
+        private System.Windows.Forms.Button btnNuevoReg;
     }
 }

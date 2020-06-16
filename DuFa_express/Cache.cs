@@ -30,6 +30,7 @@ namespace DuFa_express
         public static string CorreoUsu { set; get; }
         public static string DirDomUsu { set; get; }        
         public static string ValTotalEnvio { set; get; }
+        public static int IdEnvioGuia { set; get; }
 
     }
 }

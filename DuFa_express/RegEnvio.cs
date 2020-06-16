@@ -18,11 +18,12 @@ namespace DuFa_express
         }
 
         private void RegEnvio_Load(object sender, EventArgs e)
-        {            
+        {
+            ListarSucursales();
         }
         private void timerFechaEnvio_Tick(object sender, EventArgs e)
         {
-            lblShowFechaEnvio.Text = DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToLongTimeString();
+            lblShowFechaEnvio.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         }
 
         private void lblNomUsu_Click(object sender, EventArgs e)
@@ -65,7 +66,7 @@ namespace DuFa_express
                     txtDirDes.Enabled = true;
                     txtDetEnvio.Enabled = true;
                     btnConfirmar.Enabled = true;
-                    lblValEnvio.Text = "COP " + CacheRegEnvio.ValTotalEnvio;
+                    lblValEnvio.Text = "COP $ " + CacheRegEnvio.ValTotalEnvio;
                 }
                 else
                     MensajeError("Usuario no existe.");
@@ -86,10 +87,74 @@ namespace DuFa_express
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            DatosClient enviar = new DatosClient();
-            enviar.NumIdUsu = txtNumId.Text;
-            enviar.IdTipoPer = "5";
-            enviar.IdEstadoEnvio = "1";
+            if (txtNumId.Text != "" && lblShowFechaEnvio.Text != "" && txtNumIdDes.Text != "" && txtNomDes.Text != "" && txtTelDes.Text != "" && txtDirDes.Text != "" && txtDetEnvio.Text != "")
+            {
+                DatosClient enviar = new DatosClient();
+                enviar.NumIdUsu = txtNumId.Text;
+                enviar.ValTotalEnvio = CacheRegEnvio.ValTotalEnvio;
+                enviar.IdEstadoEnvio = "1";
+                enviar.FechEnvio = lblShowFechaEnvio.Text;
+                enviar.IdTipoPer = "5";
+                enviar.SucursalOrigen = Convert.ToString(cmbIdSucOri.SelectedValue);
+                enviar.SucursalDestino = Convert.ToString(cmbIdSucDes.SelectedValue);
+                enviar.IdDestinatario = txtNumIdDes.Text;
+                enviar.NomDestinatario = txtNomDes.Text;
+                enviar.TelDestinatario = txtTelDes.Text;
+                enviar.DirDestinatario = txtDirDes.Text;
+                enviar.DetEnvio = txtDetEnvio.Text;
+
+                int res = UsuarioDAL_C.RegistrarEnvio(enviar);
+
+                if (res > 0)
+                {
+                    MensajeError("Datos guardados correctamente.");
+                    txtNumId.Enabled = false;
+                    cmbIdSucOri.Enabled = false;
+                    cmbIdSucDes.Enabled = false;
+                    txtNumIdDes.Enabled = false;
+                    txtNomDes.Enabled = false;
+                    txtTelDes.Enabled = false;
+                    txtDirDes.Enabled = false;
+                    txtDetEnvio.Enabled = false;
+                    btnConfirmar.Enabled = false;
+                    btnNuevoReg.Enabled = true;
+
+                    UsuarioDAL_C.CrearNumeroGuia();
+                    txtNumGuia.Text = Convert.ToString(CacheRegEnvio.IdEnvioGuia);
+                }
+            }
+            else
+                MensajeError("Por favor llene los campos .");
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        public void ListarSucursales()
+        {
+            UsuarioDAL_C SucuOrigen = new UsuarioDAL_C();
+            cmbIdSucOri.DataSource = SucuOrigen.ListarSucursales();
+            cmbIdSucOri.DisplayMember = "NomSucursal";
+            cmbIdSucOri.ValueMember = "IdSucursal";
+
+            UsuarioDAL_C SucuDestino = new UsuarioDAL_C();
+            cmbIdSucDes.DataSource = SucuDestino.ListarSucursales();
+            cmbIdSucDes.DisplayMember = "NomSucursal";
+            cmbIdSucDes.ValueMember = "IdSucursal";
+        }
+
+        private void btnNuevoReg_Click(object sender, EventArgs e)
+        {
+            txtNumId.Clear();
+            CacheRegEnvio.ValTotalEnvio = Convert.ToString(0);
+            lblValEnvio.Text = "COP $0";
+            txtNumIdDes.Clear();
+            txtNomDes.Clear();
+            txtTelDes.Clear();
+            txtDirDes.Clear();
+            txtDetEnvio.Clear();
         }
     }
 }

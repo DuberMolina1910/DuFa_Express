@@ -253,5 +253,32 @@ namespace DuFa_express
             return resultado;
         }
 
+        public static int RegistrarEnvio(DatosClient DatosClient)/*Query para registrar un nuevo envio*/
+        {
+            int resultado = 0;
+            SqlConnection Connect = DB_Connection.DBConnection();
+            {
+                SqlCommand command = new SqlCommand(string.Format("INSERT INTO TABENVIOS (NUMIDUSU, VALORENVIO, IDESTADO, FECHAENVIO, IDTIPOPER, IDSUCORI, IDSUCDES, IDDESTINATARIO, NOMDESTINATARIO, TELDESTINATARIO, DIRDESTINO, DETENVIO) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')", DatosClient.NumIdUsu, DatosClient.ValTotalEnvio, DatosClient.IdEstadoEnvio, DatosClient.FechEnvio, DatosClient.IdTipoPer, DatosClient.SucursalOrigen, DatosClient.SucursalDestino,  DatosClient.IdDestinatario, DatosClient.NomDestinatario, DatosClient.TelDestinatario, DatosClient.DirDestinatario, DatosClient.DetEnvio), Connect);
+                resultado = command.ExecuteNonQuery();
+                Connect.Close();
+            }
+            return resultado;
+        }
+
+        public static int CrearNumeroGuia()/*Query para crear el nuevo numero de guia*/
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+            int resultado = -1;
+            SqlCommand command = new SqlCommand(string.Format("SELECT TOP 1 IDENVIOGUIA FROM TABENVIOS ORDER BY CAST(IDENVIOGUIA AS INT) DESC"), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            while (Reader.Read())
+            {
+                CacheRegEnvio.IdEnvioGuia = Reader.GetInt32(0);
+                resultado = 50;
+            }
+            Connect.Close();
+            return resultado;
+        }
+
     }
 }
