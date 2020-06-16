@@ -76,7 +76,7 @@
             this.lblCsltEnvPerClient.ForeColor = System.Drawing.Color.White;
             this.lblCsltEnvPerClient.Location = new System.Drawing.Point(4, 118);
             this.lblCsltEnvPerClient.Name = "lblCsltEnvPerClient";
-            this.lblCsltEnvPerClient.Size = new System.Drawing.Size(197, 35);
+            this.lblCsltEnvPerClient.Size = new System.Drawing.Size(190, 35);
             this.lblCsltEnvPerClient.TabIndex = 20;
             this.lblCsltEnvPerClient.Text = "Consultar Envio";
             this.lblCsltEnvPerClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -99,7 +99,7 @@
             this.lblSlctrAnlPerClient.ForeColor = System.Drawing.Color.White;
             this.lblSlctrAnlPerClient.Location = new System.Drawing.Point(4, 153);
             this.lblSlctrAnlPerClient.Name = "lblSlctrAnlPerClient";
-            this.lblSlctrAnlPerClient.Size = new System.Drawing.Size(197, 35);
+            this.lblSlctrAnlPerClient.Size = new System.Drawing.Size(189, 35);
             this.lblSlctrAnlPerClient.TabIndex = 18;
             this.lblSlctrAnlPerClient.Text = "Solicitar Anulacion de Envio";
             this.lblSlctrAnlPerClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,9 +108,9 @@
             // 
             this.lblPerClienCrearEnv.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblPerClienCrearEnv.ForeColor = System.Drawing.Color.White;
-            this.lblPerClienCrearEnv.Location = new System.Drawing.Point(4, 83);
+            this.lblPerClienCrearEnv.Location = new System.Drawing.Point(4, 82);
             this.lblPerClienCrearEnv.Name = "lblPerClienCrearEnv";
-            this.lblPerClienCrearEnv.Size = new System.Drawing.Size(197, 35);
+            this.lblPerClienCrearEnv.Size = new System.Drawing.Size(189, 36);
             this.lblPerClienCrearEnv.TabIndex = 17;
             this.lblPerClienCrearEnv.Text = "Nuevo Envio";
             this.lblPerClienCrearEnv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

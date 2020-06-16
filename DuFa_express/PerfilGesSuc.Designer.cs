@@ -45,7 +45,7 @@
             this.lblSlctrAnlcnEnvGesSuc.ForeColor = System.Drawing.Color.White;
             this.lblSlctrAnlcnEnvGesSuc.Location = new System.Drawing.Point(5, 188);
             this.lblSlctrAnlcnEnvGesSuc.Name = "lblSlctrAnlcnEnvGesSuc";
-            this.lblSlctrAnlcnEnvGesSuc.Size = new System.Drawing.Size(197, 35);
+            this.lblSlctrAnlcnEnvGesSuc.Size = new System.Drawing.Size(189, 35);
             this.lblSlctrAnlcnEnvGesSuc.TabIndex = 13;
             this.lblSlctrAnlcnEnvGesSuc.Text = "Solicitar Anulacion";
             this.lblSlctrAnlcnEnvGesSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -56,7 +56,7 @@
             this.lblCsltrEnvGesSuc.ForeColor = System.Drawing.Color.White;
             this.lblCsltrEnvGesSuc.Location = new System.Drawing.Point(4, 118);
             this.lblCsltrEnvGesSuc.Name = "lblCsltrEnvGesSuc";
-            this.lblCsltrEnvGesSuc.Size = new System.Drawing.Size(197, 35);
+            this.lblCsltrEnvGesSuc.Size = new System.Drawing.Size(190, 35);
             this.lblCsltrEnvGesSuc.TabIndex = 12;
             this.lblCsltrEnvGesSuc.Text = "Consultar Envios";
             this.lblCsltrEnvGesSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -88,9 +88,9 @@
             // 
             this.lblCrearEnvGesSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblCrearEnvGesSuc.ForeColor = System.Drawing.Color.White;
-            this.lblCrearEnvGesSuc.Location = new System.Drawing.Point(4, 83);
+            this.lblCrearEnvGesSuc.Location = new System.Drawing.Point(4, 82);
             this.lblCrearEnvGesSuc.Name = "lblCrearEnvGesSuc";
-            this.lblCrearEnvGesSuc.Size = new System.Drawing.Size(197, 35);
+            this.lblCrearEnvGesSuc.Size = new System.Drawing.Size(190, 36);
             this.lblCrearEnvGesSuc.TabIndex = 9;
             this.lblCrearEnvGesSuc.Text = "Crear Envio";
             this.lblCrearEnvGesSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -134,7 +134,7 @@
             this.LblCambContrGesSuc.ForeColor = System.Drawing.Color.White;
             this.LblCambContrGesSuc.Location = new System.Drawing.Point(5, 408);
             this.LblCambContrGesSuc.Name = "LblCambContrGesSuc";
-            this.LblCambContrGesSuc.Size = new System.Drawing.Size(197, 35);
+            this.LblCambContrGesSuc.Size = new System.Drawing.Size(189, 35);
             this.LblCambContrGesSuc.TabIndex = 15;
             this.LblCambContrGesSuc.Text = "Cambiar Contraseña";
             this.LblCambContrGesSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
