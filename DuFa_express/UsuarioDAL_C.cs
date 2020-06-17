@@ -168,13 +168,13 @@ namespace DuFa_express
             return tabla;
         }
 
-        public DataTable ListarSucursalesbyCiudad(int pIdSucursal)/*Query para mostrar los sucursales segun ciudad para RegUsers*/
+        public DataTable ListarSucursalesbyCiudad(int pIdCiudad)/*Query para mostrar los sucursales segun ciudad para RegUsers*/
         {
             SqlConnection Connect = DB_Connection.DBConnection();
 
             //DataTable tabla = new DataTable();
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT TabCiudades.IdCiudad,TABSUCURSALES.IdCiudad, NomSucursal FROM TabCiudades inner join TabSucursales on TabCiudades.IdCiudad= TabSucursales.IdCiudad  WHERE TabCiudades.IdCiudad = '{0}'  ORDER BY NOMSUCURSAL ASC", pIdSucursal), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT TABCIUDADES.IDCIUDAD,TABSUCURSALES.IDCIUDAD, LTRIM(RTRIM(REPLACE(NOMSUCURSAL, '', ''))) AS NOMSUCURSAL FROM TABCIUDADES INNER JOIN TABSUCURSALES ON TABCIUDADES.IDCIUDAD= TABSUCURSALES.IDCIUDAD  WHERE TABCIUDADES.IDCIUDAD = '{0}'  ORDER BY NOMSUCURSAL ASC", pIdCiudad), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             
             tabla.Load(Reader);
