@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilAdminSuc));
             this.pnlUsuLog = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.lblRegEnvio = new System.Windows.Forms.Label();
             this.lblRegCiudad = new System.Windows.Forms.Label();
             this.lblCerrarSesion = new System.Windows.Forms.Label();
@@ -37,9 +38,12 @@
             this.lblRgstUsrAdmSuc = new System.Windows.Forms.Label();
             this.lblNomTipoPer = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.pnlShowSubForm = new System.Windows.Forms.Panel();
             this.picBxLogoV2 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblGesEnvio = new System.Windows.Forms.Label();
             this.pnlUsuLog.SuspendLayout();
             this.pnlShowSubForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).BeginInit();
@@ -48,6 +52,7 @@
             // pnlUsuLog
             // 
             this.pnlUsuLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.pnlUsuLog.Controls.Add(this.lblGesEnvio);
             this.pnlUsuLog.Controls.Add(this.label6);
             this.pnlUsuLog.Controls.Add(this.lblRegEnvio);
             this.pnlUsuLog.Controls.Add(this.lblRegCiudad);
@@ -56,11 +61,23 @@
             this.pnlUsuLog.Controls.Add(this.lblRgstUsrAdmSuc);
             this.pnlUsuLog.Controls.Add(this.lblNomTipoPer);
             this.pnlUsuLog.Controls.Add(this.lblNombre);
+            this.pnlUsuLog.Controls.Add(this.shapeContainer1);
             this.pnlUsuLog.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlUsuLog.Location = new System.Drawing.Point(0, 0);
             this.pnlUsuLog.Name = "pnlUsuLog";
             this.pnlUsuLog.Size = new System.Drawing.Size(200, 490);
             this.pnlUsuLog.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(2, 228);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(197, 35);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Generar Reporte de Sucursales";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblRegEnvio
             // 
@@ -145,6 +162,36 @@
             this.lblNombre.Text = "Nombre";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape2,
+            this.lineShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(200, 490);
+            this.shapeContainer1.TabIndex = 22;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape2
+            // 
+            this.lineShape2.BorderColor = System.Drawing.Color.Navy;
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 9;
+            this.lineShape2.X2 = 191;
+            this.lineShape2.Y1 = 437;
+            this.lineShape2.Y2 = 437;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.BorderColor = System.Drawing.Color.Navy;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 8;
+            this.lineShape1.X2 = 190;
+            this.lineShape1.Y1 = 73;
+            this.lineShape1.Y2 = 73;
+            // 
             // pnlShowSubForm
             // 
             this.pnlShowSubForm.Controls.Add(this.picBxLogoV2);
@@ -165,16 +212,16 @@
             this.picBxLogoV2.TabIndex = 0;
             this.picBxLogoV2.TabStop = false;
             // 
-            // label6
+            // lblGesEnvio
             // 
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(2, 228);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(197, 35);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Generar Reporte de Sucursales";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblGesEnvio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblGesEnvio.ForeColor = System.Drawing.Color.White;
+            this.lblGesEnvio.Location = new System.Drawing.Point(3, 263);
+            this.lblGesEnvio.Name = "lblGesEnvio";
+            this.lblGesEnvio.Size = new System.Drawing.Size(197, 35);
+            this.lblGesEnvio.TabIndex = 23;
+            this.lblGesEnvio.Text = "Gestionar Envios";
+            this.lblGesEnvio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // PerfilAdminSuc
             // 
@@ -207,5 +254,9 @@
         private System.Windows.Forms.PictureBox picBxLogoV2;
         private System.Windows.Forms.Label lblRegEnvio;
         private System.Windows.Forms.Label label6;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        private System.Windows.Forms.Label lblGesEnvio;
     }
 }

@@ -106,7 +106,7 @@ namespace DuFa_express
             
             if (Convert.ToString(cmbCiudad.DataSource) == "")
             {
-                cmbSucOper.Text = "";
+                cmbSucOper.Text = "*Seleccione";
             }
         }
 

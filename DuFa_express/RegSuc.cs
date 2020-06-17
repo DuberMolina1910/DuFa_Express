@@ -59,7 +59,7 @@ namespace DuFa_express
 
         private void BtnRegSuc_Click(object sender, EventArgs e)
         {
-            if (txtRegSuc.Text != "NOMBRE DE LA Sucursal")
+            if (txtRegSuc.Text != "NOMBRE DE LA SUCURSAL")
             {
                 if (UsuarioDAL_C.RegistrarSuc(Convert.ToInt32(CmbBxSelecCiudRegSuc.SelectedValue), txtRegSuc.Text) > 0)
                 {
