@@ -49,7 +49,7 @@
             // 
             // BtnExlGenRepPerAdm
             // 
-            this.BtnExlGenRepPerAdm.Location = new System.Drawing.Point(432, 418);
+            this.BtnExlGenRepPerAdm.Location = new System.Drawing.Point(432, 452);
             this.BtnExlGenRepPerAdm.Name = "BtnExlGenRepPerAdm";
             this.BtnExlGenRepPerAdm.Size = new System.Drawing.Size(113, 26);
             this.BtnExlGenRepPerAdm.TabIndex = 1;
@@ -59,9 +59,9 @@
             // DtGrdVwGenRepPerAdm
             // 
             this.DtGrdVwGenRepPerAdm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtGrdVwGenRepPerAdm.Location = new System.Drawing.Point(36, 142);
+            this.DtGrdVwGenRepPerAdm.Location = new System.Drawing.Point(12, 142);
             this.DtGrdVwGenRepPerAdm.Name = "DtGrdVwGenRepPerAdm";
-            this.DtGrdVwGenRepPerAdm.Size = new System.Drawing.Size(509, 270);
+            this.DtGrdVwGenRepPerAdm.Size = new System.Drawing.Size(676, 270);
             this.DtGrdVwGenRepPerAdm.TabIndex = 2;
             // 
             // LblTiposReportes
@@ -100,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 490);
+            this.ClientSize = new System.Drawing.Size(700, 490);
             this.Controls.Add(this.LblTitulo);
             this.Controls.Add(this.CmbBxTipRepGenRepPerAdm);
             this.Controls.Add(this.LblTiposReportes);

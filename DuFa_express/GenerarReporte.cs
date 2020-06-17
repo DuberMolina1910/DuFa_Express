@@ -19,13 +19,13 @@ namespace DuFa_express
 
         private void GenerarReporte_Load(object sender, EventArgs e)
         {
-            //ReportConsultUsu();
+            ReportConsultUsu();
         }
 
         public void ReportConsultUsu()
         {
-            //UsuarioDAL_C Reportes = new UsuarioDAL_C();
-            //DtGrdVwGenRepPerAdm.DataSource = Reportes.ReporteCosultarUsuarios();
+            UsuarioDAL_C Reportes = new UsuarioDAL_C();
+            DtGrdVwGenRepPerAdm.DataSource = Reportes.ReporteCosultarUsuarios();
         }
 
         private void CmbBxTipRepGenRepPerAdm_SelectedIndexChanged(object sender, EventArgs e)
