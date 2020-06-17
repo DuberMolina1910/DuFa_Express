@@ -85,7 +85,7 @@
             this.CmbBxTipRepGenRepPerAdm.Name = "CmbBxTipRepGenRepPerAdm";
             this.CmbBxTipRepGenRepPerAdm.Size = new System.Drawing.Size(250, 21);
             this.CmbBxTipRepGenRepPerAdm.TabIndex = 5;
-            this.CmbBxTipRepGenRepPerAdm.SelectedValueChanged += new System.EventHandler(this.CmbBxTipRepGenRepPerAdm_SelectedValueChanged);
+            this.CmbBxTipRepGenRepPerAdm.SelectionChangeCommitted += new System.EventHandler(this.CmbBxTipRepGenRepPerAdm_SelectionChangeCommitted);
             // 
             // LblTitulo
             // 

@@ -28,27 +28,27 @@ namespace DuFa_express
             DtGrdVwGenRepPerAdm.DataSource = Reportes.ReporteCosultarUsuarios();
         }
 
-        private void CmbBxTipRepGenRepPerAdm_SelectedValueChanged(object sender, EventArgs e)
+        private void CmbBxTipRepGenRepPerAdm_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            if (CmbBxTipRepGenRepPerAdm.SelectedText == "Consulta Sucursal por Ciudades")
-            {
-                MessageBox.Show("Proceso","Proceso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else if (CmbBxTipRepGenRepPerAdm.SelectedText == "Consulta Usuarios del Sistema")
-            {
-                ReportConsultUsu();
-            }
-            else if (CmbBxTipRepGenRepPerAdm.SelectedText == "Consulta de Envios")
+            if (CmbBxTipRepGenRepPerAdm.Text == "Consulta Sucursal por Ciudades")
             {
                 MessageBox.Show("Proceso", "Proceso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
-
+            else if (CmbBxTipRepGenRepPerAdm.Text == "Consulta Usuarios del Sistema")
+            {
+                ReportConsultUsu();
+            }
+            else if (CmbBxTipRepGenRepPerAdm.Text == "Consulta de Envios")
+            {
+                MessageBox.Show("Proceso", "Proceso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
+
         private void BtnCerrarGenRepPerAdm_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        
     }
 }

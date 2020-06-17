@@ -120,7 +120,6 @@
             this.DtGrdVTabCiudades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DtGrdVTabCiudades.Size = new System.Drawing.Size(345, 150);
             this.DtGrdVTabCiudades.TabIndex = 17;
-            this.DtGrdVTabCiudades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnDesacCiudad
             // 

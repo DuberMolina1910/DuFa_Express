@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilAdminSuc));
             this.pnlUsuLog = new System.Windows.Forms.Panel();
             this.lblGesEnvio = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.LblGenRepPerAdmSuc = new System.Windows.Forms.Label();
             this.lblRegEnvio = new System.Windows.Forms.Label();
             this.lblRegCiudad = new System.Windows.Forms.Label();
             this.lblCerrarSesion = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             // 
             this.pnlUsuLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.pnlUsuLog.Controls.Add(this.lblGesEnvio);
-            this.pnlUsuLog.Controls.Add(this.label6);
+            this.pnlUsuLog.Controls.Add(this.LblGenRepPerAdmSuc);
             this.pnlUsuLog.Controls.Add(this.lblRegEnvio);
             this.pnlUsuLog.Controls.Add(this.lblRegCiudad);
             this.pnlUsuLog.Controls.Add(this.lblCerrarSesion);
@@ -78,18 +78,18 @@
             this.lblGesEnvio.TabIndex = 23;
             this.lblGesEnvio.Text = "Gestionar Envios";
             this.lblGesEnvio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblGesEnvio.Click += new System.EventHandler(this.lblGesEnvio_Click);
             // 
-            // label6
+            // LblGenRepPerAdmSuc
             // 
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(2, 228);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(197, 35);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Generar Reporte de Sucursales";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LblGenRepPerAdmSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.LblGenRepPerAdmSuc.ForeColor = System.Drawing.Color.White;
+            this.LblGenRepPerAdmSuc.Location = new System.Drawing.Point(2, 228);
+            this.LblGenRepPerAdmSuc.Name = "LblGenRepPerAdmSuc";
+            this.LblGenRepPerAdmSuc.Size = new System.Drawing.Size(197, 35);
+            this.LblGenRepPerAdmSuc.TabIndex = 21;
+            this.LblGenRepPerAdmSuc.Text = "Generar Reporte de Sucursales";
+            this.LblGenRepPerAdmSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LblGenRepPerAdmSuc.Click += new System.EventHandler(this.LblGenRepPerAdmSuc_Click);
             // 
             // lblRegEnvio
             // 
@@ -254,7 +254,7 @@
         private System.Windows.Forms.Label lblRegCiudad;
         private System.Windows.Forms.PictureBox picBxLogoV2;
         private System.Windows.Forms.Label lblRegEnvio;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label LblGenRepPerAdmSuc;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;

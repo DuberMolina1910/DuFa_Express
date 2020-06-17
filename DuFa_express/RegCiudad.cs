@@ -62,11 +62,6 @@ namespace DuFa_express
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void RegCiudad_Load(object sender, EventArgs e)
         {
             MostrarCiudades();
@@ -75,11 +70,6 @@ namespace DuFa_express
         {
             UsuarioDAL_C Ciudad = new UsuarioDAL_C();
             DtGrdVTabCiudades.DataSource = Ciudad.MostrarCiudadesDGV();            
-        }
-
-        private void btnCancelarCiudad_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void btnElimCiudad_Click(object sender, EventArgs e)
@@ -113,6 +103,10 @@ namespace DuFa_express
         private void BtnRfrsCiud_Click(object sender, EventArgs e)
         {
             MostrarCiudades();
+        }
+        private void btnCancelarCiudad_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
