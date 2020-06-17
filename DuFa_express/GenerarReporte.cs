@@ -19,27 +19,27 @@ namespace DuFa_express
 
         private void GenerarReporte_Load(object sender, EventArgs e)
         {
-            ReportConsultUsu();
+            //ReportConsultUsu();
         }
 
         public void ReportConsultUsu()
         {
-            UsuarioDAL_C Reportes = new UsuarioDAL_C();
-            DtGrdVwGenRepPerAdm.DataSource = Reportes.ReporteCosultarUsuarios();
+            //UsuarioDAL_C Reportes = new UsuarioDAL_C();
+            //DtGrdVwGenRepPerAdm.DataSource = Reportes.ReporteCosultarUsuarios();
         }
 
         private void CmbBxTipRepGenRepPerAdm_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CmbBxTipRepGenRepPerAdm.SelectedText == "Consulta Sucursal por Ciudades")
+            if (CmbBxTipRepGenRepPerAdm.Text == "Consulta Sucursal por Ciudades")
             {
                 MessageBox.Show("Proceso", "Proceso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else if (CmbBxTipRepGenRepPerAdm.SelectedText == "Consulta Usuarios del Sistema")
+            else if (CmbBxTipRepGenRepPerAdm.Text == "Consulta Usuarios del Sistema")
             {
                 UsuarioDAL_C Reportes = new UsuarioDAL_C();
                 DtGrdVwGenRepPerAdm.DataSource = Reportes.ReporteCosultarUsuarios();
             }
-            else if (CmbBxTipRepGenRepPerAdm.SelectedText == "Consulta de Envios")
+            else if (CmbBxTipRepGenRepPerAdm.Text == "Consulta de Envios")
             {
                 MessageBox.Show("Proceso", "Proceso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
