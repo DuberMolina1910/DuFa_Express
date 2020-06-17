@@ -72,7 +72,7 @@
             // 
             this.lblGesEnvio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblGesEnvio.ForeColor = System.Drawing.Color.White;
-            this.lblGesEnvio.Location = new System.Drawing.Point(3, 263);
+            this.lblGesEnvio.Location = new System.Drawing.Point(0, 226);
             this.lblGesEnvio.Name = "lblGesEnvio";
             this.lblGesEnvio.Size = new System.Drawing.Size(197, 35);
             this.lblGesEnvio.TabIndex = 23;
@@ -83,7 +83,7 @@
             // 
             this.LblGenRepPerAdmSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.LblGenRepPerAdmSuc.ForeColor = System.Drawing.Color.White;
-            this.LblGenRepPerAdmSuc.Location = new System.Drawing.Point(2, 228);
+            this.LblGenRepPerAdmSuc.Location = new System.Drawing.Point(1, 261);
             this.LblGenRepPerAdmSuc.Name = "LblGenRepPerAdmSuc";
             this.LblGenRepPerAdmSuc.Size = new System.Drawing.Size(197, 35);
             this.LblGenRepPerAdmSuc.TabIndex = 21;
