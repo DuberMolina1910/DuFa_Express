@@ -196,6 +196,7 @@
             this.Controls.Add(this.pnlPerfClient1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PerfilClientForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PerfilCliente";
             this.Load += new System.EventHandler(this.PerfilClientForm_Load);
             this.pnlPerfClient1.ResumeLayout(false);

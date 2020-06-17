@@ -16,5 +16,39 @@ namespace DuFa_express
         {
             InitializeComponent();
         }
+
+        private void GenerarReporte_Load(object sender, EventArgs e)
+        {
+            ReportConsultUsu();
+        }
+
+        public void ReportConsultUsu()
+        {
+            UsuarioDAL_C Reportes = new UsuarioDAL_C();
+            DtGrdVwGenRepPerAdm.DataSource = Reportes.ReporteCosultarUsuarios();
+        }
+
+        private void CmbBxTipRepGenRepPerAdm_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (CmbBxTipRepGenRepPerAdm.SelectedText == "Consulta Sucursal por Ciudades")
+            {
+                MessageBox.Show("Proceso","Proceso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (CmbBxTipRepGenRepPerAdm.SelectedText == "Consulta Usuarios del Sistema")
+            {
+                ReportConsultUsu();
+            }
+            else if (CmbBxTipRepGenRepPerAdm.SelectedText == "Consulta de Envios")
+            {
+                MessageBox.Show("Proceso", "Proceso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+
+        }
+        private void BtnCerrarGenRepPerAdm_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

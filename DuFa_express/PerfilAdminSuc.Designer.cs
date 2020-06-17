@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilAdminSuc));
             this.pnlUsuLog = new System.Windows.Forms.Panel();
+            this.lblGesEnvio = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblRegEnvio = new System.Windows.Forms.Label();
             this.lblRegCiudad = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.pnlShowSubForm = new System.Windows.Forms.Panel();
             this.picBxLogoV2 = new System.Windows.Forms.PictureBox();
-            this.lblGesEnvio = new System.Windows.Forms.Label();
             this.pnlUsuLog.SuspendLayout();
             this.pnlShowSubForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).BeginInit();
@@ -67,6 +67,18 @@
             this.pnlUsuLog.Name = "pnlUsuLog";
             this.pnlUsuLog.Size = new System.Drawing.Size(200, 490);
             this.pnlUsuLog.TabIndex = 3;
+            // 
+            // lblGesEnvio
+            // 
+            this.lblGesEnvio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblGesEnvio.ForeColor = System.Drawing.Color.White;
+            this.lblGesEnvio.Location = new System.Drawing.Point(3, 263);
+            this.lblGesEnvio.Name = "lblGesEnvio";
+            this.lblGesEnvio.Size = new System.Drawing.Size(197, 35);
+            this.lblGesEnvio.TabIndex = 23;
+            this.lblGesEnvio.Text = "Gestionar Envios";
+            this.lblGesEnvio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblGesEnvio.Click += new System.EventHandler(this.lblGesEnvio_Click);
             // 
             // label6
             // 
@@ -211,17 +223,6 @@
             this.picBxLogoV2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBxLogoV2.TabIndex = 0;
             this.picBxLogoV2.TabStop = false;
-            // 
-            // lblGesEnvio
-            // 
-            this.lblGesEnvio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblGesEnvio.ForeColor = System.Drawing.Color.White;
-            this.lblGesEnvio.Location = new System.Drawing.Point(3, 263);
-            this.lblGesEnvio.Name = "lblGesEnvio";
-            this.lblGesEnvio.Size = new System.Drawing.Size(197, 35);
-            this.lblGesEnvio.TabIndex = 23;
-            this.lblGesEnvio.Text = "Gestionar Envios";
-            this.lblGesEnvio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // PerfilAdminSuc
             // 

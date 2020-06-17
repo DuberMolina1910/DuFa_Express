@@ -280,5 +280,18 @@ namespace DuFa_express
             return resultado;
         }
 
+        public DataTable ReporteCosultarUsuarios()/*Query para validar usuario al consultar en el registro de envios*/
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+
+            DataTable tabla = new DataTable();
+            SqlCommand command = new SqlCommand(string.Format("SELECT DESCTIPOPER,NUMIDUSU,NOMUSU,FECHNACUSU,TELUSU,CORREOUSU,DIRDOMUSU,NOMTIPOID FROM TABUSUARIOS,TABTIPOPER, TABTIPOID WHERE TABUSUARIOS.IDTIPOPER = TABTIPOPER.IDTIPOPER AND TABUSUARIOS.IDTIPOID = TABTIPOID.IDTIPOID ORDER BY DESCTIPOPER"), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            Reader.Close();
+            Connect.Close();
+            return tabla;
+            
+        }
+
     }
 }
