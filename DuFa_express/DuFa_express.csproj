@@ -77,6 +77,12 @@
     <Compile Include="GesEnvios.Designer.cs">
       <DependentUpon>GesEnvios.cs</DependentUpon>
     </Compile>
+	<Compile Include="GenerarReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+	<Compile Include="GenerarReporte.Designer.cs">
+      <DependentUpon>GenerarReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="HabCiud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GesEnvios.resx">
       <DependentUpon>GesEnvios.cs</DependentUpon>
+    </EmbeddedResource>
+	<EmbeddedResource Include="GenerarReporte.resx">
+      <DependentUpon>GenerarReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HabCiud.resx">
       <DependentUpon>HabCiud.cs</DependentUpon>
