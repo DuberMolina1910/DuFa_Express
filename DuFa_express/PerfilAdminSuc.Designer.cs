@@ -198,7 +198,7 @@
             this.pnlShowSubForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlShowSubForm.Location = new System.Drawing.Point(200, 0);
             this.pnlShowSubForm.Name = "pnlShowSubForm";
-            this.pnlShowSubForm.Size = new System.Drawing.Size(600, 490);
+            this.pnlShowSubForm.Size = new System.Drawing.Size(700, 490);
             this.pnlShowSubForm.TabIndex = 4;
             // 
             // picBxLogoV2
@@ -207,7 +207,7 @@
             this.picBxLogoV2.Image = ((System.Drawing.Image)(resources.GetObject("picBxLogoV2.Image")));
             this.picBxLogoV2.Location = new System.Drawing.Point(0, 0);
             this.picBxLogoV2.Name = "picBxLogoV2";
-            this.picBxLogoV2.Size = new System.Drawing.Size(600, 490);
+            this.picBxLogoV2.Size = new System.Drawing.Size(700, 490);
             this.picBxLogoV2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBxLogoV2.TabIndex = 0;
             this.picBxLogoV2.TabStop = false;
@@ -227,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 490);
+            this.ClientSize = new System.Drawing.Size(900, 490);
             this.Controls.Add(this.pnlShowSubForm);
             this.Controls.Add(this.pnlUsuLog);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

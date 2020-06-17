@@ -47,9 +47,10 @@
             // 
             this.PnlPerfilRepSuc2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.PnlPerfilRepSuc2.Controls.Add(this.picBxLogoV2Client);
+            this.PnlPerfilRepSuc2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PnlPerfilRepSuc2.Location = new System.Drawing.Point(200, 0);
             this.PnlPerfilRepSuc2.Name = "PnlPerfilRepSuc2";
-            this.PnlPerfilRepSuc2.Size = new System.Drawing.Size(600, 490);
+            this.PnlPerfilRepSuc2.Size = new System.Drawing.Size(700, 490);
             this.PnlPerfilRepSuc2.TabIndex = 0;
             // 
             // picBxLogoV2Client
@@ -59,7 +60,7 @@
             this.picBxLogoV2Client.Image = ((System.Drawing.Image)(resources.GetObject("picBxLogoV2Client.Image")));
             this.picBxLogoV2Client.Location = new System.Drawing.Point(0, 0);
             this.picBxLogoV2Client.Name = "picBxLogoV2Client";
-            this.picBxLogoV2Client.Size = new System.Drawing.Size(600, 490);
+            this.picBxLogoV2Client.Size = new System.Drawing.Size(700, 490);
             this.picBxLogoV2Client.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBxLogoV2Client.TabIndex = 2;
             this.picBxLogoV2Client.TabStop = false;
@@ -152,9 +153,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(800, 490);
-            this.Controls.Add(this.PnlPerfilRepSuc1);
+            this.ClientSize = new System.Drawing.Size(900, 490);
             this.Controls.Add(this.PnlPerfilRepSuc2);
+            this.Controls.Add(this.PnlPerfilRepSuc1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PerfilRepSuc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

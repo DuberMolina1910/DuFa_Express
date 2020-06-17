@@ -171,7 +171,7 @@
             this.pnlPerClient2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPerClient2.Location = new System.Drawing.Point(200, 0);
             this.pnlPerClient2.Name = "pnlPerClient2";
-            this.pnlPerClient2.Size = new System.Drawing.Size(600, 490);
+            this.pnlPerClient2.Size = new System.Drawing.Size(700, 490);
             this.pnlPerClient2.TabIndex = 17;
             // 
             // picBxLogoV2Client
@@ -180,7 +180,7 @@
             this.picBxLogoV2Client.Image = ((System.Drawing.Image)(resources.GetObject("picBxLogoV2Client.Image")));
             this.picBxLogoV2Client.Location = new System.Drawing.Point(0, 0);
             this.picBxLogoV2Client.Name = "picBxLogoV2Client";
-            this.picBxLogoV2Client.Size = new System.Drawing.Size(600, 490);
+            this.picBxLogoV2Client.Size = new System.Drawing.Size(700, 490);
             this.picBxLogoV2Client.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBxLogoV2Client.TabIndex = 0;
             this.picBxLogoV2Client.TabStop = false;
@@ -190,7 +190,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 490);
+            this.ClientSize = new System.Drawing.Size(900, 490);
             this.Controls.Add(this.pnlPerClient2);
             this.Controls.Add(this.picBxLogoV2);
             this.Controls.Add(this.pnlPerfClient1);

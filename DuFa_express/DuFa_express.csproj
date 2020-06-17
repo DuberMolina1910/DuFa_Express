@@ -71,6 +71,12 @@
     <Compile Include="CalcValor.Designer.cs">
       <DependentUpon>CalcValor.cs</DependentUpon>
     </Compile>
+    <Compile Include="GesEnvios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GesEnvios.Designer.cs">
+      <DependentUpon>GesEnvios.cs</DependentUpon>
+    </Compile>
     <Compile Include="HabCiud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     <Compile Include="UsuarioDAL_C.cs" />
     <EmbeddedResource Include="CalcValor.resx">
       <DependentUpon>CalcValor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GesEnvios.resx">
+      <DependentUpon>GesEnvios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HabCiud.resx">
       <DependentUpon>HabCiud.cs</DependentUpon>
