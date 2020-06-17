@@ -77,5 +77,10 @@ namespace DuFa_express
         {
             AbrirSubForms(new RegEnvio());
         }
+
+        private void LblGenRepPerAdmSuc_Click(object sender, EventArgs e)
+        {
+            AbrirSubForms(new GenerarReporte());
+        }
     }
 }
