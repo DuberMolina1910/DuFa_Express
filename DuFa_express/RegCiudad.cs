@@ -50,6 +50,7 @@ namespace DuFa_express
                 if (UsuarioDAL_C.RegistrarCiudad(txtRegCiudad.Text) > 0)
                 {
                     MensajeError("Ciudad registrada correctamente.");
+                    txtRegCiudad.Clear();
                 }
                 else 
                     MensajeError("La ciudad no pudo ser registrada.");

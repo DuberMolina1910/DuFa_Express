@@ -37,12 +37,12 @@
             this.lblNomTipoPer = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.PnlPerfilGesSuc2 = new System.Windows.Forms.Panel();
+            this.picBxLogoV2 = new System.Windows.Forms.PictureBox();
             this.LblCambContrGesSuc = new System.Windows.Forms.Label();
             this.PnlPerfilGesSuc1 = new System.Windows.Forms.Panel();
-            this.picBxLogoV2 = new System.Windows.Forms.PictureBox();
             this.PnlPerfilGesSuc2.SuspendLayout();
-            this.PnlPerfilGesSuc1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).BeginInit();
+            this.PnlPerfilGesSuc1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblSlctrAnlcnEnvGesSuc
@@ -135,6 +135,18 @@
             this.PnlPerfilGesSuc2.Size = new System.Drawing.Size(600, 490);
             this.PnlPerfilGesSuc2.TabIndex = 14;
             // 
+            // picBxLogoV2
+            // 
+            this.picBxLogoV2.BackColor = System.Drawing.SystemColors.Control;
+            this.picBxLogoV2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picBxLogoV2.Image = ((System.Drawing.Image)(resources.GetObject("picBxLogoV2.Image")));
+            this.picBxLogoV2.Location = new System.Drawing.Point(0, 0);
+            this.picBxLogoV2.Name = "picBxLogoV2";
+            this.picBxLogoV2.Size = new System.Drawing.Size(600, 490);
+            this.picBxLogoV2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBxLogoV2.TabIndex = 1;
+            this.picBxLogoV2.TabStop = false;
+            // 
             // LblCambContrGesSuc
             // 
             this.LblCambContrGesSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
@@ -163,17 +175,6 @@
             this.PnlPerfilGesSuc1.Size = new System.Drawing.Size(200, 490);
             this.PnlPerfilGesSuc1.TabIndex = 25;
             // 
-            // picBxLogoV2
-            // 
-            this.picBxLogoV2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picBxLogoV2.Image = ((System.Drawing.Image)(resources.GetObject("picBxLogoV2.Image")));
-            this.picBxLogoV2.Location = new System.Drawing.Point(0, 0);
-            this.picBxLogoV2.Name = "picBxLogoV2";
-            this.picBxLogoV2.Size = new System.Drawing.Size(600, 490);
-            this.picBxLogoV2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBxLogoV2.TabIndex = 1;
-            this.picBxLogoV2.TabStop = false;
-            // 
             // PerfilGesSuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,8 +189,8 @@
             this.Text = "PerfilGesSuc";
             this.Load += new System.EventHandler(this.PerfilGesSuc_Load);
             this.PnlPerfilGesSuc2.ResumeLayout(false);
-            this.PnlPerfilGesSuc1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).EndInit();
+            this.PnlPerfilGesSuc1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

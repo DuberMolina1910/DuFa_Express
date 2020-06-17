@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilJefSuc));
             this.PnlPerfilJefSuc2 = new System.Windows.Forms.Panel();
+            this.picBxLogoV2Client = new System.Windows.Forms.PictureBox();
             this.lblCerrarSesión = new System.Windows.Forms.Label();
             this.lblNomTipoPer = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.PnlPerfilJefSuc1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.picBxLogoV2Client = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.PnlPerfilJefSuc2.SuspendLayout();
-            this.PnlPerfilJefSuc1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2Client)).BeginInit();
+            this.PnlPerfilJefSuc1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlPerfilJefSuc2
@@ -55,6 +55,18 @@
             this.PnlPerfilJefSuc2.Name = "PnlPerfilJefSuc2";
             this.PnlPerfilJefSuc2.Size = new System.Drawing.Size(600, 490);
             this.PnlPerfilJefSuc2.TabIndex = 0;
+            // 
+            // picBxLogoV2Client
+            // 
+            this.picBxLogoV2Client.BackColor = System.Drawing.SystemColors.Control;
+            this.picBxLogoV2Client.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picBxLogoV2Client.Image = ((System.Drawing.Image)(resources.GetObject("picBxLogoV2Client.Image")));
+            this.picBxLogoV2Client.Location = new System.Drawing.Point(0, 0);
+            this.picBxLogoV2Client.Name = "picBxLogoV2Client";
+            this.picBxLogoV2Client.Size = new System.Drawing.Size(600, 490);
+            this.picBxLogoV2Client.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBxLogoV2Client.TabIndex = 1;
+            this.picBxLogoV2Client.TabStop = false;
             // 
             // lblCerrarSesión
             // 
@@ -108,6 +120,17 @@
             this.PnlPerfilJefSuc1.Name = "PnlPerfilJefSuc1";
             this.PnlPerfilJefSuc1.Size = new System.Drawing.Size(200, 490);
             this.PnlPerfilJefSuc1.TabIndex = 23;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(2, 228);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(197, 35);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Generar Reporte de Sucursal";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -164,28 +187,6 @@
             this.label5.Text = "Registrar Usuario";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // picBxLogoV2Client
-            // 
-            this.picBxLogoV2Client.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picBxLogoV2Client.Image = ((System.Drawing.Image)(resources.GetObject("picBxLogoV2Client.Image")));
-            this.picBxLogoV2Client.Location = new System.Drawing.Point(0, 0);
-            this.picBxLogoV2Client.Name = "picBxLogoV2Client";
-            this.picBxLogoV2Client.Size = new System.Drawing.Size(600, 490);
-            this.picBxLogoV2Client.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBxLogoV2Client.TabIndex = 1;
-            this.picBxLogoV2Client.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(2, 228);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(197, 35);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Generar Reporte de Sucursal";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // PerfilJefSuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,8 +201,8 @@
             this.Text = "PerfilJefSuc2";
             this.Load += new System.EventHandler(this.PerfilJefSuc_Load);
             this.PnlPerfilJefSuc2.ResumeLayout(false);
-            this.PnlPerfilJefSuc1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2Client)).EndInit();
+            this.PnlPerfilJefSuc1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilRepSuc));
             this.PnlPerfilRepSuc2 = new System.Windows.Forms.Panel();
+            this.picBxLogoV2Client = new System.Windows.Forms.PictureBox();
             this.lblActlzrEstdEnvRepSuc = new System.Windows.Forms.Label();
             this.lblCerrarSesión = new System.Windows.Forms.Label();
             this.lblCsltrEnvAsignRepSuc = new System.Windows.Forms.Label();
@@ -37,10 +38,9 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.PnlPerfilRepSuc1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.picBxLogoV2Client = new System.Windows.Forms.PictureBox();
             this.PnlPerfilRepSuc2.SuspendLayout();
-            this.PnlPerfilRepSuc1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2Client)).BeginInit();
+            this.PnlPerfilRepSuc1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlPerfilRepSuc2
@@ -51,6 +51,18 @@
             this.PnlPerfilRepSuc2.Name = "PnlPerfilRepSuc2";
             this.PnlPerfilRepSuc2.Size = new System.Drawing.Size(600, 490);
             this.PnlPerfilRepSuc2.TabIndex = 0;
+            // 
+            // picBxLogoV2Client
+            // 
+            this.picBxLogoV2Client.BackColor = System.Drawing.SystemColors.Control;
+            this.picBxLogoV2Client.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picBxLogoV2Client.Image = ((System.Drawing.Image)(resources.GetObject("picBxLogoV2Client.Image")));
+            this.picBxLogoV2Client.Location = new System.Drawing.Point(0, 0);
+            this.picBxLogoV2Client.Name = "picBxLogoV2Client";
+            this.picBxLogoV2Client.Size = new System.Drawing.Size(600, 490);
+            this.picBxLogoV2Client.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBxLogoV2Client.TabIndex = 2;
+            this.picBxLogoV2Client.TabStop = false;
             // 
             // lblActlzrEstdEnvRepSuc
             // 
@@ -135,17 +147,6 @@
             this.label1.Text = "Cambiar Contraseña";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // picBxLogoV2Client
-            // 
-            this.picBxLogoV2Client.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picBxLogoV2Client.Image = ((System.Drawing.Image)(resources.GetObject("picBxLogoV2Client.Image")));
-            this.picBxLogoV2Client.Location = new System.Drawing.Point(0, 0);
-            this.picBxLogoV2Client.Name = "picBxLogoV2Client";
-            this.picBxLogoV2Client.Size = new System.Drawing.Size(600, 490);
-            this.picBxLogoV2Client.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBxLogoV2Client.TabIndex = 2;
-            this.picBxLogoV2Client.TabStop = false;
-            // 
             // PerfilRepSuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,8 +161,8 @@
             this.Text = "PerfilRepSuc";
             this.Load += new System.EventHandler(this.PerfilRepSuc_Load);
             this.PnlPerfilRepSuc2.ResumeLayout(false);
-            this.PnlPerfilRepSuc1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2Client)).EndInit();
+            this.PnlPerfilRepSuc1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
