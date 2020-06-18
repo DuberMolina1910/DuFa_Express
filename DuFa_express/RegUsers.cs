@@ -21,7 +21,7 @@ namespace DuFa_express
         {
             ListarTipoId();
             ListarTipoPer();
-            ListarCiudades();
+            ListarCiudades();          
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
@@ -35,7 +35,14 @@ namespace DuFa_express
                     enviar.IdTipoId = Convert.ToString(CmbBoxIdTipoId.SelectedValue);
                     enviar.IdTipoPer = Convert.ToString(cmbTipoUsu.SelectedValue);
                     enviar.CiudadUsu = Convert.ToString(cmbCiudad.SelectedValue);
-                    enviar.SucursalOperarios = Convert.ToString(cmbSucOper.SelectedValue);
+                    if (Convert.ToString(cmbTipoUsu.Text) == "Cliente")
+                    {
+                        enviar.SucursalOperarios = Convert.ToString(null);
+                    }
+                    else
+                    {
+                        enviar.SucursalOperarios = Convert.ToString(cmbSucOper.SelectedValue);
+                    }
                     enviar.NumIdUsu = TxtBxIdClient.Text;
                     enviar.FechNacUsu = MskTxtbxFechaNacClient.Text;
                     enviar.TelUsu = TxtBxTelefonoClient.Text;

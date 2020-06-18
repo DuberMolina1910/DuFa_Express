@@ -82,5 +82,10 @@ namespace DuFa_express
         {
             AbrirSubForms(new GenerarReporte());
         }
+
+        private void lblGesEnvio_Click(object sender, EventArgs e)
+        {
+            AbrirSubForms(new GesEnvios());
+        }
     }
 }

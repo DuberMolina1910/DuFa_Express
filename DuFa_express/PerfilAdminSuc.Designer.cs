@@ -78,6 +78,7 @@
             this.lblGesEnvio.TabIndex = 23;
             this.lblGesEnvio.Text = "Gestionar Envios";
             this.lblGesEnvio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblGesEnvio.Click += new System.EventHandler(this.lblGesEnvio_Click);
             // 
             // LblGenRepPerAdmSuc
             // 

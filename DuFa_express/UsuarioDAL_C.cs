@@ -174,7 +174,7 @@ namespace DuFa_express
 
             //DataTable tabla = new DataTable();
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT TABCIUDADES.IDCIUDAD,TABSUCURSALES.IDCIUDAD, LTRIM(RTRIM(REPLACE(NOMSUCURSAL, '', ''))) AS NOMSUCURSAL FROM TABCIUDADES INNER JOIN TABSUCURSALES ON TABCIUDADES.IDCIUDAD= TABSUCURSALES.IDCIUDAD  WHERE TABCIUDADES.IDCIUDAD = '{0}'  ORDER BY NOMSUCURSAL ASC", pIdCiudad), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT TABCIUDADES.IDCIUDAD,TABSUCURSALES.IDSUCURSAL, LTRIM(RTRIM(REPLACE(NOMSUCURSAL, '', ''))) AS NOMSUCURSAL FROM TABCIUDADES INNER JOIN TABSUCURSALES ON TABCIUDADES.IDCIUDAD= TABSUCURSALES.IDCIUDAD  WHERE TABCIUDADES.IDCIUDAD = '{0}'  ORDER BY NOMSUCURSAL ASC", pIdCiudad), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             
             tabla.Load(Reader);
@@ -286,6 +286,32 @@ namespace DuFa_express
 
             DataTable tabla = new DataTable();
             SqlCommand command = new SqlCommand(string.Format("SELECT DESCTIPOPER,NUMIDUSU,NOMUSU,FECHNACUSU,TELUSU,CORREOUSU,DIRDOMUSU,NOMTIPOID FROM TABUSUARIOS,TABTIPOPER, TABTIPOID WHERE TABUSUARIOS.IDTIPOPER = TABTIPOPER.IDTIPOPER AND TABUSUARIOS.IDTIPOID = TABTIPOID.IDTIPOID ORDER BY DESCTIPOPER"), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            tabla.Load(Reader);
+            Reader.Close();
+            Connect.Close();
+            return tabla;
+        }
+
+        public DataTable getTabEnviosDGV(DatosClient DatosCliente)/*Query para mostrar los envios en el DataGridView de GesEnvios*/
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+
+            DataTable tabla = new DataTable();
+            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABENVIOS ORDER BY FECHAENVIO DESC"), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            tabla.Load(Reader);
+            Reader.Close();
+            Connect.Close();
+            return tabla;
+        }
+
+        public DataTable ListarEstados()/*Query para mostrar los envios en el DataGridView de GesEnvios*/
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+
+            DataTable tabla = new DataTable();
+            SqlCommand command = new SqlCommand(string.Format("SELECT IDESTADO, LTRIM(RTRIM(REPLACE(DESCESTADO, '', ''))) AS DESCESTADO FROM TABESTADOS ORDER BY IDESTADO ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
