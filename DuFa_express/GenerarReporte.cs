@@ -20,6 +20,7 @@ namespace DuFa_express
         private void GenerarReporte_Load(object sender, EventArgs e)
         {
             ReportConsultUsu();
+            ReportConsultUsuxSuc();
         }
 
         public void ReportConsultUsu()
@@ -27,12 +28,19 @@ namespace DuFa_express
             UsuarioDAL_C Reportes = new UsuarioDAL_C();
             DtGrdVwGenRepPerAdm.DataSource = Reportes.ReporteCosultarUsuarios();
         }
+        public void ReportConsultUsuxSuc()
+        {
+            UsuarioDAL_C Reportes = new UsuarioDAL_C();
+            DtGrdVwGenRepPerAdm.DataSource = Reportes.ReporteCosultaUsuarioxSuc();
+        }
+
 
         private void CmbBxTipRepGenRepPerAdm_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CmbBxTipRepGenRepPerAdm.Text == "Consulta Sucursal por Ciudades")
+            if (CmbBxTipRepGenRepPerAdm.Text == "Consulta Asignacion de Usuarios - Sucursales")
             {
-                MessageBox.Show("Proceso", "Proceso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                UsuarioDAL_C Reportes = new UsuarioDAL_C();
+                DtGrdVwGenRepPerAdm.DataSource = Reportes.ReporteCosultaUsuarioxSuc();
             }
             else if (CmbBxTipRepGenRepPerAdm.Text == "Consulta Usuarios del Sistema")
             {
@@ -41,7 +49,7 @@ namespace DuFa_express
             }
             else if (CmbBxTipRepGenRepPerAdm.Text == "Consulta de Envios")
             {
-                MessageBox.Show("Proceso", "Proceso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Proceso", "EnviosxSucursalOrgn", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

@@ -78,7 +78,7 @@
             this.CmbBxTipRepGenRepPerAdm.FormattingEnabled = true;
             this.CmbBxTipRepGenRepPerAdm.Items.AddRange(new object[] {
             "",
-            "Consulta Sucursal por Ciudades",
+            "Consulta Asignacion de Usuarios - Sucursales",
             "Consulta Usuarios del Sistema",
             "Consulta de Envios"});
             this.CmbBxTipRepGenRepPerAdm.Location = new System.Drawing.Point(170, 86);
