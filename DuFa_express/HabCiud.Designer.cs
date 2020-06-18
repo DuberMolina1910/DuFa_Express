@@ -37,15 +37,18 @@
             // 
             // BtnCanclHabCiu
             // 
+            this.BtnCanclHabCiu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.BtnCanclHabCiu.Location = new System.Drawing.Point(198, 266);
             this.BtnCanclHabCiu.Name = "BtnCanclHabCiu";
             this.BtnCanclHabCiu.Size = new System.Drawing.Size(108, 38);
             this.BtnCanclHabCiu.TabIndex = 5;
             this.BtnCanclHabCiu.Text = "Cancelar";
             this.BtnCanclHabCiu.UseVisualStyleBackColor = true;
+            this.BtnCanclHabCiu.Click += new System.EventHandler(this.BtnCanclHabCiu_Click);
             // 
             // BtnHabCiu
             // 
+            this.BtnHabCiu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.BtnHabCiu.Location = new System.Drawing.Point(39, 266);
             this.BtnHabCiu.Name = "BtnHabCiu";
             this.BtnHabCiu.Size = new System.Drawing.Size(108, 38);
@@ -72,6 +75,7 @@
             this.DtGrdVwHabCiu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtGrdVwHabCiu.Location = new System.Drawing.Point(39, 34);
             this.DtGrdVwHabCiu.Name = "DtGrdVwHabCiu";
+            this.DtGrdVwHabCiu.RowHeadersVisible = false;
             this.DtGrdVwHabCiu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DtGrdVwHabCiu.Size = new System.Drawing.Size(267, 192);
             this.DtGrdVwHabCiu.TabIndex = 3;
@@ -87,6 +91,7 @@
             this.Controls.Add(this.DtGrdVwHabCiu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "HabCiud";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HabCiud";
             this.Load += new System.EventHandler(this.HabCiud_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DtGrdVwHabCiu)).EndInit();

@@ -54,5 +54,10 @@ namespace DuFa_express
 
             this.Close();
         }
+
+        private void BtnCanclHabCiu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

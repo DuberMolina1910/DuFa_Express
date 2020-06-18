@@ -53,12 +53,14 @@
             this.DtGrdVwHabSuc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtGrdVwHabSuc.Location = new System.Drawing.Point(44, 29);
             this.DtGrdVwHabSuc.Name = "DtGrdVwHabSuc";
+            this.DtGrdVwHabSuc.RowHeadersVisible = false;
             this.DtGrdVwHabSuc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DtGrdVwHabSuc.Size = new System.Drawing.Size(267, 192);
             this.DtGrdVwHabSuc.TabIndex = 0;
             // 
             // BtnHabSuc
             // 
+            this.BtnHabSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.BtnHabSuc.Location = new System.Drawing.Point(44, 261);
             this.BtnHabSuc.Name = "BtnHabSuc";
             this.BtnHabSuc.Size = new System.Drawing.Size(108, 38);
@@ -69,6 +71,7 @@
             // 
             // BtnCanclHabSuc
             // 
+            this.BtnCanclHabSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.BtnCanclHabSuc.Location = new System.Drawing.Point(203, 261);
             this.BtnCanclHabSuc.Name = "BtnCanclHabSuc";
             this.BtnCanclHabSuc.Size = new System.Drawing.Size(108, 38);
