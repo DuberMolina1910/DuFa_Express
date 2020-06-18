@@ -49,7 +49,7 @@
             // 
             // BtnExlGenRepPerAdm
             // 
-            this.BtnExlGenRepPerAdm.Location = new System.Drawing.Point(432, 452);
+            this.BtnExlGenRepPerAdm.Location = new System.Drawing.Point(575, 418);
             this.BtnExlGenRepPerAdm.Name = "BtnExlGenRepPerAdm";
             this.BtnExlGenRepPerAdm.Size = new System.Drawing.Size(113, 26);
             this.BtnExlGenRepPerAdm.TabIndex = 1;
@@ -80,7 +80,7 @@
             "",
             "Consulta Asignacion de Usuarios - Sucursales",
             "Consulta Usuarios del Sistema",
-            "Consulta de Envios"});
+            "Consulta de Envios por sucursales"});
             this.CmbBxTipRepGenRepPerAdm.Location = new System.Drawing.Point(170, 86);
             this.CmbBxTipRepGenRepPerAdm.Name = "CmbBxTipRepGenRepPerAdm";
             this.CmbBxTipRepGenRepPerAdm.Size = new System.Drawing.Size(250, 21);

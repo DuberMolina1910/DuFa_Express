@@ -296,7 +296,19 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT TabCiudades.NomCiudad,TabSucursales.NomSucursal,TabUsuarios.NomUsu,TabUsuarios.NumIdUsu,TabTipoPer.DescTipoPer FROM TabCiudades, TabSucursales, TabUsuarios, TabTipoPer WHERE TabCiudades.IdCiudad = TabSucursales.IdCiudad and TabTipoPer.IdTipoPer = TabUsuarios.IdTipoPer and TabSucursales.IdSucursal = TabUsuarios.SucOperarios ORDER BY NomCiudad"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT TABCIUDADES.NOMCIUDAD,TABSUCURSALES.NOMSUCURSAL,TABUSUARIOS.NOMUSU,TABUSUARIOS.NUMIDUSU,TABTIPOPER.DESCTIPOPER FROM TABCIUDADES, TABSUCURSALES, TABUSUARIOS, TABTIPOPER WHERE TABCIUDADES.IDCIUDAD = TABSUCURSALES.IDCIUDAD AND TABTIPOPER.IDTIPOPER = TABUSUARIOS.IDTIPOPER AND TABSUCURSALES.IDSUCURSAL = TABUSUARIOS.SUCOPERARIOS ORDER BY NOMCIUDAD"), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            tabla.Load(Reader);
+            Reader.Close();
+            Connect.Close();
+            return tabla;
+        }
+        public DataTable ReporteCosultaEnvxSuc()/*Query para validar usuario al consultar envios por sucursales*/
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+
+            DataTable tabla = new DataTable();
+            SqlCommand command = new SqlCommand(string.Format("SELECT TABCIUDADES.NOMCIUDAD,TABSUCURSALES.NOMSUCURSAL,TABENVIOS.IDENVIOGUIA,TABENVIOS.FECHAENVIO,TABENVIOS.VALORENVIO,TABESTADOS.DESCESTADO FROM TABENVIOS, TABSUCURSALES, TABCIUDADES,TABESTADOS WHERE TABCIUDADES.IDCIUDAD = TABSUCURSALES.IDSUCURSAL AND TABENVIOS.IDSUCORI = TABSUCURSALES.IDSUCURSAL AND TABESTADOS.IDESTADO = TABENVIOS.IDESTADO ORDER BY NOMCIUDAD"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();

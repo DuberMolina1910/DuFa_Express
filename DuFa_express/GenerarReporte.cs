@@ -19,8 +19,9 @@ namespace DuFa_express
 
         private void GenerarReporte_Load(object sender, EventArgs e)
         {
-            ReportConsultUsu();
-            ReportConsultUsuxSuc();
+            //ReportConsultUsu();
+            //ReportConsultUsuxSuc();
+            //ReportConsultEnvxSuc();
         }
 
         public void ReportConsultUsu()
@@ -33,6 +34,12 @@ namespace DuFa_express
             UsuarioDAL_C Reportes = new UsuarioDAL_C();
             DtGrdVwGenRepPerAdm.DataSource = Reportes.ReporteCosultaUsuarioxSuc();
         }
+        public void ReportConsultEnvxSuc()
+        {
+            UsuarioDAL_C Reportes = new UsuarioDAL_C();
+            DtGrdVwGenRepPerAdm.DataSource = Reportes.ReporteCosultaEnvxSuc();
+        }
+
 
 
         private void CmbBxTipRepGenRepPerAdm_SelectedIndexChanged(object sender, EventArgs e)
@@ -47,9 +54,10 @@ namespace DuFa_express
                 UsuarioDAL_C Reportes = new UsuarioDAL_C();
                 DtGrdVwGenRepPerAdm.DataSource = Reportes.ReporteCosultarUsuarios();
             }
-            else if (CmbBxTipRepGenRepPerAdm.Text == "Consulta de Envios")
+            else if (CmbBxTipRepGenRepPerAdm.Text == "Consulta de Envios por sucursales")
             {
-                MessageBox.Show("Proceso", "EnviosxSucursalOrgn", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                UsuarioDAL_C Reportes = new UsuarioDAL_C();
+                DtGrdVwGenRepPerAdm.DataSource = Reportes.ReporteCosultaEnvxSuc();
             }
         }
 
