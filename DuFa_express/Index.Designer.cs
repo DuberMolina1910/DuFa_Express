@@ -66,7 +66,7 @@
             // BtnSalir
             // 
             this.BtnSalir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.BtnSalir.Location = new System.Drawing.Point(384, 283);
+            this.BtnSalir.Location = new System.Drawing.Point(405, 283);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(108, 33);
             this.BtnSalir.TabIndex = 5;
@@ -87,7 +87,7 @@
             // lblRegistro
             // 
             this.lblRegistro.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistro.Location = new System.Drawing.Point(309, 224);
+            this.lblRegistro.Location = new System.Drawing.Point(295, 232);
             this.lblRegistro.Name = "lblRegistro";
             this.lblRegistro.Size = new System.Drawing.Size(170, 30);
             this.lblRegistro.TabIndex = 4;
@@ -100,7 +100,7 @@
             this.lblMsgError.AutoSize = true;
             this.lblMsgError.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMsgError.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblMsgError.Location = new System.Drawing.Point(251, 162);
+            this.lblMsgError.Location = new System.Drawing.Point(251, 155);
             this.lblMsgError.Name = "lblMsgError";
             this.lblMsgError.Size = new System.Drawing.Size(34, 17);
             this.lblMsgError.TabIndex = 20;
@@ -110,7 +110,7 @@
             // BtnIniciarSesClient
             // 
             this.BtnIniciarSesClient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.BtnIniciarSesClient.Location = new System.Drawing.Point(313, 169);
+            this.BtnIniciarSesClient.Location = new System.Drawing.Point(299, 177);
             this.BtnIniciarSesClient.Name = "BtnIniciarSesClient";
             this.BtnIniciarSesClient.Size = new System.Drawing.Size(119, 41);
             this.BtnIniciarSesClient.TabIndex = 18;
