@@ -222,7 +222,6 @@ namespace DuFa_express
             return tabla;
         }
 
-
         public static int EstadosSucursales(DatosClient DatosClient)/*Query para Desactivar o Activar Sucursales*/
         {
             int rest = 0;
@@ -293,19 +292,6 @@ namespace DuFa_express
             return tabla;
         }
 
-        public DataTable getTabEnviosDGV(DatosClient DatosCliente)/*Query para mostrar los envios en el DataGridView de GesEnvios*/
-        {
-            SqlConnection Connect = DB_Connection.DBConnection();
-
-            DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABENVIOS ORDER BY FECHAENVIO DESC"), Connect);
-            SqlDataReader Reader = command.ExecuteReader();
-            tabla.Load(Reader);
-            Reader.Close();
-            Connect.Close();
-            return tabla;
-        }
-
         public DataTable ListarEstados()/*Query para mostrar los envios en el DataGridView de GesEnvios*/
         {
             SqlConnection Connect = DB_Connection.DBConnection();
@@ -317,6 +303,56 @@ namespace DuFa_express
             Reader.Close();
             Connect.Close();
             return tabla;
+        }
+
+        public DataTable getTabEnviosDGV()/*Query para mostrar los envios en el DataGridView de GesEnvios*/
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+
+            DataTable tabla = new DataTable();
+            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABENVIOS ORDER BY FECHAENVIO DESC"), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            tabla.Load(Reader);
+            Reader.Close();            
+            Connect.Close();
+            return tabla;
+        }
+
+        public DataTable getTabEnviosGuiaDGV(DatosClient DatosClient)/*Query para mostrar los envios filtrados por numero de guia en el DataGridView de GesEnvios*/
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+
+            DataTable tabla = new DataTable();
+            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABENVIOS WHERE IDENVIOGUIA = '{0}' ORDER BY FECHAENVIO DESC", DatosClient.NumIdUsu), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            tabla.Load(Reader);
+            Reader.Close();
+            Connect.Close();
+            return tabla;
+        }
+        public DataTable getTabEnviosEstadoDGV(DatosClient DatosClient)/*Query para mostrar los envios filtrados por numero de guia en el DataGridView de GesEnvios*/
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+
+            DataTable tabla = new DataTable();
+            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABENVIOS WHERE IDESTADO = '{0}' ORDER BY FECHAENVIO DESC", DatosClient.IdEstadoEnvio), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            tabla.Load(Reader);
+            Reader.Close();
+            Connect.Close();
+            return tabla;
+        }
+
+        public static int AnulacionEnvio(DatosClient DatosClient)/*Query para Desactivar o Activar Sucursales*/
+        {
+            int rest = 0;
+            SqlConnection Connect = DB_Connection.DBConnection();
+            {
+                SqlCommand com = new SqlCommand(string.Format("UPDATE TABENVIOS SET IDESTADO = '{0}' WHERE IDENVIOGUIA ='{1}'", DatosClient.IdEstadoEnvio, DatosClient.IdEnvioGuia), Connect);
+                rest = com.ExecuteNonQuery();
+                Connect.Close();
+            }
+            return rest;
         }
     }
 }

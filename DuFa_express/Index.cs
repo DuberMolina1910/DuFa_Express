@@ -74,26 +74,31 @@ namespace DuFa_express
                         {
                             PerfilAdminSuc perfilAdminSuc = new PerfilAdminSuc();
                             perfilAdminSuc.Show();
+                            this.Hide();
                         }
                         else if (enviar.IdTipoPer == "2")//Perfil Jefe de sucursal
                         {
                             PerfilJefSuc perfilJefSuc = new PerfilJefSuc();
                             perfilJefSuc.Show();
+                            this.Hide();
                         }
                         else if (enviar.IdTipoPer == "3")//Perfil Gestor de sucursal
                         {
                             PerfilGesSuc perfilGesSuc = new PerfilGesSuc();
                             perfilGesSuc.Show();
+                            this.Hide();
                         }
                         else if (enviar.IdTipoPer == "4")//Perfil Repartidor
                         {
                             PerfilRepSuc perfilRepartidor = new PerfilRepSuc();
                             perfilRepartidor.Show();
+                            this.Hide();
                         }
                         else //Perfil Cliente
                         {
                             PerfilClientForm perfilCliente = new PerfilClientForm();
                             perfilCliente.Show();
+                            this.Hide();
                         }
                     }
                     else
@@ -106,7 +111,6 @@ namespace DuFa_express
             }
             else
                 MensajeError("Ingrese N° Identificación");
-            this.Hide();
         }
 
         private void MensajeError(string errorMsg)

@@ -34,15 +34,21 @@
             this.cmbEstadoEnvio = new System.Windows.Forms.ComboBox();
             this.btnAnularEnvio = new System.Windows.Forms.Button();
             this.btnSolAnulacion = new System.Windows.Forms.Button();
+            this.lblMsgError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGesEnvios)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvGesEnvios
             // 
+            this.dgvGesEnvios.AllowUserToAddRows = false;
+            this.dgvGesEnvios.AllowUserToDeleteRows = false;
+            this.dgvGesEnvios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgvGesEnvios.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvGesEnvios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGesEnvios.Location = new System.Drawing.Point(12, 159);
             this.dgvGesEnvios.Name = "dgvGesEnvios";
+            this.dgvGesEnvios.RowHeadersVisible = false;
+            this.dgvGesEnvios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGesEnvios.Size = new System.Drawing.Size(676, 319);
             this.dgvGesEnvios.TabIndex = 0;
             // 
@@ -87,6 +93,7 @@
             this.btnAnularEnvio.TabIndex = 82;
             this.btnAnularEnvio.Text = "ANULAR";
             this.btnAnularEnvio.UseVisualStyleBackColor = true;
+            this.btnAnularEnvio.Click += new System.EventHandler(this.btnAnularEnvio_Click);
             // 
             // btnSolAnulacion
             // 
@@ -98,11 +105,24 @@
             this.btnSolAnulacion.Text = "SOLICITAR ANULACION";
             this.btnSolAnulacion.UseVisualStyleBackColor = true;
             // 
+            // lblMsgError
+            // 
+            this.lblMsgError.AutoSize = true;
+            this.lblMsgError.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMsgError.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblMsgError.Location = new System.Drawing.Point(12, 119);
+            this.lblMsgError.Name = "lblMsgError";
+            this.lblMsgError.Size = new System.Drawing.Size(34, 17);
+            this.lblMsgError.TabIndex = 84;
+            this.lblMsgError.Text = "Error";
+            this.lblMsgError.Visible = false;
+            // 
             // GesEnvios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 490);
+            this.Controls.Add(this.lblMsgError);
             this.Controls.Add(this.btnSolAnulacion);
             this.Controls.Add(this.btnAnularEnvio);
             this.Controls.Add(this.cmbEstadoEnvio);
@@ -127,5 +147,6 @@
         private System.Windows.Forms.ComboBox cmbEstadoEnvio;
         private System.Windows.Forms.Button btnAnularEnvio;
         private System.Windows.Forms.Button btnSolAnulacion;
+        private System.Windows.Forms.Label lblMsgError;
     }
 }

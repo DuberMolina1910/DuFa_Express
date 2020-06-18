@@ -21,6 +21,7 @@ namespace DuFa_express
         {
             ListarEstados();
             GetTabEnviosDGV();
+            cmbEstadoEnvio.Text = "*ESTADO ENVÍO";
         }
 
         private void txtNumGuia_Enter(object sender, EventArgs e)
@@ -42,8 +43,7 @@ namespace DuFa_express
         private void GetTabEnviosDGV()
         {
             UsuarioDAL_C enviar = new UsuarioDAL_C();
-            DatosClient datos = new DatosClient();
-            dgvGesEnvios.DataSource = enviar.getTabEnviosDGV(datos);
+            dgvGesEnvios.DataSource = enviar.getTabEnviosDGV();
         }
 
         private void ListarEstados()
@@ -61,13 +61,60 @@ namespace DuFa_express
                 UsuarioDAL_C enviar = new UsuarioDAL_C();
                 DatosClient datos = new DatosClient();
                 datos.NumIdUsu = txtNumGuia.Text;
-                dgvGesEnvios.DataSource = enviar.getTabEnviosDGV(datos);
+                dgvGesEnvios.DataSource = enviar.getTabEnviosGuiaDGV(datos);                
 
+                if (dgvGesEnvios.Rows.Count < 1)
+                {
+                    lblMsgError.Visible = true;
+                    MensajeError("No se encontraron registros con ese numero de guia.");
+                }
+                else
+                    lblMsgError.Visible = false;
+
+            }
+            else if (cmbEstadoEnvio.Text != "*ESTADO ENVÍO")
+            {
+                UsuarioDAL_C enviar = new UsuarioDAL_C();
+                DatosClient datos = new DatosClient();
+                datos.IdEstadoEnvio = Convert.ToString(cmbEstadoEnvio.SelectedValue);
+                dgvGesEnvios.DataSource = enviar.getTabEnviosEstadoDGV(datos);
+
+                if (dgvGesEnvios.Rows.Count < 1)
+                {
+                    lblMsgError.Visible = true;
+                    MensajeError("No se encontraron registros con ese estado.");
+                }
+                else
+                    lblMsgError.Visible = false;
             }
             else
             {
                 GetTabEnviosDGV();
             }
+            cmbEstadoEnvio.Text = "*ESTADO ENVÍO";
+        }
+
+        private void btnAnularEnvio_Click(object sender, EventArgs e)
+        {
+            if (dgvGesEnvios.SelectedRows.Count > 0)
+            {
+                if (MessageBox.Show("¿Esta seguro de anular el envio?", "Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    //Llevar a cabo la anulación del envío
+                    DatosClient enviar = new DatosClient();
+                    enviar.IdEstadoEnvio = "6";
+                    enviar.IdEnvioGuia = Convert.ToString(dgvGesEnvios.CurrentRow.Cells["IDENVIOGUIA"].Value);
+                    int res = UsuarioDAL_C.AnulacionEnvio(enviar);
+                    MensajeError("El envío ha sido anulado exitosamente.");
+                }
+            }
+            else
+                MensajeError("Seleccione el envío a anular.");
+        }
+        private void MensajeError(string errorMsg)
+        {
+            lblMsgError.Text = errorMsg;
+            lblMsgError.Visible = true;
         }
     }
 }
