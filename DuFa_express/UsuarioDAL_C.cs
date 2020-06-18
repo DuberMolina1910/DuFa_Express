@@ -280,7 +280,7 @@ namespace DuFa_express
             return resultado;
         }
 
-        public DataTable ReporteCosultarUsuarios()/*Query para validar usuario al consultar en el registro de envios*/
+        public DataTable ReporteCosultarUsuarios()/*Query para validar usuario usuarios regitrados en el sistema*/
         {
             SqlConnection Connect = DB_Connection.DBConnection();
 
@@ -292,6 +292,19 @@ namespace DuFa_express
             Connect.Close();
             return tabla;
         }
+        public DataTable ReporteCosultaUsuarioxSuc()/*Query para validar usuario al consultar en el usuarios asignados a sucursales*/
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+
+            DataTable tabla = new DataTable();
+            SqlCommand command = new SqlCommand(string.Format("SELECT TabCiudades.NomCiudad,TabSucursales.NomSucursal,TabUsuarios.NomUsu,TabUsuarios.NumIdUsu,TabTipoPer.DescTipoPer FROM TabCiudades, TabSucursales, TabUsuarios, TabTipoPer WHERE TabCiudades.IdCiudad = TabSucursales.IdCiudad and TabTipoPer.IdTipoPer = TabUsuarios.IdTipoPer and TabSucursales.IdSucursal = TabUsuarios.SucOperarios ORDER BY NomCiudad"), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            tabla.Load(Reader);
+            Reader.Close();
+            Connect.Close();
+            return tabla;
+        }
+
 
         public DataTable getTabEnviosDGV(DatosClient DatosCliente)/*Query para mostrar los envios en el DataGridView de GesEnvios*/
         {
