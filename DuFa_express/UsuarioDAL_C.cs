@@ -315,6 +315,18 @@ namespace DuFa_express
             Connect.Close();
             return tabla;
         }
+        public DataTable ReportedatosGen()/*Query para consulta toda BD*/
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+
+            DataTable tabla = new DataTable();
+            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABCIUDADES,TABENVIOS,TABESTADOS,TABSUCURSALES,TABTIPOID,TABTIPOPER,TABUSUARIOS"), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            tabla.Load(Reader);
+            Reader.Close();
+            Connect.Close();
+            return tabla;
+        }
 
 
         public DataTable ListarEstados()/*Query para mostrar los envios en el DataGridView de GesEnvios*/

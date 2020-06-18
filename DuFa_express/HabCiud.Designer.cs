@@ -37,6 +37,7 @@
             // 
             // BtnCanclHabCiu
             // 
+            this.BtnCanclHabCiu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.BtnCanclHabCiu.Location = new System.Drawing.Point(198, 266);
             this.BtnCanclHabCiu.Name = "BtnCanclHabCiu";
             this.BtnCanclHabCiu.Size = new System.Drawing.Size(108, 38);
@@ -46,6 +47,7 @@
             // 
             // BtnHabCiu
             // 
+            this.BtnHabCiu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.BtnHabCiu.Location = new System.Drawing.Point(39, 266);
             this.BtnHabCiu.Name = "BtnHabCiu";
             this.BtnHabCiu.Size = new System.Drawing.Size(108, 38);
@@ -72,6 +74,7 @@
             this.DtGrdVwHabCiu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtGrdVwHabCiu.Location = new System.Drawing.Point(39, 34);
             this.DtGrdVwHabCiu.Name = "DtGrdVwHabCiu";
+            this.DtGrdVwHabCiu.RowHeadersVisible = false;
             this.DtGrdVwHabCiu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DtGrdVwHabCiu.Size = new System.Drawing.Size(267, 192);
             this.DtGrdVwHabCiu.TabIndex = 3;

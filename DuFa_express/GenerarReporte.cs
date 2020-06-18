@@ -22,6 +22,7 @@ namespace DuFa_express
             //ReportConsultUsu();
             //ReportConsultUsuxSuc();
             //ReportConsultEnvxSuc();
+            //ReportGen();
         }
 
         public void ReportConsultUsu()
@@ -39,6 +40,11 @@ namespace DuFa_express
             UsuarioDAL_C Reportes = new UsuarioDAL_C();
             DtGrdVwGenRepPerAdm.DataSource = Reportes.ReporteCosultaEnvxSuc();
         }
+        //public void ReportGen()
+        //{
+        //    UsuarioDAL_C Reportes = new UsuarioDAL_C();
+        //    DtGrdVwGenRepPerAdm.DataSource = Reportes.ReportedatosGen();
+        //}
 
 
 

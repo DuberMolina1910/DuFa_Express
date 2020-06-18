@@ -28,20 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BtnCerrarGenRepPerAdm = new System.Windows.Forms.Button();
             this.BtnExlGenRepPerAdm = new System.Windows.Forms.Button();
             this.DtGrdVwGenRepPerAdm = new System.Windows.Forms.DataGridView();
             this.LblTiposReportes = new System.Windows.Forms.Label();
             this.CmbBxTipRepGenRepPerAdm = new System.Windows.Forms.ComboBox();
-            this.LblTitulo = new System.Windows.Forms.Label();
+            this.lblRepInformes = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DtGrdVwGenRepPerAdm)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnCerrarGenRepPerAdm
             // 
-            this.BtnCerrarGenRepPerAdm.Location = new System.Drawing.Point(36, 452);
+            this.BtnCerrarGenRepPerAdm.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.BtnCerrarGenRepPerAdm.Location = new System.Drawing.Point(36, 449);
             this.BtnCerrarGenRepPerAdm.Name = "BtnCerrarGenRepPerAdm";
-            this.BtnCerrarGenRepPerAdm.Size = new System.Drawing.Size(113, 26);
+            this.BtnCerrarGenRepPerAdm.Size = new System.Drawing.Size(119, 29);
             this.BtnCerrarGenRepPerAdm.TabIndex = 0;
             this.BtnCerrarGenRepPerAdm.Text = "Cerrar";
             this.BtnCerrarGenRepPerAdm.UseVisualStyleBackColor = true;
@@ -49,27 +51,45 @@
             // 
             // BtnExlGenRepPerAdm
             // 
-            this.BtnExlGenRepPerAdm.Location = new System.Drawing.Point(575, 418);
+            this.BtnExlGenRepPerAdm.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.BtnExlGenRepPerAdm.Location = new System.Drawing.Point(568, 418);
             this.BtnExlGenRepPerAdm.Name = "BtnExlGenRepPerAdm";
-            this.BtnExlGenRepPerAdm.Size = new System.Drawing.Size(113, 26);
+            this.BtnExlGenRepPerAdm.Size = new System.Drawing.Size(120, 35);
             this.BtnExlGenRepPerAdm.TabIndex = 1;
             this.BtnExlGenRepPerAdm.Text = "Generar Excel";
             this.BtnExlGenRepPerAdm.UseVisualStyleBackColor = true;
             // 
             // DtGrdVwGenRepPerAdm
             // 
+            this.DtGrdVwGenRepPerAdm.AllowUserToAddRows = false;
+            this.DtGrdVwGenRepPerAdm.AllowUserToDeleteRows = false;
+            this.DtGrdVwGenRepPerAdm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DtGrdVwGenRepPerAdm.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.DtGrdVwGenRepPerAdm.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DtGrdVwGenRepPerAdm.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DtGrdVwGenRepPerAdm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DtGrdVwGenRepPerAdm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtGrdVwGenRepPerAdm.Location = new System.Drawing.Point(12, 142);
             this.DtGrdVwGenRepPerAdm.Name = "DtGrdVwGenRepPerAdm";
+            this.DtGrdVwGenRepPerAdm.RowHeadersVisible = false;
+            this.DtGrdVwGenRepPerAdm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DtGrdVwGenRepPerAdm.Size = new System.Drawing.Size(676, 270);
             this.DtGrdVwGenRepPerAdm.TabIndex = 2;
             // 
             // LblTiposReportes
             // 
             this.LblTiposReportes.AutoSize = true;
-            this.LblTiposReportes.Location = new System.Drawing.Point(33, 89);
+            this.LblTiposReportes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTiposReportes.Location = new System.Drawing.Point(58, 89);
             this.LblTiposReportes.Name = "LblTiposReportes";
-            this.LblTiposReportes.Size = new System.Drawing.Size(94, 13);
+            this.LblTiposReportes.Size = new System.Drawing.Size(136, 18);
             this.LblTiposReportes.TabIndex = 4;
             this.LblTiposReportes.Text = "Tipos de Reportes";
             // 
@@ -81,27 +101,29 @@
             "Consulta Asignacion de Usuarios - Sucursales",
             "Consulta Usuarios del Sistema",
             "Consulta de Envios por sucursales"});
-            this.CmbBxTipRepGenRepPerAdm.Location = new System.Drawing.Point(170, 86);
+            this.CmbBxTipRepGenRepPerAdm.Location = new System.Drawing.Point(200, 86);
             this.CmbBxTipRepGenRepPerAdm.Name = "CmbBxTipRepGenRepPerAdm";
             this.CmbBxTipRepGenRepPerAdm.Size = new System.Drawing.Size(250, 21);
             this.CmbBxTipRepGenRepPerAdm.TabIndex = 5;
             this.CmbBxTipRepGenRepPerAdm.SelectedIndexChanged += new System.EventHandler(this.CmbBxTipRepGenRepPerAdm_SelectedIndexChanged);
             // 
-            // LblTitulo
+            // lblRepInformes
             // 
-            this.LblTitulo.AutoSize = true;
-            this.LblTitulo.Location = new System.Drawing.Point(228, 22);
-            this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Size = new System.Drawing.Size(94, 13);
-            this.LblTitulo.TabIndex = 6;
-            this.LblTitulo.Text = "Tipos de Reportes";
+            this.lblRepInformes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblRepInformes.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRepInformes.Location = new System.Drawing.Point(0, 0);
+            this.lblRepInformes.Name = "lblRepInformes";
+            this.lblRepInformes.Size = new System.Drawing.Size(700, 75);
+            this.lblRepInformes.TabIndex = 6;
+            this.lblRepInformes.Text = "Reportes/Informes";
+            this.lblRepInformes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // GenerarReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 490);
-            this.Controls.Add(this.LblTitulo);
+            this.Controls.Add(this.lblRepInformes);
             this.Controls.Add(this.CmbBxTipRepGenRepPerAdm);
             this.Controls.Add(this.LblTiposReportes);
             this.Controls.Add(this.DtGrdVwGenRepPerAdm);
@@ -124,6 +146,6 @@
         private System.Windows.Forms.DataGridView DtGrdVwGenRepPerAdm;
         private System.Windows.Forms.Label LblTiposReportes;
         private System.Windows.Forms.ComboBox CmbBxTipRepGenRepPerAdm;
-        private System.Windows.Forms.Label LblTitulo;
+        private System.Windows.Forms.Label lblRepInformes;
     }
 }

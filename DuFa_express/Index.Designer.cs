@@ -35,7 +35,6 @@
             this.lblAcceder = new System.Windows.Forms.Label();
             this.lblRegistro = new System.Windows.Forms.Label();
             this.lblMsgError = new System.Windows.Forms.Label();
-            this.BtnCancelarSesClient = new System.Windows.Forms.Button();
             this.BtnIniciarSesClient = new System.Windows.Forms.Button();
             this.TxtContrasena = new System.Windows.Forms.TextBox();
             this.TxtNumID = new System.Windows.Forms.TextBox();
@@ -66,7 +65,7 @@
             // 
             // BtnSalir
             // 
-            this.BtnSalir.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.BtnSalir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.BtnSalir.Location = new System.Drawing.Point(384, 283);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(108, 33);
@@ -88,7 +87,7 @@
             // lblRegistro
             // 
             this.lblRegistro.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistro.Location = new System.Drawing.Point(226, 241);
+            this.lblRegistro.Location = new System.Drawing.Point(309, 224);
             this.lblRegistro.Name = "lblRegistro";
             this.lblRegistro.Size = new System.Drawing.Size(170, 30);
             this.lblRegistro.TabIndex = 4;
@@ -108,22 +107,12 @@
             this.lblMsgError.Text = "Error";
             this.lblMsgError.Visible = false;
             // 
-            // BtnCancelarSesClient
-            // 
-            this.BtnCancelarSesClient.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.BtnCancelarSesClient.Location = new System.Drawing.Point(384, 189);
-            this.BtnCancelarSesClient.Name = "BtnCancelarSesClient";
-            this.BtnCancelarSesClient.Size = new System.Drawing.Size(108, 33);
-            this.BtnCancelarSesClient.TabIndex = 19;
-            this.BtnCancelarSesClient.Text = "CANCELAR";
-            this.BtnCancelarSesClient.UseVisualStyleBackColor = true;
-            // 
             // BtnIniciarSesClient
             // 
-            this.BtnIniciarSesClient.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.BtnIniciarSesClient.Location = new System.Drawing.Point(251, 189);
+            this.BtnIniciarSesClient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.BtnIniciarSesClient.Location = new System.Drawing.Point(313, 169);
             this.BtnIniciarSesClient.Name = "BtnIniciarSesClient";
-            this.BtnIniciarSesClient.Size = new System.Drawing.Size(108, 33);
+            this.BtnIniciarSesClient.Size = new System.Drawing.Size(119, 41);
             this.BtnIniciarSesClient.TabIndex = 18;
             this.BtnIniciarSesClient.Text = "INICIAR SESIÓN";
             this.BtnIniciarSesClient.UseVisualStyleBackColor = true;
@@ -171,7 +160,6 @@
             this.ClientSize = new System.Drawing.Size(525, 328);
             this.Controls.Add(this.cmbTipoPer);
             this.Controls.Add(this.lblMsgError);
-            this.Controls.Add(this.BtnCancelarSesClient);
             this.Controls.Add(this.BtnIniciarSesClient);
             this.Controls.Add(this.TxtContrasena);
             this.Controls.Add(this.TxtNumID);
@@ -199,7 +187,6 @@
         private System.Windows.Forms.Label lblRegistro;
         private System.Windows.Forms.PictureBox picBxLogo;
         private System.Windows.Forms.Label lblMsgError;
-        private System.Windows.Forms.Button BtnCancelarSesClient;
         private System.Windows.Forms.Button BtnIniciarSesClient;
         private System.Windows.Forms.TextBox TxtContrasena;
         private System.Windows.Forms.TextBox TxtNumID;
