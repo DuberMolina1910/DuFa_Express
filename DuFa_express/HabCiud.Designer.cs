@@ -44,6 +44,7 @@
             this.BtnCanclHabCiu.TabIndex = 5;
             this.BtnCanclHabCiu.Text = "Cancelar";
             this.BtnCanclHabCiu.UseVisualStyleBackColor = true;
+            this.BtnCanclHabCiu.Click += new System.EventHandler(this.BtnCanclHabCiu_Click);
             // 
             // BtnHabCiu
             // 
@@ -90,6 +91,7 @@
             this.Controls.Add(this.DtGrdVwHabCiu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "HabCiud";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HabCiud";
             this.Load += new System.EventHandler(this.HabCiud_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DtGrdVwHabCiu)).EndInit();
