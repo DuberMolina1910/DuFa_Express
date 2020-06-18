@@ -22,6 +22,7 @@ namespace DuFa_express
             ListarEstados();
             GetTabEnviosDGV();
             cmbEstadoEnvio.Text = "*ESTADO ENVÍO";
+            OpcPerfil();
         }
 
         private void txtNumGuia_Enter(object sender, EventArgs e)
@@ -37,6 +38,18 @@ namespace DuFa_express
             if (txtNumGuia.Text == "")
             {
                 txtNumGuia.Text = "*N° GUIA";
+            }
+        }
+
+        private void OpcPerfil()
+        {
+            if (Cache.IdTipoPer == "1")
+            {
+                btnSolAnulacion.Visible = false;
+            }
+            else if (Cache.IdTipoPer == "5")
+            {
+                btnAnularEnvio.Visible = false;
             }
         }
 
@@ -90,6 +103,7 @@ namespace DuFa_express
             else
             {
                 GetTabEnviosDGV();
+                lblMsgError.Visible = false;
             }
             cmbEstadoEnvio.Text = "*ESTADO ENVÍO";
         }
@@ -103,7 +117,7 @@ namespace DuFa_express
                     //Llevar a cabo la anulación del envío
                     DatosClient enviar = new DatosClient();
                     enviar.IdEstadoEnvio = "6";
-                    enviar.IdEnvioGuia = Convert.ToString(dgvGesEnvios.CurrentRow.Cells["IDENVIOGUIA"].Value);
+                    enviar.IdEnvioGuia = Convert.ToString(dgvGesEnvios.CurrentRow.Cells["N° GUIA"].Value);
                     int res = UsuarioDAL_C.AnulacionEnvio(enviar);
                     MensajeError("El envío ha sido anulado exitosamente.");
                 }

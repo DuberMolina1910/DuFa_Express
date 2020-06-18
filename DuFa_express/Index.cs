@@ -66,6 +66,8 @@ namespace DuFa_express
                     enviar.Contrasena = TxtContrasena.Text;
                     enviar.IdTipoPer = Convert.ToString(cmbTipoPer.SelectedValue);
 
+                    Cache.IdTipoPer = Convert.ToString(cmbTipoPer.SelectedValue);
+
                     int res = UsuarioDAL_C.AccesoUsuarios(enviar);
 
                     if (res > 0)

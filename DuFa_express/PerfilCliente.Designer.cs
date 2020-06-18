@@ -32,7 +32,7 @@
             this.pnlPerfClient1 = new System.Windows.Forms.Panel();
             this.LblCmbContraPerClien = new System.Windows.Forms.Label();
             this.lblActDtsPerClien = new System.Windows.Forms.Label();
-            this.lblCsltEnvPerClient = new System.Windows.Forms.Label();
+            this.lblGesEnvPerClient = new System.Windows.Forms.Label();
             this.lblSlctrAnlPerClient = new System.Windows.Forms.Label();
             this.lblPerClienCrearEnv = new System.Windows.Forms.Label();
             this.lblCerrarSesion = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.pnlPerfClient1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.pnlPerfClient1.Controls.Add(this.LblCmbContraPerClien);
             this.pnlPerfClient1.Controls.Add(this.lblActDtsPerClien);
-            this.pnlPerfClient1.Controls.Add(this.lblCsltEnvPerClient);
+            this.pnlPerfClient1.Controls.Add(this.lblGesEnvPerClient);
             this.pnlPerfClient1.Controls.Add(this.lblSlctrAnlPerClient);
             this.pnlPerfClient1.Controls.Add(this.lblPerClienCrearEnv);
             this.pnlPerfClient1.Controls.Add(this.lblCerrarSesion);
@@ -86,16 +86,17 @@
             this.lblActDtsPerClien.Text = "Actualizar Datos";
             this.lblActDtsPerClien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblCsltEnvPerClient
+            // lblGesEnvPerClient
             // 
-            this.lblCsltEnvPerClient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblCsltEnvPerClient.ForeColor = System.Drawing.Color.White;
-            this.lblCsltEnvPerClient.Location = new System.Drawing.Point(0, 122);
-            this.lblCsltEnvPerClient.Name = "lblCsltEnvPerClient";
-            this.lblCsltEnvPerClient.Size = new System.Drawing.Size(197, 35);
-            this.lblCsltEnvPerClient.TabIndex = 17;
-            this.lblCsltEnvPerClient.Text = "Consultar Envio";
-            this.lblCsltEnvPerClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblGesEnvPerClient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblGesEnvPerClient.ForeColor = System.Drawing.Color.White;
+            this.lblGesEnvPerClient.Location = new System.Drawing.Point(0, 122);
+            this.lblGesEnvPerClient.Name = "lblGesEnvPerClient";
+            this.lblGesEnvPerClient.Size = new System.Drawing.Size(197, 35);
+            this.lblGesEnvPerClient.TabIndex = 17;
+            this.lblGesEnvPerClient.Text = "Gestionar Envios";
+            this.lblGesEnvPerClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblGesEnvPerClient.Click += new System.EventHandler(this.lblGesEnvPerClient_Click);
             // 
             // lblSlctrAnlPerClient
             // 
@@ -212,7 +213,7 @@
         private System.Windows.Forms.Panel pnlPerfClient1;
         private System.Windows.Forms.Label LblCmbContraPerClien;
         private System.Windows.Forms.Label lblActDtsPerClien;
-        private System.Windows.Forms.Label lblCsltEnvPerClient;
+        private System.Windows.Forms.Label lblGesEnvPerClient;
         private System.Windows.Forms.Label lblSlctrAnlPerClient;
         private System.Windows.Forms.Label lblPerClienCrearEnv;
         private System.Windows.Forms.Label lblCerrarSesion;
