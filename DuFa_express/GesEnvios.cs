@@ -130,5 +130,82 @@ namespace DuFa_express
             lblMsgError.Text = errorMsg;
             lblMsgError.Visible = true;
         }
+
+        private void btnSolAnulacion_Click(object sender, EventArgs e)
+        {
+            lblMsgError.Visible = false;
+            if (dgvGesEnvios.SelectedRows.Count > 0)
+            {
+                DatosClient enviar = new DatosClient();
+                enviar.IdEstadoEnvio = Convert.ToString(dgvGesEnvios.CurrentRow.Cells["ESTADO"].Value);
+                enviar.ValTotalEnvio = Convert.ToString(dgvGesEnvios.CurrentRow.Cells["VALOR TOTAL"].Value);
+
+                int valAnul = 0;
+                int valEnvio = Convert.ToInt32(enviar.ValTotalEnvio);
+
+                if (enviar.IdEstadoEnvio == "Recepcionado en sucursal" || enviar.IdEstadoEnvio == "Nuevo")
+                {                    
+                    if (MessageBox.Show("El valor por la anulación del envío es de: COP $ " + valAnul + " \n¿Esta seguro de anular el envio?", "Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        //Llevar a cabo la anulación del envío
+
+                        enviar.IdEstadoEnvio = "8";
+                        enviar.IdEnvioGuia = Convert.ToString(dgvGesEnvios.CurrentRow.Cells["N° GUIA"].Value);
+                        int res = UsuarioDAL_C.AnulacionEnvio(enviar);
+                        MensajeError("La soliciud se ha realizado exitosamente.");
+                        GetTabEnviosDGV();
+                    }
+                }
+                else if (enviar.IdEstadoEnvio == "Tránsito a destino")
+                {
+                    valAnul = valEnvio/4;
+
+                    if (MessageBox.Show("El valor por la anulación del envío es de: COP $ " + valAnul + " \n¿Esta seguro de anular el envio?", "Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        //Llevar a cabo la anulación del envío
+
+                        enviar.IdEstadoEnvio = "8";
+                        enviar.IdEnvioGuia = Convert.ToString(dgvGesEnvios.CurrentRow.Cells["N° GUIA"].Value);
+                        int res = UsuarioDAL_C.AnulacionEnvio(enviar);
+                        MensajeError("La soliciud se ha realizado exitosamente.");
+                        GetTabEnviosDGV();
+                    }
+                }
+                else if (enviar.IdEstadoEnvio == "DPO")
+                {
+                    valAnul = valEnvio / 2;
+
+                    if (MessageBox.Show("El valor por la anulación del envío es de: COP $ " + valAnul + " \n¿Esta seguro de anular el envio?", "Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        //Llevar a cabo la anulación del envío
+
+                        enviar.IdEstadoEnvio = "8";
+                        enviar.IdEnvioGuia = Convert.ToString(dgvGesEnvios.CurrentRow.Cells["N° GUIA"].Value);
+                        int res = UsuarioDAL_C.AnulacionEnvio(enviar);
+                        MensajeError("La soliciud se ha realizado exitosamente.");
+                        GetTabEnviosDGV();
+                    }
+                }
+                else
+                {
+                    if (enviar.IdEstadoEnvio == "Entregado" || enviar.IdEstadoEnvio == "Finalizado y Confirmado")
+                    {
+                        MensajeError("El estado del pedido no permite cancelarlo porque este ya se finalizo.");
+                    }
+                    else if (enviar.IdEstadoEnvio == "Cancelado")
+                    {
+                        MensajeError("Este envío ya fue cancelado.");
+                    }
+                    else if (enviar.IdEstadoEnvio == "Solicitud de Cancelación")
+                    {
+                        MensajeError("Este envío ya se encuentra en proceso de validación para su cancelación.");
+                    }
+                }
+            }
+            else
+            {
+                MensajeError("Seleccione el envío al cual desea solicitar la anulación.");
+            }
+        }
     }
 }

@@ -42,10 +42,10 @@
             // 
             this.dgvGesEnvios.AllowUserToAddRows = false;
             this.dgvGesEnvios.AllowUserToDeleteRows = false;
-            this.dgvGesEnvios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvGesEnvios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvGesEnvios.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvGesEnvios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGesEnvios.Location = new System.Drawing.Point(12, 159);
+            this.dgvGesEnvios.Location = new System.Drawing.Point(15, 159);
             this.dgvGesEnvios.Name = "dgvGesEnvios";
             this.dgvGesEnvios.RowHeadersVisible = false;
             this.dgvGesEnvios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -104,6 +104,7 @@
             this.btnSolAnulacion.TabIndex = 83;
             this.btnSolAnulacion.Text = "SOLICITAR ANULACION";
             this.btnSolAnulacion.UseVisualStyleBackColor = true;
+            this.btnSolAnulacion.Click += new System.EventHandler(this.btnSolAnulacion_Click);
             // 
             // lblMsgError
             // 
