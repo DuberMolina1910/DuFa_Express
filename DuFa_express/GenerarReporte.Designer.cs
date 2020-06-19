@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BtnCerrarGenRepPerAdm = new System.Windows.Forms.Button();
             this.BtnExlGenRepPerAdm = new System.Windows.Forms.Button();
             this.DtGrdVwGenRepPerAdm = new System.Windows.Forms.DataGridView();
@@ -58,6 +58,7 @@
             this.BtnExlGenRepPerAdm.TabIndex = 1;
             this.BtnExlGenRepPerAdm.Text = "Generar Excel";
             this.BtnExlGenRepPerAdm.UseVisualStyleBackColor = true;
+            this.BtnExlGenRepPerAdm.Click += new System.EventHandler(this.BtnExlGenRepPerAdm_Click);
             // 
             // DtGrdVwGenRepPerAdm
             // 
@@ -67,14 +68,14 @@
             this.DtGrdVwGenRepPerAdm.BackgroundColor = System.Drawing.SystemColors.Window;
             this.DtGrdVwGenRepPerAdm.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DtGrdVwGenRepPerAdm.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DtGrdVwGenRepPerAdm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DtGrdVwGenRepPerAdm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DtGrdVwGenRepPerAdm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtGrdVwGenRepPerAdm.Location = new System.Drawing.Point(12, 142);
             this.DtGrdVwGenRepPerAdm.Name = "DtGrdVwGenRepPerAdm";
