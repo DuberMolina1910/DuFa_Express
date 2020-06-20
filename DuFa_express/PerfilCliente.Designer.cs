@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilClientForm));
             this.pnlPerfClient1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LblCmbContraPerClien = new System.Windows.Forms.Label();
             this.lblActDtsPerClien = new System.Windows.Forms.Label();
             this.lblGesEnvPerClient = new System.Windows.Forms.Label();
-            this.lblSlctrAnlPerClient = new System.Windows.Forms.Label();
             this.lblPerClienCrearEnv = new System.Windows.Forms.Label();
             this.lblCerrarSesion = new System.Windows.Forms.Label();
             this.lblNomTipoPer = new System.Windows.Forms.Label();
@@ -42,6 +42,7 @@
             this.pnlPerClient2 = new System.Windows.Forms.Panel();
             this.picBxLogoV2Client = new System.Windows.Forms.PictureBox();
             this.pnlPerfClient1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).BeginInit();
             this.pnlPerClient2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2Client)).BeginInit();
@@ -50,10 +51,10 @@
             // pnlPerfClient1
             // 
             this.pnlPerfClient1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.pnlPerfClient1.Controls.Add(this.pictureBox1);
             this.pnlPerfClient1.Controls.Add(this.LblCmbContraPerClien);
             this.pnlPerfClient1.Controls.Add(this.lblActDtsPerClien);
             this.pnlPerfClient1.Controls.Add(this.lblGesEnvPerClient);
-            this.pnlPerfClient1.Controls.Add(this.lblSlctrAnlPerClient);
             this.pnlPerfClient1.Controls.Add(this.lblPerClienCrearEnv);
             this.pnlPerfClient1.Controls.Add(this.lblCerrarSesion);
             this.pnlPerfClient1.Controls.Add(this.lblNomTipoPer);
@@ -63,6 +64,16 @@
             this.pnlPerfClient1.Name = "pnlPerfClient1";
             this.pnlPerfClient1.Size = new System.Drawing.Size(200, 490);
             this.pnlPerfClient1.TabIndex = 15;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(148, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(46, 49);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
             // 
             // LblCmbContraPerClien
             // 
@@ -79,7 +90,7 @@
             // 
             this.lblActDtsPerClien.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblActDtsPerClien.ForeColor = System.Drawing.Color.White;
-            this.lblActDtsPerClien.Location = new System.Drawing.Point(1, 192);
+            this.lblActDtsPerClien.Location = new System.Drawing.Point(1, 157);
             this.lblActDtsPerClien.Name = "lblActDtsPerClien";
             this.lblActDtsPerClien.Size = new System.Drawing.Size(197, 35);
             this.lblActDtsPerClien.TabIndex = 18;
@@ -97,17 +108,6 @@
             this.lblGesEnvPerClient.Text = "Gestionar Envios";
             this.lblGesEnvPerClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblGesEnvPerClient.Click += new System.EventHandler(this.lblGesEnvPerClient_Click);
-            // 
-            // lblSlctrAnlPerClient
-            // 
-            this.lblSlctrAnlPerClient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblSlctrAnlPerClient.ForeColor = System.Drawing.Color.White;
-            this.lblSlctrAnlPerClient.Location = new System.Drawing.Point(0, 157);
-            this.lblSlctrAnlPerClient.Name = "lblSlctrAnlPerClient";
-            this.lblSlctrAnlPerClient.Size = new System.Drawing.Size(197, 35);
-            this.lblSlctrAnlPerClient.TabIndex = 16;
-            this.lblSlctrAnlPerClient.Text = "Solicitar Anulacion de Envio";
-            this.lblSlctrAnlPerClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblPerClienCrearEnv
             // 
@@ -137,9 +137,9 @@
             // 
             this.lblNomTipoPer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomTipoPer.ForeColor = System.Drawing.Color.White;
-            this.lblNomTipoPer.Location = new System.Drawing.Point(9, 37);
+            this.lblNomTipoPer.Location = new System.Drawing.Point(3, 34);
             this.lblNomTipoPer.Name = "lblNomTipoPer";
-            this.lblNomTipoPer.Size = new System.Drawing.Size(150, 25);
+            this.lblNomTipoPer.Size = new System.Drawing.Size(139, 25);
             this.lblNomTipoPer.TabIndex = 1;
             this.lblNomTipoPer.Text = "Tipo Perfil";
             this.lblNomTipoPer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -149,9 +149,9 @@
             this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(9, 12);
+            this.lblNombre.Location = new System.Drawing.Point(3, 9);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(150, 25);
+            this.lblNombre.Size = new System.Drawing.Size(139, 25);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -201,6 +201,7 @@
             this.Text = "PerfilCliente";
             this.Load += new System.EventHandler(this.PerfilClientForm_Load);
             this.pnlPerfClient1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).EndInit();
             this.pnlPerClient2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2Client)).EndInit();
@@ -214,7 +215,6 @@
         private System.Windows.Forms.Label LblCmbContraPerClien;
         private System.Windows.Forms.Label lblActDtsPerClien;
         private System.Windows.Forms.Label lblGesEnvPerClient;
-        private System.Windows.Forms.Label lblSlctrAnlPerClient;
         private System.Windows.Forms.Label lblPerClienCrearEnv;
         private System.Windows.Forms.Label lblCerrarSesion;
         private System.Windows.Forms.Label lblNomTipoPer;
@@ -222,5 +222,6 @@
         private System.Windows.Forms.PictureBox picBxLogoV2;
         private System.Windows.Forms.Panel pnlPerClient2;
         private System.Windows.Forms.PictureBox picBxLogoV2Client;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

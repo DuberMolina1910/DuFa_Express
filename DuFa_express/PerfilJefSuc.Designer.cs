@@ -35,6 +35,7 @@
             this.lblNomTipoPer = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.PnlPerfilJefSuc1 = new System.Windows.Forms.Panel();
+            this.picImgPer = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@
             this.PnlPerfilJefSuc2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2Client)).BeginInit();
             this.PnlPerfilJefSuc1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImgPer)).BeginInit();
             this.SuspendLayout();
             // 
             // PnlPerfilJefSuc2
@@ -86,7 +88,7 @@
             this.lblNomTipoPer.ForeColor = System.Drawing.Color.White;
             this.lblNomTipoPer.Location = new System.Drawing.Point(3, 34);
             this.lblNomTipoPer.Name = "lblNomTipoPer";
-            this.lblNomTipoPer.Size = new System.Drawing.Size(150, 25);
+            this.lblNomTipoPer.Size = new System.Drawing.Size(139, 25);
             this.lblNomTipoPer.TabIndex = 16;
             this.lblNomTipoPer.Text = "Tipo Perfil";
             this.lblNomTipoPer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -98,7 +100,7 @@
             this.lblNombre.ForeColor = System.Drawing.Color.White;
             this.lblNombre.Location = new System.Drawing.Point(3, 9);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(150, 25);
+            this.lblNombre.Size = new System.Drawing.Size(139, 25);
             this.lblNombre.TabIndex = 15;
             this.lblNombre.Text = "Nombre";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -106,6 +108,7 @@
             // PnlPerfilJefSuc1
             // 
             this.PnlPerfilJefSuc1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.PnlPerfilJefSuc1.Controls.Add(this.picImgPer);
             this.PnlPerfilJefSuc1.Controls.Add(this.label6);
             this.PnlPerfilJefSuc1.Controls.Add(this.label1);
             this.PnlPerfilJefSuc1.Controls.Add(this.label2);
@@ -120,6 +123,16 @@
             this.PnlPerfilJefSuc1.Name = "PnlPerfilJefSuc1";
             this.PnlPerfilJefSuc1.Size = new System.Drawing.Size(200, 490);
             this.PnlPerfilJefSuc1.TabIndex = 23;
+            // 
+            // picImgPer
+            // 
+            this.picImgPer.Image = ((System.Drawing.Image)(resources.GetObject("picImgPer.Image")));
+            this.picImgPer.Location = new System.Drawing.Point(148, 10);
+            this.picImgPer.Name = "picImgPer";
+            this.picImgPer.Size = new System.Drawing.Size(46, 49);
+            this.picImgPer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picImgPer.TabIndex = 25;
+            this.picImgPer.TabStop = false;
             // 
             // label6
             // 
@@ -203,6 +216,7 @@
             this.PnlPerfilJefSuc2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2Client)).EndInit();
             this.PnlPerfilJefSuc1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picImgPer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,5 +235,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox picBxLogoV2Client;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox picImgPer;
     }
 }

@@ -38,9 +38,11 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.PnlPerfilRepSuc1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.picImgPer = new System.Windows.Forms.PictureBox();
             this.PnlPerfilRepSuc2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2Client)).BeginInit();
             this.PnlPerfilRepSuc1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImgPer)).BeginInit();
             this.SuspendLayout();
             // 
             // PnlPerfilRepSuc2
@@ -103,9 +105,9 @@
             // 
             this.lblNomTipoPer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomTipoPer.ForeColor = System.Drawing.Color.White;
-            this.lblNomTipoPer.Location = new System.Drawing.Point(13, 34);
+            this.lblNomTipoPer.Location = new System.Drawing.Point(3, 34);
             this.lblNomTipoPer.Name = "lblNomTipoPer";
-            this.lblNomTipoPer.Size = new System.Drawing.Size(150, 25);
+            this.lblNomTipoPer.Size = new System.Drawing.Size(139, 25);
             this.lblNomTipoPer.TabIndex = 16;
             this.lblNomTipoPer.Text = "Tipo Perfil";
             this.lblNomTipoPer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -115,9 +117,9 @@
             this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(13, 9);
+            this.lblNombre.Location = new System.Drawing.Point(3, 9);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(150, 25);
+            this.lblNombre.Size = new System.Drawing.Size(139, 25);
             this.lblNombre.TabIndex = 15;
             this.lblNombre.Text = "Nombre";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -125,6 +127,7 @@
             // PnlPerfilRepSuc1
             // 
             this.PnlPerfilRepSuc1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.PnlPerfilRepSuc1.Controls.Add(this.picImgPer);
             this.PnlPerfilRepSuc1.Controls.Add(this.label1);
             this.PnlPerfilRepSuc1.Controls.Add(this.lblActlzrEstdEnvRepSuc);
             this.PnlPerfilRepSuc1.Controls.Add(this.lblNombre);
@@ -148,6 +151,16 @@
             this.label1.Text = "Cambiar Contraseña";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // picImgPer
+            // 
+            this.picImgPer.Image = ((System.Drawing.Image)(resources.GetObject("picImgPer.Image")));
+            this.picImgPer.Location = new System.Drawing.Point(148, 10);
+            this.picImgPer.Name = "picImgPer";
+            this.picImgPer.Size = new System.Drawing.Size(46, 49);
+            this.picImgPer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picImgPer.TabIndex = 25;
+            this.picImgPer.TabStop = false;
+            // 
             // PerfilRepSuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,6 +177,7 @@
             this.PnlPerfilRepSuc2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2Client)).EndInit();
             this.PnlPerfilRepSuc1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picImgPer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -179,5 +193,6 @@
         private System.Windows.Forms.Panel PnlPerfilRepSuc1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picBxLogoV2Client;
+        private System.Windows.Forms.PictureBox picImgPer;
     }
 }

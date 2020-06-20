@@ -44,14 +44,17 @@
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.pnlShowSubForm = new System.Windows.Forms.Panel();
             this.picBxLogoV2 = new System.Windows.Forms.PictureBox();
+            this.picImgPer = new System.Windows.Forms.PictureBox();
             this.pnlUsuLog.SuspendLayout();
             this.pnlShowSubForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImgPer)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlUsuLog
             // 
             this.pnlUsuLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.pnlUsuLog.Controls.Add(this.picImgPer);
             this.pnlUsuLog.Controls.Add(this.lblGesEnvio);
             this.pnlUsuLog.Controls.Add(this.LblGenRepPerAdmSuc);
             this.pnlUsuLog.Controls.Add(this.lblRegEnvio);
@@ -156,9 +159,9 @@
             // 
             this.lblNomTipoPer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomTipoPer.ForeColor = System.Drawing.Color.White;
-            this.lblNomTipoPer.Location = new System.Drawing.Point(9, 37);
+            this.lblNomTipoPer.Location = new System.Drawing.Point(3, 34);
             this.lblNomTipoPer.Name = "lblNomTipoPer";
-            this.lblNomTipoPer.Size = new System.Drawing.Size(150, 25);
+            this.lblNomTipoPer.Size = new System.Drawing.Size(139, 25);
             this.lblNomTipoPer.TabIndex = 1;
             this.lblNomTipoPer.Text = "Tipo Perfil";
             this.lblNomTipoPer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -168,9 +171,9 @@
             this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(9, 12);
+            this.lblNombre.Location = new System.Drawing.Point(3, 9);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(150, 25);
+            this.lblNombre.Size = new System.Drawing.Size(139, 25);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -225,6 +228,16 @@
             this.picBxLogoV2.TabIndex = 0;
             this.picBxLogoV2.TabStop = false;
             // 
+            // picImgPer
+            // 
+            this.picImgPer.Image = ((System.Drawing.Image)(resources.GetObject("picImgPer.Image")));
+            this.picImgPer.Location = new System.Drawing.Point(148, 10);
+            this.picImgPer.Name = "picImgPer";
+            this.picImgPer.Size = new System.Drawing.Size(46, 49);
+            this.picImgPer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picImgPer.TabIndex = 24;
+            this.picImgPer.TabStop = false;
+            // 
             // PerfilAdminSuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,6 +253,7 @@
             this.pnlUsuLog.ResumeLayout(false);
             this.pnlShowSubForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImgPer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -260,5 +274,6 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.Label lblGesEnvio;
+        private System.Windows.Forms.PictureBox picImgPer;
     }
 }

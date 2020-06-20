@@ -40,9 +40,11 @@
             this.picBxLogoV2 = new System.Windows.Forms.PictureBox();
             this.LblCambContrGesSuc = new System.Windows.Forms.Label();
             this.PnlPerfilGesSuc1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PnlPerfilGesSuc2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).BeginInit();
             this.PnlPerfilGesSuc1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSlctrAnlcnEnvGesSuc
@@ -105,9 +107,9 @@
             // 
             this.lblNomTipoPer.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomTipoPer.ForeColor = System.Drawing.Color.White;
-            this.lblNomTipoPer.Location = new System.Drawing.Point(12, 34);
+            this.lblNomTipoPer.Location = new System.Drawing.Point(3, 34);
             this.lblNomTipoPer.Name = "lblNomTipoPer";
-            this.lblNomTipoPer.Size = new System.Drawing.Size(150, 25);
+            this.lblNomTipoPer.Size = new System.Drawing.Size(139, 25);
             this.lblNomTipoPer.TabIndex = 8;
             this.lblNomTipoPer.Text = "Tipo Perfil";
             this.lblNomTipoPer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -117,9 +119,9 @@
             this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(12, 9);
+            this.lblNombre.Location = new System.Drawing.Point(3, 9);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(150, 25);
+            this.lblNombre.Size = new System.Drawing.Size(139, 25);
             this.lblNombre.TabIndex = 7;
             this.lblNombre.Text = "Nombre";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -161,6 +163,7 @@
             // PnlPerfilGesSuc1
             // 
             this.PnlPerfilGesSuc1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.PnlPerfilGesSuc1.Controls.Add(this.pictureBox1);
             this.PnlPerfilGesSuc1.Controls.Add(this.lblNombre);
             this.PnlPerfilGesSuc1.Controls.Add(this.LblCambContrGesSuc);
             this.PnlPerfilGesSuc1.Controls.Add(this.lblNomTipoPer);
@@ -174,6 +177,16 @@
             this.PnlPerfilGesSuc1.Name = "PnlPerfilGesSuc1";
             this.PnlPerfilGesSuc1.Size = new System.Drawing.Size(200, 490);
             this.PnlPerfilGesSuc1.TabIndex = 25;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(148, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(46, 49);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
             // 
             // PerfilGesSuc
             // 
@@ -191,6 +204,7 @@
             this.PnlPerfilGesSuc2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).EndInit();
             this.PnlPerfilGesSuc1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -208,5 +222,6 @@
         private System.Windows.Forms.Label LblCambContrGesSuc;
         private System.Windows.Forms.Panel PnlPerfilGesSuc1;
         private System.Windows.Forms.PictureBox picBxLogoV2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
