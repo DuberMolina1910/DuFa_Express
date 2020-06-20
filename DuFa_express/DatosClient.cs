@@ -33,12 +33,13 @@ namespace DuFa_express
         public string DirDestinatario { set; get; }
         public string DetEnvio { set; get; }
         public string IdEnvioGuia { set; get; }
+        public string DetCancelacion { set; get; }
 
         public DatosClient()
         {
         }
 
-        public DatosClient(string pNombreC, string pIDClient, string pFechaNac_C, string pTelefonoC, string pEmail, string pDirDom_C, string pContrasena, string pSucursal, string pTipoId, string pTipoPer, string pCiudad, bool pEstado, int pIdCiudad, string pValTotalEnvio, string pIdEstadoEnvio, string pFechEnvio, string pSucursalOrigen, string pSucursalDestino, string pIdDestinatario, string pNomDestinatario, string pTelDestinatario, string pDirDestinatario, string pDetEnvio, string pIdEnvioGuia)
+        public DatosClient(string pNombreC, string pIDClient, string pFechaNac_C, string pTelefonoC, string pEmail, string pDirDom_C, string pContrasena, string pSucursal, string pTipoId, string pTipoPer, string pCiudad, bool pEstado, int pIdCiudad, string pValTotalEnvio, string pIdEstadoEnvio, string pFechEnvio, string pSucursalOrigen, string pSucursalDestino, string pIdDestinatario, string pNomDestinatario, string pTelDestinatario, string pDirDestinatario, string pDetEnvio, string pIdEnvioGuia, string pDetCancelacion)
         {
             this.NumIdUsu = pNombreC;
             this.NomUsu = pIDClient;
@@ -64,6 +65,7 @@ namespace DuFa_express
             this.DirDestinatario = pDirDestinatario;
             this.DetEnvio = pDetEnvio;
             this.IdEnvioGuia = pIdEnvioGuia;
+            this.DetCancelacion = pDetCancelacion;
         }
     }
 }

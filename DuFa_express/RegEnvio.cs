@@ -160,5 +160,21 @@ namespace DuFa_express
             txtDirDes.Clear();
             txtDetEnvio.Clear();
         }
+
+        private void txtDetEnvio_Enter(object sender, EventArgs e)
+        {
+            if (txtDetEnvio.Text == "Por favor haga una breve descripción del envío")
+            {
+                txtDetEnvio.Text = "";
+            }
+        }
+
+        private void txtDetEnvio_Leave(object sender, EventArgs e)
+        {
+            if (txtDetEnvio.Text == "")
+            {
+                txtDetEnvio.Text = "Por favor haga una breve descripción del envío";
+            }
+        }
     }
 }

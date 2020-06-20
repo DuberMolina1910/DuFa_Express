@@ -35,6 +35,7 @@
             this.btnAnularEnvio = new System.Windows.Forms.Button();
             this.btnSolAnulacion = new System.Windows.Forms.Button();
             this.lblMsgError = new System.Windows.Forms.Label();
+            this.txtDetCancelacion = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGesEnvios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(248, 33);
+            this.btnBuscar.Location = new System.Drawing.Point(283, 31);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(100, 25);
             this.btnBuscar.TabIndex = 2;
@@ -87,7 +88,7 @@
             // btnAnularEnvio
             // 
             this.btnAnularEnvio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnularEnvio.Location = new System.Drawing.Point(248, 74);
+            this.btnAnularEnvio.Location = new System.Drawing.Point(283, 73);
             this.btnAnularEnvio.Name = "btnAnularEnvio";
             this.btnAnularEnvio.Size = new System.Drawing.Size(100, 25);
             this.btnAnularEnvio.TabIndex = 82;
@@ -98,7 +99,7 @@
             // btnSolAnulacion
             // 
             this.btnSolAnulacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSolAnulacion.Location = new System.Drawing.Point(389, 33);
+            this.btnSolAnulacion.Location = new System.Drawing.Point(389, 31);
             this.btnSolAnulacion.Name = "btnSolAnulacion";
             this.btnSolAnulacion.Size = new System.Drawing.Size(166, 25);
             this.btnSolAnulacion.TabIndex = 83;
@@ -111,18 +112,30 @@
             this.lblMsgError.AutoSize = true;
             this.lblMsgError.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMsgError.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblMsgError.Location = new System.Drawing.Point(12, 119);
+            this.lblMsgError.Location = new System.Drawing.Point(12, 110);
+            this.lblMsgError.MaximumSize = new System.Drawing.Size(250, 0);
             this.lblMsgError.Name = "lblMsgError";
             this.lblMsgError.Size = new System.Drawing.Size(34, 17);
             this.lblMsgError.TabIndex = 84;
             this.lblMsgError.Text = "Error";
             this.lblMsgError.Visible = false;
             // 
+            // txtDetCancelacion
+            // 
+            this.txtDetCancelacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDetCancelacion.Location = new System.Drawing.Point(389, 73);
+            this.txtDetCancelacion.Multiline = true;
+            this.txtDetCancelacion.Name = "txtDetCancelacion";
+            this.txtDetCancelacion.Size = new System.Drawing.Size(299, 77);
+            this.txtDetCancelacion.TabIndex = 85;
+            this.txtDetCancelacion.Text = "Haga una breve descripción del motivo de cancelación.";
+            // 
             // GesEnvios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 490);
+            this.Controls.Add(this.txtDetCancelacion);
             this.Controls.Add(this.lblMsgError);
             this.Controls.Add(this.btnSolAnulacion);
             this.Controls.Add(this.btnAnularEnvio);
@@ -149,5 +162,6 @@
         private System.Windows.Forms.Button btnAnularEnvio;
         private System.Windows.Forms.Button btnSolAnulacion;
         private System.Windows.Forms.Label lblMsgError;
+        private System.Windows.Forms.TextBox txtDetCancelacion;
     }
 }

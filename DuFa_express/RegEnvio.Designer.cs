@@ -365,6 +365,8 @@
             this.txtDetEnvio.Size = new System.Drawing.Size(142, 176);
             this.txtDetEnvio.TabIndex = 149;
             this.txtDetEnvio.Text = "Por favor haga una breve descripción del envío";
+            this.txtDetEnvio.Enter += new System.EventHandler(this.txtDetEnvio_Enter);
+            this.txtDetEnvio.Leave += new System.EventHandler(this.txtDetEnvio_Leave);
             // 
             // lblNomValEnvio
             // 
