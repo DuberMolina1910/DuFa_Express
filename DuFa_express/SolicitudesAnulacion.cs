@@ -26,5 +26,29 @@ namespace DuFa_express
             UsuarioDAL_C envios = new UsuarioDAL_C();
             dgvSolicAnulacion.DataSource = envios.getTabEnviosEstadoSolAnulDGV();
         }
+
+        private void btnAnularEnvio_Click(object sender, EventArgs e)
+        {
+            if (dgvSolicAnulacion.SelectedRows.Count > 0)
+            {
+                if (MessageBox.Show("¿Esta seguro de anular el envio?", "Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    //Llevar a cabo la anulación del envío
+                    DatosClient enviar = new DatosClient();
+                    enviar.IdEstadoEnvio = "6";
+                    enviar.IdEnvioGuia = Convert.ToString(dgvSolicAnulacion.CurrentRow.Cells["N° GUIA"].Value);
+                    int res = UsuarioDAL_C.AnulacionEnvio(enviar);
+                    MensajeError("El envío ha sido anulado exitosamente.");
+                    dgvSolAnul();
+                }
+            }
+            else
+                MensajeError("Seleccione el envío a anular.");
+        }
+        private void MensajeError(string errorMsg)
+        {
+            lblMsgError.Text = errorMsg;
+            lblMsgError.Visible = true;
+        }
     }
 }

@@ -73,6 +73,7 @@
             this.btnAnularEnvio.TabIndex = 88;
             this.btnAnularEnvio.Text = "ANULAR";
             this.btnAnularEnvio.UseVisualStyleBackColor = true;
+            this.btnAnularEnvio.Click += new System.EventHandler(this.btnAnularEnvio_Click);
             // 
             // cmbEstadoEnvio
             // 
