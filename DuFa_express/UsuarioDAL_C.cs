@@ -380,7 +380,7 @@ namespace DuFa_express
             return tabla;
         }
 
-        public DataTable getTabEnviosEstadoSolAnulDGV()/*Query para mostrar los envios filtrados por numero de guia en el DataGridView de GesEnvios*/
+        public DataTable getTabEnviosEstadoSolAnulDGV()/*Query para mostrar los envios en estado de proceso de cancelacion*/
         {
             SqlConnection Connect = DB_Connection.DBConnection();
 
