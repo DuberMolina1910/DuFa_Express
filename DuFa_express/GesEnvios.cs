@@ -43,13 +43,12 @@ namespace DuFa_express
 
         private void OpcPerfil()
         {
-            //if (Cache.IdTipoPer == "1")
-            //{
-            //    btnSolAnulacion.Visible = false;
-            //    txtDetCancelacion.Visible = false;
-            //}
-            //else 
-            if (Cache.IdTipoPer == "5")
+            if (Cache.IdTipoPer == "1")
+            {
+                btnSolAnulacion.Visible = false;
+                txtDetCancelacion.Visible = false;
+            }
+            else if (Cache.IdTipoPer == "5")
             {
                 btnAnularEnvio.Visible = false;
             }

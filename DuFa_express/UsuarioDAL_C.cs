@@ -40,7 +40,7 @@ namespace DuFa_express
         {
             SqlConnection Connect = DB_Connection.DBConnection();
             int resultado = -1;
-            SqlCommand command = new SqlCommand(string.Format("SELECT TABUSUARIOS.*, TABTIPOPER.DESCTIPOPER, TABTIPOID.NOMTIPOID FROM TABUSUARIOS, TABTIPOPER, TABTIPOID WHERE NUMIDUSU = '{0}' AND HASHBYTES('MD5','{1}') = CONTRASENA AND TABUSUARIOS.IDTIPOPER = '{2}' AND TABTIPOID.IDTIPOID = TABUSUARIOS.IDTIPOID", DatosClient.NumIdUsu, DatosClient.Contrasena, DatosClient.IdTipoPer), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT TABUSUARIOS.*, TABTIPOPER.DESCTIPOPER, TABTIPOID.NOMTIPOID FROM TABUSUARIOS, TABTIPOPER, TABTIPOID WHERE NUMIDUSU = '{0}' AND HASHBYTES('MD5','{1}') = CONTRASENA AND TABTIPOID.IDTIPOID = TABUSUARIOS.IDTIPOID AND TABUSUARIOS.IDTIPOPER = '{2}' AND TABUSUARIOS.IDTIPOPER = TABTIPOPER.IDTIPOPER", DatosClient.NumIdUsu, DatosClient.Contrasena, DatosClient.IdTipoPer), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             while (Reader.Read())
             {

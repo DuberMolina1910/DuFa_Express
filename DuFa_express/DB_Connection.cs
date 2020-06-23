@@ -13,10 +13,10 @@ namespace DuFa_express
         public static SqlConnection DBConnection()
         {
             //FabianDB
-            SqlConnection Connect = new SqlConnection("Data source = DESKTOP-416QJ6G\\SQLEXPRESS; Initial Catalog = DuFa_express; Integrated Security = True");
+            //SqlConnection Connect = new SqlConnection("Data source = DESKTOP-416QJ6G\\SQLEXPRESS; Initial Catalog = DuFa_express; Integrated Security = True");
 
             //DuberDB
-            //SqlConnection Connect = new SqlConnection("Data source = DESKTOP-4Q9IA0V\\PRUEBAS; Initial Catalog = DuFa_express; Integrated Security = True");//
+            SqlConnection Connect = new SqlConnection("Data source = DESKTOP-4Q9IA0V\\PRUEBAS; Initial Catalog = DuFa_express; Integrated Security = True");//
             Connect.Open();
                        
             return Connect;

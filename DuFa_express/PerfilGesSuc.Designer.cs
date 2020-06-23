@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilGesSuc));
-            this.lblSlctrAnlcnEnvGesSuc = new System.Windows.Forms.Label();
-            this.lblCsltrEnvGesSuc = new System.Windows.Forms.Label();
             this.lblCerrarSesión = new System.Windows.Forms.Label();
             this.lblGstnrEnvGesSuc = new System.Windows.Forms.Label();
             this.lblCrearEnvGesSuc = new System.Windows.Forms.Label();
@@ -46,28 +44,6 @@
             this.PnlPerfilGesSuc1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblSlctrAnlcnEnvGesSuc
-            // 
-            this.lblSlctrAnlcnEnvGesSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblSlctrAnlcnEnvGesSuc.ForeColor = System.Drawing.Color.White;
-            this.lblSlctrAnlcnEnvGesSuc.Location = new System.Drawing.Point(5, 188);
-            this.lblSlctrAnlcnEnvGesSuc.Name = "lblSlctrAnlcnEnvGesSuc";
-            this.lblSlctrAnlcnEnvGesSuc.Size = new System.Drawing.Size(189, 35);
-            this.lblSlctrAnlcnEnvGesSuc.TabIndex = 13;
-            this.lblSlctrAnlcnEnvGesSuc.Text = "Solicitar Anulacion";
-            this.lblSlctrAnlcnEnvGesSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblCsltrEnvGesSuc
-            // 
-            this.lblCsltrEnvGesSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblCsltrEnvGesSuc.ForeColor = System.Drawing.Color.White;
-            this.lblCsltrEnvGesSuc.Location = new System.Drawing.Point(4, 118);
-            this.lblCsltrEnvGesSuc.Name = "lblCsltrEnvGesSuc";
-            this.lblCsltrEnvGesSuc.Size = new System.Drawing.Size(190, 35);
-            this.lblCsltrEnvGesSuc.TabIndex = 12;
-            this.lblCsltrEnvGesSuc.Text = "Consultar Envios";
-            this.lblCsltrEnvGesSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblCerrarSesión
             // 
@@ -85,7 +61,7 @@
             // 
             this.lblGstnrEnvGesSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblGstnrEnvGesSuc.ForeColor = System.Drawing.Color.White;
-            this.lblGstnrEnvGesSuc.Location = new System.Drawing.Point(4, 153);
+            this.lblGstnrEnvGesSuc.Location = new System.Drawing.Point(4, 118);
             this.lblGstnrEnvGesSuc.Name = "lblGstnrEnvGesSuc";
             this.lblGstnrEnvGesSuc.Size = new System.Drawing.Size(197, 35);
             this.lblGstnrEnvGesSuc.TabIndex = 10;
@@ -168,9 +144,7 @@
             this.PnlPerfilGesSuc1.Controls.Add(this.LblCambContrGesSuc);
             this.PnlPerfilGesSuc1.Controls.Add(this.lblNomTipoPer);
             this.PnlPerfilGesSuc1.Controls.Add(this.lblCrearEnvGesSuc);
-            this.PnlPerfilGesSuc1.Controls.Add(this.lblSlctrAnlcnEnvGesSuc);
             this.PnlPerfilGesSuc1.Controls.Add(this.lblGstnrEnvGesSuc);
-            this.PnlPerfilGesSuc1.Controls.Add(this.lblCsltrEnvGesSuc);
             this.PnlPerfilGesSuc1.Controls.Add(this.lblCerrarSesión);
             this.PnlPerfilGesSuc1.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnlPerfilGesSuc1.Location = new System.Drawing.Point(0, 0);
@@ -210,9 +184,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblSlctrAnlcnEnvGesSuc;
-        private System.Windows.Forms.Label lblCsltrEnvGesSuc;
         private System.Windows.Forms.Label lblCerrarSesión;
         private System.Windows.Forms.Label lblGstnrEnvGesSuc;
         private System.Windows.Forms.Label lblCrearEnvGesSuc;

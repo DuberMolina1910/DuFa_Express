@@ -37,8 +37,8 @@
             this.lblNomTipoPer = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.PnlPerfilRepSuc1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.picImgPer = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.PnlPerfilRepSuc2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2Client)).BeginInit();
             this.PnlPerfilRepSuc1.SuspendLayout();
@@ -82,7 +82,7 @@
             // 
             this.lblCerrarSesión.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblCerrarSesión.ForeColor = System.Drawing.Color.White;
-            this.lblCerrarSesión.Location = new System.Drawing.Point(6, 443);
+            this.lblCerrarSesión.Location = new System.Drawing.Point(2, 446);
             this.lblCerrarSesión.Name = "lblCerrarSesión";
             this.lblCerrarSesión.Size = new System.Drawing.Size(189, 35);
             this.lblCerrarSesión.TabIndex = 19;
@@ -140,6 +140,16 @@
             this.PnlPerfilRepSuc1.Size = new System.Drawing.Size(200, 490);
             this.PnlPerfilRepSuc1.TabIndex = 24;
             // 
+            // picImgPer
+            // 
+            this.picImgPer.Image = ((System.Drawing.Image)(resources.GetObject("picImgPer.Image")));
+            this.picImgPer.Location = new System.Drawing.Point(148, 10);
+            this.picImgPer.Name = "picImgPer";
+            this.picImgPer.Size = new System.Drawing.Size(46, 49);
+            this.picImgPer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picImgPer.TabIndex = 25;
+            this.picImgPer.TabStop = false;
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
@@ -150,16 +160,6 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Cambiar Contraseña";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // picImgPer
-            // 
-            this.picImgPer.Image = ((System.Drawing.Image)(resources.GetObject("picImgPer.Image")));
-            this.picImgPer.Location = new System.Drawing.Point(148, 10);
-            this.picImgPer.Name = "picImgPer";
-            this.picImgPer.Size = new System.Drawing.Size(46, 49);
-            this.picImgPer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picImgPer.TabIndex = 25;
-            this.picImgPer.TabStop = false;
             // 
             // PerfilRepSuc
             // 
