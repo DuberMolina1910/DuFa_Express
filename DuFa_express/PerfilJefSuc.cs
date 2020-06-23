@@ -28,6 +28,47 @@ namespace DuFa_express
             lblNomTipoPer.Text = Cache.NomTipoPer;
         }
 
+        private void AbrirSubForms(object SubForms)
+        {
+            if (this.PnlPerfilJefSuc2.Controls.Count > 0)
+                this.PnlPerfilJefSuc2.Controls.RemoveAt(0);
+            {
+                Form frm = SubForms as Form;
+                frm.TopLevel = false;
+                frm.Dock = DockStyle.Fill;
+                this.PnlPerfilJefSuc2.Controls.Add(frm);
+                this.PnlPerfilJefSuc2.Tag = frm;
+                frm.Show();
+            }
+        }
+        private void lblRegUserPerJerSuc_Click(object sender, EventArgs e)
+        {
+            AbrirSubForms(new RegUsers());
+        }
+
+        private void lblSolAnulPerJerSuc_Click(object sender, EventArgs e)
+        {
+            AbrirSubForms(new SolicitudesAnulacion());
+        }
+
+        private void lblGesEnvPerJerSuc_Click(object sender, EventArgs e)
+        {
+            AbrirSubForms(new GesEnvios());
+        }
+        private void lblReportSucPerJerSuc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+        private void LblCambcontra_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         private void lblCerrarSesión_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Esta seguro que desea cerrar la sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

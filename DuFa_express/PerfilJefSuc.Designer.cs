@@ -36,12 +36,12 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.PnlPerfilJefSuc1 = new System.Windows.Forms.Panel();
             this.picImgPer = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblReportSucPerJerSuc = new System.Windows.Forms.Label();
+            this.LblCambcontra = new System.Windows.Forms.Label();
+            this.lblSolAnulPerJerSuc = new System.Windows.Forms.Label();
+            this.lblConstEnvPerJerSuc = new System.Windows.Forms.Label();
+            this.lblGesEnvPerJerSuc = new System.Windows.Forms.Label();
+            this.lblRegUserPerJerSuc = new System.Windows.Forms.Label();
             this.PnlPerfilJefSuc2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2Client)).BeginInit();
             this.PnlPerfilJefSuc1.SuspendLayout();
@@ -109,13 +109,13 @@
             // 
             this.PnlPerfilJefSuc1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.PnlPerfilJefSuc1.Controls.Add(this.picImgPer);
-            this.PnlPerfilJefSuc1.Controls.Add(this.label6);
-            this.PnlPerfilJefSuc1.Controls.Add(this.label1);
-            this.PnlPerfilJefSuc1.Controls.Add(this.label2);
-            this.PnlPerfilJefSuc1.Controls.Add(this.label3);
-            this.PnlPerfilJefSuc1.Controls.Add(this.label4);
+            this.PnlPerfilJefSuc1.Controls.Add(this.lblReportSucPerJerSuc);
+            this.PnlPerfilJefSuc1.Controls.Add(this.LblCambcontra);
+            this.PnlPerfilJefSuc1.Controls.Add(this.lblSolAnulPerJerSuc);
+            this.PnlPerfilJefSuc1.Controls.Add(this.lblConstEnvPerJerSuc);
+            this.PnlPerfilJefSuc1.Controls.Add(this.lblGesEnvPerJerSuc);
             this.PnlPerfilJefSuc1.Controls.Add(this.lblCerrarSesión);
-            this.PnlPerfilJefSuc1.Controls.Add(this.label5);
+            this.PnlPerfilJefSuc1.Controls.Add(this.lblRegUserPerJerSuc);
             this.PnlPerfilJefSuc1.Controls.Add(this.lblNomTipoPer);
             this.PnlPerfilJefSuc1.Controls.Add(this.lblNombre);
             this.PnlPerfilJefSuc1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -134,71 +134,76 @@
             this.picImgPer.TabIndex = 25;
             this.picImgPer.TabStop = false;
             // 
-            // label6
+            // lblReportSucPerJerSuc
             // 
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(2, 228);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(197, 35);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Generar Reporte de Sucursal";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblReportSucPerJerSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblReportSucPerJerSuc.ForeColor = System.Drawing.Color.White;
+            this.lblReportSucPerJerSuc.Location = new System.Drawing.Point(2, 228);
+            this.lblReportSucPerJerSuc.Name = "lblReportSucPerJerSuc";
+            this.lblReportSucPerJerSuc.Size = new System.Drawing.Size(197, 35);
+            this.lblReportSucPerJerSuc.TabIndex = 20;
+            this.lblReportSucPerJerSuc.Text = "Generar Reporte de Sucursal";
+            this.lblReportSucPerJerSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblReportSucPerJerSuc.Click += new System.EventHandler(this.lblReportSucPerJerSuc_Click);
             // 
-            // label1
+            // LblCambcontra
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(2, 411);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 35);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Cambiar Contraseña";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LblCambcontra.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.LblCambcontra.ForeColor = System.Drawing.Color.White;
+            this.LblCambcontra.Location = new System.Drawing.Point(2, 411);
+            this.LblCambcontra.Name = "LblCambcontra";
+            this.LblCambcontra.Size = new System.Drawing.Size(197, 35);
+            this.LblCambcontra.TabIndex = 19;
+            this.LblCambcontra.Text = "Cambiar Contraseña";
+            this.LblCambcontra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LblCambcontra.Click += new System.EventHandler(this.LblCambcontra_Click);
             // 
-            // label2
+            // lblSolAnulPerJerSuc
             // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1, 192);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 35);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Solicitudes de Anulacion";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSolAnulPerJerSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblSolAnulPerJerSuc.ForeColor = System.Drawing.Color.White;
+            this.lblSolAnulPerJerSuc.Location = new System.Drawing.Point(1, 192);
+            this.lblSolAnulPerJerSuc.Name = "lblSolAnulPerJerSuc";
+            this.lblSolAnulPerJerSuc.Size = new System.Drawing.Size(197, 35);
+            this.lblSolAnulPerJerSuc.TabIndex = 18;
+            this.lblSolAnulPerJerSuc.Text = "Solicitudes de Anulacion";
+            this.lblSolAnulPerJerSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSolAnulPerJerSuc.Click += new System.EventHandler(this.lblSolAnulPerJerSuc_Click);
             // 
-            // label3
+            // lblConstEnvPerJerSuc
             // 
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(0, 122);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(197, 35);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Consultar Envio";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblConstEnvPerJerSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblConstEnvPerJerSuc.ForeColor = System.Drawing.Color.White;
+            this.lblConstEnvPerJerSuc.Location = new System.Drawing.Point(0, 122);
+            this.lblConstEnvPerJerSuc.Name = "lblConstEnvPerJerSuc";
+            this.lblConstEnvPerJerSuc.Size = new System.Drawing.Size(197, 35);
+            this.lblConstEnvPerJerSuc.TabIndex = 17;
+            this.lblConstEnvPerJerSuc.Text = "Consultar Envio";
+            this.lblConstEnvPerJerSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label4
+            // lblGesEnvPerJerSuc
             // 
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(0, 157);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(197, 35);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Gestionar Envios";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblGesEnvPerJerSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblGesEnvPerJerSuc.ForeColor = System.Drawing.Color.White;
+            this.lblGesEnvPerJerSuc.Location = new System.Drawing.Point(0, 157);
+            this.lblGesEnvPerJerSuc.Name = "lblGesEnvPerJerSuc";
+            this.lblGesEnvPerJerSuc.Size = new System.Drawing.Size(197, 35);
+            this.lblGesEnvPerJerSuc.TabIndex = 16;
+            this.lblGesEnvPerJerSuc.Text = "Gestionar Envios";
+            this.lblGesEnvPerJerSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblGesEnvPerJerSuc.Click += new System.EventHandler(this.lblGesEnvPerJerSuc_Click);
             // 
-            // label5
+            // lblRegUserPerJerSuc
             // 
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(1, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(197, 35);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Registrar Usuario";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblRegUserPerJerSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblRegUserPerJerSuc.ForeColor = System.Drawing.Color.White;
+            this.lblRegUserPerJerSuc.Location = new System.Drawing.Point(1, 87);
+            this.lblRegUserPerJerSuc.Name = "lblRegUserPerJerSuc";
+            this.lblRegUserPerJerSuc.Size = new System.Drawing.Size(197, 35);
+            this.lblRegUserPerJerSuc.TabIndex = 15;
+            this.lblRegUserPerJerSuc.Text = "Registrar Usuario";
+            this.lblRegUserPerJerSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblRegUserPerJerSuc.Click += new System.EventHandler(this.lblRegUserPerJerSuc_Click);
             // 
             // PerfilJefSuc
             // 
@@ -228,13 +233,13 @@
         private System.Windows.Forms.Label lblNomTipoPer;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Panel PnlPerfilJefSuc1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LblCambcontra;
+        private System.Windows.Forms.Label lblSolAnulPerJerSuc;
+        private System.Windows.Forms.Label lblConstEnvPerJerSuc;
+        private System.Windows.Forms.Label lblGesEnvPerJerSuc;
+        private System.Windows.Forms.Label lblRegUserPerJerSuc;
         private System.Windows.Forms.PictureBox picBxLogoV2Client;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblReportSucPerJerSuc;
         private System.Windows.Forms.PictureBox picImgPer;
     }
 }

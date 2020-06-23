@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilClientForm));
             this.pnlPerfClient1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LblCmbContraPerClien = new System.Windows.Forms.Label();
+            this.LblActualizarDatosPerClien = new System.Windows.Forms.Label();
             this.lblActDtsPerClien = new System.Windows.Forms.Label();
             this.lblGesEnvPerClient = new System.Windows.Forms.Label();
             this.lblPerClienCrearEnv = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             // 
             this.pnlPerfClient1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.pnlPerfClient1.Controls.Add(this.pictureBox1);
-            this.pnlPerfClient1.Controls.Add(this.LblCmbContraPerClien);
+            this.pnlPerfClient1.Controls.Add(this.LblActualizarDatosPerClien);
             this.pnlPerfClient1.Controls.Add(this.lblActDtsPerClien);
             this.pnlPerfClient1.Controls.Add(this.lblGesEnvPerClient);
             this.pnlPerfClient1.Controls.Add(this.lblPerClienCrearEnv);
@@ -75,16 +75,16 @@
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
-            // LblCmbContraPerClien
+            // LblActualizarDatosPerClien
             // 
-            this.LblCmbContraPerClien.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.LblCmbContraPerClien.ForeColor = System.Drawing.Color.White;
-            this.LblCmbContraPerClien.Location = new System.Drawing.Point(2, 411);
-            this.LblCmbContraPerClien.Name = "LblCmbContraPerClien";
-            this.LblCmbContraPerClien.Size = new System.Drawing.Size(197, 35);
-            this.LblCmbContraPerClien.TabIndex = 19;
-            this.LblCmbContraPerClien.Text = "Cambiar Contraseña";
-            this.LblCmbContraPerClien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LblActualizarDatosPerClien.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.LblActualizarDatosPerClien.ForeColor = System.Drawing.Color.White;
+            this.LblActualizarDatosPerClien.Location = new System.Drawing.Point(2, 411);
+            this.LblActualizarDatosPerClien.Name = "LblActualizarDatosPerClien";
+            this.LblActualizarDatosPerClien.Size = new System.Drawing.Size(197, 35);
+            this.LblActualizarDatosPerClien.TabIndex = 19;
+            this.LblActualizarDatosPerClien.Text = "Actualizar Datos";
+            this.LblActualizarDatosPerClien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblActDtsPerClien
             // 
@@ -143,6 +143,7 @@
             this.lblNomTipoPer.TabIndex = 1;
             this.lblNomTipoPer.Text = "Tipo Perfil";
             this.lblNomTipoPer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNomTipoPer.Click += new System.EventHandler(this.lblNomTipoPer_Click);
             // 
             // lblNombre
             // 
@@ -212,7 +213,7 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlPerfClient1;
-        private System.Windows.Forms.Label LblCmbContraPerClien;
+        private System.Windows.Forms.Label LblActualizarDatosPerClien;
         private System.Windows.Forms.Label lblActDtsPerClien;
         private System.Windows.Forms.Label lblGesEnvPerClient;
         private System.Windows.Forms.Label lblPerClienCrearEnv;

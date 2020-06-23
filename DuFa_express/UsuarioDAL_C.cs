@@ -54,8 +54,21 @@ namespace DuFa_express
                 Cache.NomTipoId = Reader.GetString(12);
                 resultado = 50;
             }
+            Reader.Close();
             Connect.Close();
             return resultado;
+        }
+
+        public static int CambiarContrasena(DatosClient DatosClient)/*Query para actualizar contraseña*/
+        {
+            int rest = 0;
+            SqlConnection Connect = DB_Connection.DBConnection();
+            {
+                SqlCommand com = new SqlCommand(string.Format("UPDATE TABUSUARIOS SET CONTRASENA = '{0}' WHERE NOMUSU = '{1}' AND  HASHBYTES('MD5','{2}') = CONTRASENA", DatosClient.Contrasena, DatosClient.Contrasena), Connect);
+                rest = com.ExecuteNonQuery();
+                Connect.Close();
+            }
+            return rest;
         }
 
 

@@ -70,5 +70,10 @@ namespace DuFa_express
         {
             AbrirSubForms(new GesEnvios());
         }
+
+        private void lblNomTipoPer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
