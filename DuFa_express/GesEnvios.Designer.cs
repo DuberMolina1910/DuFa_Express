@@ -67,7 +67,7 @@
             // txtNumGuia
             // 
             this.txtNumGuia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumGuia.Location = new System.Drawing.Point(12, 33);
+            this.txtNumGuia.Location = new System.Drawing.Point(15, 33);
             this.txtNumGuia.Name = "txtNumGuia";
             this.txtNumGuia.Size = new System.Drawing.Size(190, 23);
             this.txtNumGuia.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             this.cmbEstadoEnvio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstadoEnvio.FormattingEnabled = true;
-            this.cmbEstadoEnvio.Location = new System.Drawing.Point(12, 74);
+            this.cmbEstadoEnvio.Location = new System.Drawing.Point(15, 74);
             this.cmbEstadoEnvio.Name = "cmbEstadoEnvio";
             this.cmbEstadoEnvio.Size = new System.Drawing.Size(190, 24);
             this.cmbEstadoEnvio.TabIndex = 81;
