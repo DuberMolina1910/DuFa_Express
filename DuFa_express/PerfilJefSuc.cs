@@ -41,34 +41,30 @@ namespace DuFa_express
                 frm.Show();
             }
         }
-        private void lblRegUserPerJerSuc_Click(object sender, EventArgs e)
+        private void lblPerJefSucCrearEnv_Click(object sender, EventArgs e)
         {
-            AbrirSubForms(new RegUsers());
+            //Nuevo Envio
+            AbrirSubForms(new RegEnvio());
         }
-
-        private void lblSolAnulPerJerSuc_Click(object sender, EventArgs e)
+        private void LblGesEnvPerJefSuc_Click(object sender, EventArgs e)
         {
-            AbrirSubForms(new SolicitudesAnulacion());
-        }
-
-        private void lblGesEnvPerJerSuc_Click(object sender, EventArgs e)
-        {
+            //GestionarEnvios
             AbrirSubForms(new GesEnvios());
         }
-        private void lblReportSucPerJerSuc_Click(object sender, EventArgs e)
+        private void lblRegUserPerJerSuc_Click_1(object sender, EventArgs e)
         {
-
+            //Registrar Usuarios
+            AbrirSubForms(new RegUsers());
         }
-
-
-
-
-
-        private void LblCambcontra_Click(object sender, EventArgs e)
+        private void LblSolAnulRegJefSuc_Click(object sender, EventArgs e)
         {
-            
+            //Solicitudes de Anulacion
+            AbrirSubForms(new SolicitudesAnulacion());
         }
-
+        private void LblRepSucPerJefSuc_Click(object sender, EventArgs e)
+        {
+            //Reporte Sucursal
+        }
         private void lblCerrarSesión_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Esta seguro que desea cerrar la sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -78,5 +74,7 @@ namespace DuFa_express
                 this.Close();
             }
         }
+
+
     }
 }
