@@ -87,5 +87,10 @@ namespace DuFa_express
         {
             AbrirSubForms(new GesEnvios());
         }
+
+        private void LblSolAnul_Click(object sender, EventArgs e)
+        {
+            AbrirSubForms(new SolicitudesAnulacion());
+        }
     }
 }

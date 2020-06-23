@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilAdminSuc));
             this.pnlUsuLog = new System.Windows.Forms.Panel();
+            this.LblSolAnul = new System.Windows.Forms.Label();
+            this.picImgPer = new System.Windows.Forms.PictureBox();
             this.lblGesEnvio = new System.Windows.Forms.Label();
             this.LblGenRepPerAdmSuc = new System.Windows.Forms.Label();
             this.lblRegEnvio = new System.Windows.Forms.Label();
@@ -44,16 +46,16 @@
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.pnlShowSubForm = new System.Windows.Forms.Panel();
             this.picBxLogoV2 = new System.Windows.Forms.PictureBox();
-            this.picImgPer = new System.Windows.Forms.PictureBox();
             this.pnlUsuLog.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImgPer)).BeginInit();
             this.pnlShowSubForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picImgPer)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlUsuLog
             // 
             this.pnlUsuLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.pnlUsuLog.Controls.Add(this.LblSolAnul);
             this.pnlUsuLog.Controls.Add(this.picImgPer);
             this.pnlUsuLog.Controls.Add(this.lblGesEnvio);
             this.pnlUsuLog.Controls.Add(this.LblGenRepPerAdmSuc);
@@ -71,6 +73,28 @@
             this.pnlUsuLog.Size = new System.Drawing.Size(200, 490);
             this.pnlUsuLog.TabIndex = 3;
             // 
+            // LblSolAnul
+            // 
+            this.LblSolAnul.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.LblSolAnul.ForeColor = System.Drawing.Color.White;
+            this.LblSolAnul.Location = new System.Drawing.Point(1, 258);
+            this.LblSolAnul.Name = "LblSolAnul";
+            this.LblSolAnul.Size = new System.Drawing.Size(197, 35);
+            this.LblSolAnul.TabIndex = 25;
+            this.LblSolAnul.Text = "Solicitudes de Anulacion";
+            this.LblSolAnul.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LblSolAnul.Click += new System.EventHandler(this.LblSolAnul_Click);
+            // 
+            // picImgPer
+            // 
+            this.picImgPer.Image = ((System.Drawing.Image)(resources.GetObject("picImgPer.Image")));
+            this.picImgPer.Location = new System.Drawing.Point(148, 10);
+            this.picImgPer.Name = "picImgPer";
+            this.picImgPer.Size = new System.Drawing.Size(46, 49);
+            this.picImgPer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picImgPer.TabIndex = 24;
+            this.picImgPer.TabStop = false;
+            // 
             // lblGesEnvio
             // 
             this.lblGesEnvio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
@@ -87,7 +111,7 @@
             // 
             this.LblGenRepPerAdmSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.LblGenRepPerAdmSuc.ForeColor = System.Drawing.Color.White;
-            this.LblGenRepPerAdmSuc.Location = new System.Drawing.Point(1, 261);
+            this.LblGenRepPerAdmSuc.Location = new System.Drawing.Point(1, 297);
             this.LblGenRepPerAdmSuc.Name = "LblGenRepPerAdmSuc";
             this.LblGenRepPerAdmSuc.Size = new System.Drawing.Size(197, 35);
             this.LblGenRepPerAdmSuc.TabIndex = 21;
@@ -228,16 +252,6 @@
             this.picBxLogoV2.TabIndex = 0;
             this.picBxLogoV2.TabStop = false;
             // 
-            // picImgPer
-            // 
-            this.picImgPer.Image = ((System.Drawing.Image)(resources.GetObject("picImgPer.Image")));
-            this.picImgPer.Location = new System.Drawing.Point(148, 10);
-            this.picImgPer.Name = "picImgPer";
-            this.picImgPer.Size = new System.Drawing.Size(46, 49);
-            this.picImgPer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picImgPer.TabIndex = 24;
-            this.picImgPer.TabStop = false;
-            // 
             // PerfilAdminSuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,9 +265,9 @@
             this.Text = "PerfilAdminSuc";
             this.Load += new System.EventHandler(this.PerfilAdminSuc_Load);
             this.pnlUsuLog.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picImgPer)).EndInit();
             this.pnlShowSubForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picImgPer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,5 +289,6 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.Label lblGesEnvio;
         private System.Windows.Forms.PictureBox picImgPer;
+        private System.Windows.Forms.Label LblSolAnul;
     }
 }

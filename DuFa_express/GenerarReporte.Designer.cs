@@ -101,7 +101,8 @@
             "",
             "Consulta Usuarios del Sistema",
             "Consulta Asignacion de Usuarios - Sucursales",
-            "Consulta de Envios por sucursales"});
+            "Consulta de Envios por sucursales",
+            "Consulta de Envios Cancelados"});
             this.CmbBxTipRepGenRepPerAdm.Location = new System.Drawing.Point(200, 86);
             this.CmbBxTipRepGenRepPerAdm.Name = "CmbBxTipRepGenRepPerAdm";
             this.CmbBxTipRepGenRepPerAdm.Size = new System.Drawing.Size(250, 21);

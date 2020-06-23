@@ -315,12 +315,12 @@ namespace DuFa_express
             Connect.Close();
             return tabla;
         }
-        public DataTable ReportedatosGen()/*Query para consulta toda BD*/
+        public DataTable ReporteEnviosCancelados()/*Query para consulta Envios Cancelados*/
         {
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT * FROM TABCIUDADES,TABENVIOS,TABESTADOS,TABSUCURSALES,TABTIPOID,TABTIPOPER,TABUSUARIOS"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT LTRIM(RTRIM(REPLACE(TEN.IDENVIOGUIA, '', ''))) AS 'N° GUIA',LTRIM(RTRIM(REPLACE(TEN.NUMIDUSU, '', ''))) AS 'ID USUARIO',LTRIM(RTRIM(REPLACE(TEN.VALORENVIO, '', ''))) AS 'VALOR TOTAL',LTRIM(RTRIM(REPLACE(TES.DESCESTADO, '', ''))) AS ESTADO,LTRIM(RTRIM(REPLACE(TEN.FECHAENVIO, '', ''))) AS 'FECHA ENVIO',LTRIM(RTRIM(REPLACE(TTP.DESCTIPOPER, '', ''))) AS PERFIL,LTRIM(RTRIM(REPLACE(TSU.NOMSUCURSAL, '', ''))) AS 'SUC. ORIGEN',LTRIM(RTRIM(REPLACE(TSU2.NOMSUCURSAL, '', ''))) AS 'SUC. DESTINO',LTRIM(RTRIM(REPLACE(TEN.IDDESTINATARIO, '', ''))) AS 'ID DESTINATARIO',LTRIM(RTRIM(REPLACE(TEN.NOMDESTINATARIO, '', ''))) AS 'NOMBRE DESTINATARIO',LTRIM(RTRIM(REPLACE(TEN.TELDESTINATARIO, '', ''))) AS 'TELEFONO DESTINATARIO',LTRIM(RTRIM(REPLACE(TEN.DIRDESTINO, '', ''))) AS 'DIRECCION DESTINO',LTRIM(RTRIM(REPLACE(TEN.DETENVIO, '', ''))) AS 'DETALLES DEL ENVIO', LTRIM(RTRIM(REPLACE(TEN.DETCANCELACION, '', ''))) AS 'DETALLES DE CANCELACIÓN' FROM TABENVIOS TEN INNER JOIN TABESTADOS TES ON TES.IDESTADO = TEN.IDESTADO INNER JOIN TABTIPOPER TTP ON TEN.IDTIPOPER = TTP.IDTIPOPER INNER JOIN TABSUCURSALES TSU ON TEN.IDSUCORI = TSU.IDSUCURSAL INNER JOIN TABSUCURSALES TSU2 ON TEN.IDSUCDES = TSU2.IDSUCURSAL WHERE TEN.IDESTADO = '6' ORDER BY FECHAENVIO DESC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -379,6 +379,20 @@ namespace DuFa_express
             Connect.Close();
             return tabla;
         }
+
+        public DataTable getTabEnviosEstadoSolAnulDGV()/*Query para mostrar los envios en estado de proceso de cancelacion*/
+        {
+            SqlConnection Connect = DB_Connection.DBConnection();
+
+            DataTable tabla = new DataTable();
+            SqlCommand command = new SqlCommand(string.Format("SELECT LTRIM(RTRIM(REPLACE(TEN.IDENVIOGUIA, '', ''))) AS 'N° GUIA',LTRIM(RTRIM(REPLACE(TEN.NUMIDUSU, '', ''))) AS 'ID USUARIO',LTRIM(RTRIM(REPLACE(TEN.VALORENVIO, '', ''))) AS 'VALOR TOTAL',LTRIM(RTRIM(REPLACE(TES.DESCESTADO, '', ''))) AS ESTADO,LTRIM(RTRIM(REPLACE(TEN.FECHAENVIO, '', ''))) AS 'FECHA ENVIO',LTRIM(RTRIM(REPLACE(TTP.DESCTIPOPER, '', ''))) AS PERFIL,LTRIM(RTRIM(REPLACE(TSU.NOMSUCURSAL, '', ''))) AS 'SUC. ORIGEN',LTRIM(RTRIM(REPLACE(TSU2.NOMSUCURSAL, '', ''))) AS 'SUC. DESTINO',LTRIM(RTRIM(REPLACE(TEN.IDDESTINATARIO, '', ''))) AS 'ID DESTINATARIO',LTRIM(RTRIM(REPLACE(TEN.NOMDESTINATARIO, '', ''))) AS 'NOMBRE DESTINATARIO',LTRIM(RTRIM(REPLACE(TEN.TELDESTINATARIO, '', ''))) AS 'TELEFONO DESTINATARIO',LTRIM(RTRIM(REPLACE(TEN.DIRDESTINO, '', ''))) AS 'DIRECCION DESTINO',LTRIM(RTRIM(REPLACE(TEN.DETENVIO, '', ''))) AS 'DETALLES DEL ENVIO', LTRIM(RTRIM(REPLACE(TEN.DETCANCELACION, '', ''))) AS 'DETALLES DE CANCELACIÓN' FROM TABENVIOS TEN INNER JOIN TABESTADOS TES ON TES.IDESTADO = TEN.IDESTADO INNER JOIN TABTIPOPER TTP ON TEN.IDTIPOPER = TTP.IDTIPOPER INNER JOIN TABSUCURSALES TSU ON TEN.IDSUCORI = TSU.IDSUCURSAL INNER JOIN TABSUCURSALES TSU2 ON TEN.IDSUCDES = TSU2.IDSUCURSAL WHERE TEN.IDESTADO = '8' ORDER BY FECHAENVIO DESC"), Connect);
+            SqlDataReader Reader = command.ExecuteReader();
+            tabla.Load(Reader);
+            Reader.Close();
+            Connect.Close();
+            return tabla;
+        }
+
 
         public static int AnulacionEnvio(DatosClient DatosClient)/*Query para Desactivar o Activar Sucursales*/
         {

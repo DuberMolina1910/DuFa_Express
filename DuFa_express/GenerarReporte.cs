@@ -68,6 +68,11 @@ namespace DuFa_express
                 UsuarioDAL_C Reportes = new UsuarioDAL_C();
                 DtGrdVwGenRepPerAdm.DataSource = Reportes.ReporteCosultaEnvxSuc();
             }
+            else if (CmbBxTipRepGenRepPerAdm.Text == "Consulta de Envios Cancelados")
+            {
+                UsuarioDAL_C Reportes = new UsuarioDAL_C();
+                DtGrdVwGenRepPerAdm.DataSource = Reportes.ReporteEnviosCancelados();
+            }
         }
 
         private void BtnCerrarGenRepPerAdm_Click(object sender, EventArgs e)
@@ -217,8 +222,69 @@ namespace DuFa_express
                 Reader.Close();
                 Connect.Close();
             }
+            else if (CmbBxTipRepGenRepPerAdm.Text == "Consulta de Envios Cancelados")
+            {
+                int CellHeader = 2, cellstart = 2;
+                SLDocument sl = new SLDocument();
+                sl.SetCellValue("B" + CellHeader, "N° GUIA");
+                sl.SetCellValue("C" + CellHeader, "ID USUARIO");
+                sl.SetCellValue("D" + CellHeader, "VALOR TOTAL");
+                sl.SetCellValue("E" + CellHeader, "ESTADO");
+                sl.SetCellValue("F" + CellHeader, "FECHA ENVIO");
+                sl.SetCellValue("G" + CellHeader, "PERFIL");
+                sl.SetCellValue("H" + CellHeader, "SUC. ORIGEN");
+                sl.SetCellValue("I" + CellHeader, "SUC. DESTINO");
+                sl.SetCellValue("J" + CellHeader, "ID DESTINATARIO");
+                sl.SetCellValue("K" + CellHeader, "NOMBRE DESTINATARIO");
+                sl.SetCellValue("L" + CellHeader, "TELEFONO DESTINATARIO");
+                sl.SetCellValue("M" + CellHeader, "DIRECCION DESTINO");
+                sl.SetCellValue("N" + CellHeader, "DETALLES DEL ENVIO");
+                sl.SetCellValue("O" + CellHeader, "DETALLES DE CANCELACIÓN");
 
-            
+                SqlConnection Connect = DB_Connection.DBConnection();
+                SqlCommand command = new SqlCommand(string.Format("SELECT LTRIM(RTRIM(REPLACE(TEN.IDENVIOGUIA, '', ''))) AS 'N° GUIA',LTRIM(RTRIM(REPLACE(TEN.NUMIDUSU, '', ''))) AS 'ID USUARIO',LTRIM(RTRIM(REPLACE(TEN.VALORENVIO, '', ''))) AS 'VALOR TOTAL',LTRIM(RTRIM(REPLACE(TES.DESCESTADO, '', ''))) AS ESTADO,LTRIM(RTRIM(REPLACE(TEN.FECHAENVIO, '', ''))) AS 'FECHA ENVIO',LTRIM(RTRIM(REPLACE(TTP.DESCTIPOPER, '', ''))) AS PERFIL,LTRIM(RTRIM(REPLACE(TSU.NOMSUCURSAL, '', ''))) AS 'SUC. ORIGEN',LTRIM(RTRIM(REPLACE(TSU2.NOMSUCURSAL, '', ''))) AS 'SUC. DESTINO',LTRIM(RTRIM(REPLACE(TEN.IDDESTINATARIO, '', ''))) AS 'ID DESTINATARIO',LTRIM(RTRIM(REPLACE(TEN.NOMDESTINATARIO, '', ''))) AS 'NOMBRE DESTINATARIO',LTRIM(RTRIM(REPLACE(TEN.TELDESTINATARIO, '', ''))) AS 'TELEFONO DESTINATARIO',LTRIM(RTRIM(REPLACE(TEN.DIRDESTINO, '', ''))) AS 'DIRECCION DESTINO',LTRIM(RTRIM(REPLACE(TEN.DETENVIO, '', ''))) AS 'DETALLES DEL ENVIO', LTRIM(RTRIM(REPLACE(TEN.DETCANCELACION, '', ''))) AS 'DETALLES DE CANCELACIÓN' FROM TABENVIOS TEN INNER JOIN TABESTADOS TES ON TES.IDESTADO = TEN.IDESTADO INNER JOIN TABTIPOPER TTP ON TEN.IDTIPOPER = TTP.IDTIPOPER INNER JOIN TABSUCURSALES TSU ON TEN.IDSUCORI = TSU.IDSUCURSAL INNER JOIN TABSUCURSALES TSU2 ON TEN.IDSUCDES = TSU2.IDSUCURSAL WHERE TEN.IDESTADO = '6' ORDER BY FECHAENVIO DESC"), Connect);
+                SqlDataReader Reader = command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    CellHeader++;
+                    sl.SetCellValue("B" + CellHeader, Reader["N° GUIA"].ToString());
+                    sl.SetCellValue("C" + CellHeader, Reader["ID USUARIO"].ToString());
+                    sl.SetCellValue("D" + CellHeader, Reader["VALOR TOTAL"].ToString());
+                    sl.SetCellValue("E" + CellHeader, Reader["ESTADO"].ToString());
+                    sl.SetCellValue("F" + CellHeader, Reader["FECHA ENVIO"].ToString());
+                    sl.SetCellValue("G" + CellHeader, Reader["PERFIL"].ToString());
+                    sl.SetCellValue("H" + CellHeader, Reader["SUC. ORIGEN"].ToString());
+                    sl.SetCellValue("I" + CellHeader, Reader["SUC. DESTINO"].ToString());
+                    sl.SetCellValue("J" + CellHeader, Reader["ID DESTINATARIO"].ToString());
+                    sl.SetCellValue("K" + CellHeader, Reader["NOMBRE DESTINATARIO"].ToString());
+                    sl.SetCellValue("L" + CellHeader, Reader["TELEFONO DESTINATARIO"].ToString());
+                    sl.SetCellValue("M" + CellHeader, Reader["DIRECCION DESTINO"].ToString());
+                    sl.SetCellValue("N" + CellHeader, Reader["DETALLES DEL ENVIO"].ToString());
+                    sl.SetCellValue("O" + CellHeader, Reader["DETALLES DE CANCELACIÓN"].ToString());
+
+                }
+
+                SLStyle CellStyle = sl.CreateStyle();
+                CellStyle.Border.TopBorder.BorderStyle = BorderStyleValues.Thin;
+                CellStyle.Border.TopBorder.Color = System.Drawing.Color.Black;
+                CellStyle.Border.BottomBorder.BorderStyle = BorderStyleValues.Thin;
+                CellStyle.Border.BottomBorder.Color = System.Drawing.Color.Black;
+                CellStyle.Border.RightBorder.BorderStyle = BorderStyleValues.Thin;
+                CellStyle.Border.RightBorder.Color = System.Drawing.Color.Black;
+                CellStyle.Border.LeftBorder.BorderStyle = BorderStyleValues.Thin;
+                CellStyle.Border.LeftBorder.Color = System.Drawing.Color.Black;
+
+                sl.AutoFitColumn("B", "O");
+                sl.SetCellStyle("B" + cellstart, "O" + CellHeader, CellStyle);
+
+                sl.RenameWorksheet(SLDocument.DefaultFirstSheetName, "DF_REPORT_EnviosCancelados");
+                sl.SaveAs("Report" + CmbBxTipRepGenRepPerAdm.Text + ".xlsx");
+                MessageBox.Show("Reporte Generado a Excel", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Reader.Close();
+                Connect.Close();
+            }
+
         }
     }
 }
