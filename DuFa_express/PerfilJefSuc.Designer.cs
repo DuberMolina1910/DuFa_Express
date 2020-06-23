@@ -36,11 +36,12 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.PnlPerfilJefSuc1 = new System.Windows.Forms.Panel();
             this.picImgPer = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.lblPerJefSucCrearEnv = new System.Windows.Forms.Label();
+            this.LblCambContraPerJefSuc = new System.Windows.Forms.Label();
+            this.LblRepSucPerJefSuc = new System.Windows.Forms.Label();
             this.PnlPerfilJefSuc2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxLogoV2Client)).BeginInit();
             this.PnlPerfilJefSuc1.SuspendLayout();
@@ -107,13 +108,13 @@
             // PnlPerfilJefSuc1
             // 
             this.PnlPerfilJefSuc1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.PnlPerfilJefSuc1.Controls.Add(this.LblRepSucPerJefSuc);
+            this.PnlPerfilJefSuc1.Controls.Add(this.LblCambContraPerJefSuc);
+            this.PnlPerfilJefSuc1.Controls.Add(this.lblPerJefSucCrearEnv);
             this.PnlPerfilJefSuc1.Controls.Add(this.picImgPer);
-            this.PnlPerfilJefSuc1.Controls.Add(this.label6);
-            this.PnlPerfilJefSuc1.Controls.Add(this.label1);
             this.PnlPerfilJefSuc1.Controls.Add(this.label2);
             this.PnlPerfilJefSuc1.Controls.Add(this.label4);
             this.PnlPerfilJefSuc1.Controls.Add(this.lblCerrarSesión);
-            this.PnlPerfilJefSuc1.Controls.Add(this.lblRegUserPerJerSuc);
             this.PnlPerfilJefSuc1.Controls.Add(this.lblNomTipoPer);
             this.PnlPerfilJefSuc1.Controls.Add(this.lblNombre);
             this.PnlPerfilJefSuc1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -132,30 +133,7 @@
             this.picImgPer.TabIndex = 25;
             this.picImgPer.TabStop = false;
             // 
-            // lblReportSucPerJerSuc
-            // 
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(2, 193);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(197, 35);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Generar Reporte de Sucursal";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // LblCambcontra
-            // 
-            this.LblCambcontra.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.LblCambcontra.ForeColor = System.Drawing.Color.White;
-            this.LblCambcontra.Location = new System.Drawing.Point(2, 411);
-            this.LblCambcontra.Name = "LblCambcontra";
-            this.LblCambcontra.Size = new System.Drawing.Size(197, 35);
-            this.LblCambcontra.TabIndex = 19;
-            this.LblCambcontra.Text = "Cambiar Contraseña";
-            this.LblCambcontra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LblCambcontra.Click += new System.EventHandler(this.LblCambcontra_Click);
-            // 
-            // lblSolAnulPerJerSuc
+            // label2
             // 
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -177,17 +155,45 @@
             this.label4.Text = "Gestionar Envios";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblRegUserPerJerSuc
+            // label5
             // 
-            this.lblRegUserPerJerSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblRegUserPerJerSuc.ForeColor = System.Drawing.Color.White;
-            this.lblRegUserPerJerSuc.Location = new System.Drawing.Point(1, 87);
-            this.lblRegUserPerJerSuc.Name = "lblRegUserPerJerSuc";
-            this.lblRegUserPerJerSuc.Size = new System.Drawing.Size(197, 35);
-            this.lblRegUserPerJerSuc.TabIndex = 15;
-            this.lblRegUserPerJerSuc.Text = "Registrar Usuario";
-            this.lblRegUserPerJerSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblRegUserPerJerSuc.Click += new System.EventHandler(this.lblRegUserPerJerSuc_Click);
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 23);
+            this.label5.TabIndex = 0;
+            // 
+            // lblPerJefSucCrearEnv
+            // 
+            this.lblPerJefSucCrearEnv.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblPerJefSucCrearEnv.ForeColor = System.Drawing.Color.White;
+            this.lblPerJefSucCrearEnv.Location = new System.Drawing.Point(0, 87);
+            this.lblPerJefSucCrearEnv.Name = "lblPerJefSucCrearEnv";
+            this.lblPerJefSucCrearEnv.Size = new System.Drawing.Size(197, 35);
+            this.lblPerJefSucCrearEnv.TabIndex = 26;
+            this.lblPerJefSucCrearEnv.Text = "Nuevo Envio";
+            this.lblPerJefSucCrearEnv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LblCambContraPerJefSuc
+            // 
+            this.LblCambContraPerJefSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.LblCambContraPerJefSuc.ForeColor = System.Drawing.Color.White;
+            this.LblCambContraPerJefSuc.Location = new System.Drawing.Point(3, 411);
+            this.LblCambContraPerJefSuc.Name = "LblCambContraPerJefSuc";
+            this.LblCambContraPerJefSuc.Size = new System.Drawing.Size(197, 35);
+            this.LblCambContraPerJefSuc.TabIndex = 27;
+            this.LblCambContraPerJefSuc.Text = "Cambiar Contraseña";
+            this.LblCambContraPerJefSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LblRepSucPerJefSuc
+            // 
+            this.LblRepSucPerJefSuc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.LblRepSucPerJefSuc.ForeColor = System.Drawing.Color.White;
+            this.LblRepSucPerJefSuc.Location = new System.Drawing.Point(0, 192);
+            this.LblRepSucPerJefSuc.Name = "LblRepSucPerJefSuc";
+            this.LblRepSucPerJefSuc.Size = new System.Drawing.Size(197, 35);
+            this.LblRepSucPerJefSuc.TabIndex = 28;
+            this.LblRepSucPerJefSuc.Text = "Reporte de Sucursal";
+            this.LblRepSucPerJefSuc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // PerfilJefSuc
             // 
@@ -217,12 +223,14 @@
         private System.Windows.Forms.Label lblNomTipoPer;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Panel PnlPerfilJefSuc1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox picBxLogoV2Client;
         private System.Windows.Forms.Label lblReportSucPerJerSuc;
         private System.Windows.Forms.PictureBox picImgPer;
+        private System.Windows.Forms.Label lblPerJefSucCrearEnv;
+        private System.Windows.Forms.Label LblRepSucPerJefSuc;
+        private System.Windows.Forms.Label LblCambContraPerJefSuc;
     }
 }
