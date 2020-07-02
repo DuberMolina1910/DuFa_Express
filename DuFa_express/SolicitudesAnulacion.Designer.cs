@@ -44,7 +44,7 @@
             this.dgvSolicAnulacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvSolicAnulacion.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvSolicAnulacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSolicAnulacion.Location = new System.Drawing.Point(4, 127);
+            this.dgvSolicAnulacion.Location = new System.Drawing.Point(12, 159);
             this.dgvSolicAnulacion.Name = "dgvSolicAnulacion";
             this.dgvSolicAnulacion.RowHeadersVisible = false;
             this.dgvSolicAnulacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -56,7 +56,7 @@
             this.lblMsgError.AutoSize = true;
             this.lblMsgError.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMsgError.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblMsgError.Location = new System.Drawing.Point(135, 101);
+            this.lblMsgError.Location = new System.Drawing.Point(28, 104);
             this.lblMsgError.MaximumSize = new System.Drawing.Size(250, 0);
             this.lblMsgError.Name = "lblMsgError";
             this.lblMsgError.Size = new System.Drawing.Size(34, 17);
@@ -67,7 +67,7 @@
             // btnAnularEnvio
             // 
             this.btnAnularEnvio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnularEnvio.Location = new System.Drawing.Point(406, 64);
+            this.btnAnularEnvio.Location = new System.Drawing.Point(299, 67);
             this.btnAnularEnvio.Name = "btnAnularEnvio";
             this.btnAnularEnvio.Size = new System.Drawing.Size(100, 25);
             this.btnAnularEnvio.TabIndex = 88;
@@ -79,7 +79,7 @@
             // 
             this.cmbEstadoEnvio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstadoEnvio.FormattingEnabled = true;
-            this.cmbEstadoEnvio.Location = new System.Drawing.Point(135, 65);
+            this.cmbEstadoEnvio.Location = new System.Drawing.Point(28, 68);
             this.cmbEstadoEnvio.Name = "cmbEstadoEnvio";
             this.cmbEstadoEnvio.Size = new System.Drawing.Size(190, 24);
             this.cmbEstadoEnvio.TabIndex = 87;
@@ -88,7 +88,7 @@
             // txtNumGuia
             // 
             this.txtNumGuia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumGuia.Location = new System.Drawing.Point(135, 24);
+            this.txtNumGuia.Location = new System.Drawing.Point(28, 27);
             this.txtNumGuia.Name = "txtNumGuia";
             this.txtNumGuia.Size = new System.Drawing.Size(190, 23);
             this.txtNumGuia.TabIndex = 86;
@@ -97,7 +97,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(406, 22);
+            this.btnBuscar.Location = new System.Drawing.Point(299, 25);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(100, 25);
             this.btnBuscar.TabIndex = 85;
@@ -108,7 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 451);
+            this.ClientSize = new System.Drawing.Size(700, 490);
             this.Controls.Add(this.lblMsgError);
             this.Controls.Add(this.btnAnularEnvio);
             this.Controls.Add(this.cmbEstadoEnvio);

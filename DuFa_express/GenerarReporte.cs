@@ -286,5 +286,10 @@ namespace DuFa_express
             }
 
         }
+
+        private void DtGrdVwGenRepPerAdm_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -48,10 +48,6 @@ namespace DuFa_express
                 btnSolAnulacion.Visible = false;
                 txtDetCancelacion.Visible = false;
             }
-            else if (Cache.IdTipoPer == "5")
-            {
-                btnAnularEnvio.Visible = false;
-            }
         }
 
         private void GetTabEnviosDGV()

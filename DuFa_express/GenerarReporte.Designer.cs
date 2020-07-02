@@ -41,7 +41,7 @@
             // BtnCerrarGenRepPerAdm
             // 
             this.BtnCerrarGenRepPerAdm.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.BtnCerrarGenRepPerAdm.Location = new System.Drawing.Point(36, 449);
+            this.BtnCerrarGenRepPerAdm.Location = new System.Drawing.Point(569, 449);
             this.BtnCerrarGenRepPerAdm.Name = "BtnCerrarGenRepPerAdm";
             this.BtnCerrarGenRepPerAdm.Size = new System.Drawing.Size(119, 29);
             this.BtnCerrarGenRepPerAdm.TabIndex = 0;
@@ -52,7 +52,7 @@
             // BtnExlGenRepPerAdm
             // 
             this.BtnExlGenRepPerAdm.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.BtnExlGenRepPerAdm.Location = new System.Drawing.Point(568, 418);
+            this.BtnExlGenRepPerAdm.Location = new System.Drawing.Point(488, 113);
             this.BtnExlGenRepPerAdm.Name = "BtnExlGenRepPerAdm";
             this.BtnExlGenRepPerAdm.Size = new System.Drawing.Size(120, 35);
             this.BtnExlGenRepPerAdm.TabIndex = 1;
@@ -77,18 +77,19 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DtGrdVwGenRepPerAdm.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DtGrdVwGenRepPerAdm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtGrdVwGenRepPerAdm.Location = new System.Drawing.Point(12, 142);
+            this.DtGrdVwGenRepPerAdm.Location = new System.Drawing.Point(12, 163);
             this.DtGrdVwGenRepPerAdm.Name = "DtGrdVwGenRepPerAdm";
             this.DtGrdVwGenRepPerAdm.RowHeadersVisible = false;
             this.DtGrdVwGenRepPerAdm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DtGrdVwGenRepPerAdm.Size = new System.Drawing.Size(676, 270);
             this.DtGrdVwGenRepPerAdm.TabIndex = 2;
+            this.DtGrdVwGenRepPerAdm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGrdVwGenRepPerAdm_CellContentClick);
             // 
             // LblTiposReportes
             // 
             this.LblTiposReportes.AutoSize = true;
             this.LblTiposReportes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTiposReportes.Location = new System.Drawing.Point(58, 89);
+            this.LblTiposReportes.Location = new System.Drawing.Point(12, 124);
             this.LblTiposReportes.Name = "LblTiposReportes";
             this.LblTiposReportes.Size = new System.Drawing.Size(136, 18);
             this.LblTiposReportes.TabIndex = 4;
@@ -103,7 +104,7 @@
             "Consulta Asignacion de Usuarios - Sucursales",
             "Consulta de Envios por sucursales",
             "Consulta de Envios Cancelados"});
-            this.CmbBxTipRepGenRepPerAdm.Location = new System.Drawing.Point(200, 86);
+            this.CmbBxTipRepGenRepPerAdm.Location = new System.Drawing.Point(154, 121);
             this.CmbBxTipRepGenRepPerAdm.Name = "CmbBxTipRepGenRepPerAdm";
             this.CmbBxTipRepGenRepPerAdm.Size = new System.Drawing.Size(250, 21);
             this.CmbBxTipRepGenRepPerAdm.TabIndex = 5;
