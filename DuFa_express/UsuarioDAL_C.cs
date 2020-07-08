@@ -118,7 +118,7 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT IdCiudad, LTRIM(RTRIM(REPLACE(NomCiudad, '', ''))) AS NomCiudad, Estados FROM TABCIUDADES WHERE ESTADOS = '1' ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT IdCiudad, LTRIM(RTRIM(REPLACE(NomCiudad, '', ''))) AS 'Nombre Ciudad', Estados FROM TABCIUDADES WHERE ESTADOS = '1' ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -133,7 +133,7 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT LTRIM(RTRIM(REPLACE(NOMCIUDAD, '', ''))) AS NOMCIUDAD FROM TABCIUDADES WHERE ESTADOS = '1' ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT LTRIM(RTRIM(REPLACE(NOMCIUDAD, '', ''))) AS 'Nombre Ciudad' FROM TABCIUDADES WHERE ESTADOS = '1' ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -146,7 +146,7 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT LTRIM(RTRIM(REPLACE(NOMCIUDAD, '', ''))) AS NOMCIUDAD FROM TABCIUDADES WHERE ESTADOS = '0' ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT LTRIM(RTRIM(REPLACE(NOMCIUDAD, '', ''))) AS 'Nombre Ciudad' FROM TABCIUDADES WHERE ESTADOS = '0' ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -173,7 +173,7 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT IDSUCURSAL, IDCIUDAD, LTRIM(RTRIM(REPLACE(NOMSUCURSAL, '', ''))) AS NOMSUCURSAL, ESTADOSSUC FROM TABSUCURSALES ORDER BY NOMSUCURSAL ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT IDSUCURSAL, IDCIUDAD, LTRIM(RTRIM(REPLACE(NOMSUCURSAL, '', ''))) AS 'Nombre Sucursal', ESTADOSSUC FROM TABSUCURSALES ORDER BY NOMSUCURSAL ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
@@ -187,7 +187,7 @@ namespace DuFa_express
 
             //DataTable tabla = new DataTable();
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT TABCIUDADES.IDCIUDAD,TABSUCURSALES.IDSUCURSAL, LTRIM(RTRIM(REPLACE(NOMSUCURSAL, '', ''))) AS NOMSUCURSAL FROM TABCIUDADES INNER JOIN TABSUCURSALES ON TABCIUDADES.IDCIUDAD= TABSUCURSALES.IDCIUDAD  WHERE TABCIUDADES.IDCIUDAD = '{0}'  ORDER BY NOMSUCURSAL ASC", pIdCiudad), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT TABCIUDADES.IDCIUDAD,TABSUCURSALES.IDSUCURSAL, LTRIM(RTRIM(REPLACE(NOMSUCURSAL, '', ''))) AS 'Nombre Sucursal' FROM TABCIUDADES INNER JOIN TABSUCURSALES ON TABCIUDADES.IDCIUDAD= TABSUCURSALES.IDCIUDAD  WHERE TABCIUDADES.IDCIUDAD = '{0}'  ORDER BY NOMSUCURSAL ASC", pIdCiudad), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             
             tabla.Load(Reader);
@@ -202,7 +202,7 @@ namespace DuFa_express
             SqlConnection Connect = DB_Connection.DBConnection();
 
             DataTable tabla = new DataTable();
-            SqlCommand command = new SqlCommand(string.Format("SELECT LTRIM(RTRIM(REPLACE(NOMCIUDAD, '', ''))) AS NOMCIUDAD, LTRIM(RTRIM(REPLACE(NOMSUCURSAL, '', ''))) AS NOMSUCURSAL FROM TABSUCURSALES, TABCIUDADES WHERE TABSUCURSALES.IDCIUDAD = TABCIUDADES.IDCIUDAD AND TABSUCURSALES.ESTADOSSUC = '1' AND TABCIUDADES.ESTADOS = '1'  ORDER BY NOMCIUDAD ASC"), Connect);
+            SqlCommand command = new SqlCommand(string.Format("SELECT LTRIM(RTRIM(REPLACE(NOMCIUDAD, '', ''))) AS 'Nombre Ciudad', LTRIM(RTRIM(REPLACE(NOMSUCURSAL, '', ''))) AS 'Nombre Sucursal' FROM TABSUCURSALES, TABCIUDADES WHERE TABSUCURSALES.IDCIUDAD = TABCIUDADES.IDCIUDAD AND TABSUCURSALES.ESTADOSSUC = '1' AND TABCIUDADES.ESTADOS = '1'  ORDER BY NOMCIUDAD ASC"), Connect);
             SqlDataReader Reader = command.ExecuteReader();
             tabla.Load(Reader);
             Reader.Close();
